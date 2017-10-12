@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="liveappInfo" shareimg="http://news.changsha.cn/images/titlepic_xczx.jpg" sharedesc="邵宁：让钟扬这样的科学家成为青少年的偶像">    
+    <script>
+
+        /**
+         * Created by a525 on 15-3-16.
+         */
+        function QueryString()
+        {
+            var name,value,i;
+            var str=location.href;
+            var num=str.indexOf("?")
+            str=str.substr(num+1);
+            var arrtmp=str.split("&");
+            for(i=0;i < arrtmp.length;i++){
+                num=arrtmp[i].indexOf("=");
+                if(num>0){
+                    name=arrtmp[i].substring(0,num);
+                    value=arrtmp[i].substr(num+1);
+                    this[name]=value;
+                }
+            }
+        }
+        var Request=new QueryString();
+
+
+
+        function checkDevice(){
+            var stay=Request["stay"];
+            if(stay<=0||stay==undefined){
+
+                var devise=browserRedirect();
+
+                var oriUrl=location.href.toLowerCase();
+                var url=oriUrl.replace("_m.html",".html");
+                url=url.replace("_p.html",".html");
+                url=url.replace("_t.html",".html");
+                switch(devise){
+                    case "PC":
+
+                        if(url!=oriUrl){
+                            location.href=url;
+                        }
+                        break;
+                    case "Mobile":
+
+                        if(url.indexOf(".htm")<0){
+                            //default
+                            location.href = url + "/default_m.html"
+                        }
+
+
+                        url=url.replace(".html","_m.html");
+                        if(url!=oriUrl){
+                            location.href=url;
+                        }
+                        break;
+                    case "Pad":
+
+                        if(url.indexOf(".htm")<0){
+                            //default
+                            location.href = url + "/default_p.html"
+                        }
+
+                        url=url.replace(".html","_p.html");
+                        if(url!=oriUrl){
+                            location.href=url;
+                        }
+                        break;
+                    case "TV":
+
+                        if(url.indexOf(".htm")<0){
+                            //default
+                            location.href = url + "/default_t.html"
+                        }
+
+                        url=url.replace(".html","_t.html");
+                        if(url!=oriUrl){
+                            location.href=url;
+                        }
+                        break;
+                    default :
+                        if(url!=oriUrl){
+                            location.href=url;
+                        }
+                        break;
+                }
+
+            }
+
+
+
+        }
+
+        checkDevice();
+
+        function browserRedirect() {
+            var devise="PC";
+            var sUserAgent = navigator.userAgent.toLowerCase();        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                //var width=window.screen.width;
+                //var height=window.screen.height;
+                //if(width>1000&&height>1000){
+                //    devise="Pad";
+                //}else{
+                devise="Mobile";
+                //}
+            } else {
+                devise="PC";
+            }
+            return devise;
+        }
+
+    </script>
+    <title>邵宁：让钟扬这样的科学家成为青少年的偶像 星辰在线 长沙新闻网 长沙新闻门户</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta name="keywords" content="科学家青少年;偶像" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/images100001/pc_layout.css" type="text/css" />
+
+
+    <script type="text/javascript" src="/system_js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/front_js/common.js"></script>
+    <script type="text/javascript" src="/front_js/site/site_ad.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/front_js/comment.js"></script>
+    <script type="text/javascript">
+
+        $(function(){
+            //格式化分钟显示为两位数
+	    $(".showminute").each(function(){
+	    var showminute=$(this).text();
+	    if(showminute<10) $(this).text("0"+showminute.toString());
+	    });
+            //统计点击
+            $.post("http://icms3api.changsha.cn/default.php?mod=document_news&a=async_add_and_get_hit&id=2256471&site_id=4", {
+                resultbox: $(this).html()
+            }, function(result) {
+                $("#hit_count").html(result);
+                $("#hit_count").show();
+            });
+            CreateLongComment(2256471,7,230,true);
+            CommentShow(0,2256471,7,"",true);            
+        });
+
+        window.CommentShowCallBack = function(data){
+            var listContent = "";
+            var pagerButton = data["page_button"];
+            comment_count = data["count"];
+            var result = eval(data["result"]);
+            $.each(result, function (i, v) {
+                var username = v["UserName"].replace(" ","");
+                if (username == undefined || username == "") {
+                    username = "游客";
+                }else if(username.length > 30){
+                    var mphone =username.substr(3,4);
+                    username = username.replace(mphone,"****");
+                }
+                listContent = listContent + '<div class="huifu">'+
+                '<div class="user_icon"><img src="/images100001/user_icon.png" width="45" height="45" /></div>'+
+                '<div class="right">'+
+                '<div class="time"><em><span class="span2"></span>0 | <a href="">回复</a></em>'+username+'      <font class="grey">'+v["CreateDate"]+'</font></div>'+
+                '<div class="user_pinglun">'+v["Content"]+'</div>'+
+                '</div>'+
+                '<div class="clean"></div>'+
+                '</div>';
+            });
+
+            $("#commentmessage").html(listContent);
+            $("#comment_pagerbutton").html(pagerButton);
+            $("#count").html(comment_count);
+        };
+
+        window.CreateLongCommentCallback = function(data,tableId,tableType,channelId){
+            var re_url = window.location.href;
+            var result = data["result"];
+            var username = "";
+            var name = '<td class="guest" style="text-align:left;">您还未<a href="/default.php?mod=channel&a=default&temp=user_login&re_url=' + re_url + '" style="font-weight:bold">登录</a>,目前的身份是游客</td>';
+            if (result["UserMobile"] != undefined && result["UserMobile"].length > 0) {
+                username = result["UserMobile"];
+                name = '<td class="username" style="text-align:left">您已用' + username + '登录，点击<a href="/default.php?mod=user&a=logout">注销<a/></td>';
+            }
+
+            if (tableId > 0) {
+                $('#comment').append('<form id="mainForm" action="/default.php?mod=comment&a=create" data-ajax="false" method="post">'
+                + '<div class="div_15">'
+                + '<div class="pinglun">评论（<span id="count">0</span>）</div>'
+                + '<textarea name="content" cols="" rows="4" class="textarea">我要评论</textarea>'
+                + '<button class="button">发表</button>'
+                + '<div class="clean"></div>'
+                + '<input type="hidden" value="' + tableId + '" name="table_id"/>'
+                + '<input type="hidden" value="' + tableType + '" name="table_type"/>'
+                + '<input type="hidden" name="channel_id" value="' + channelId + '"/>'
+                + '<input type="hidden" id="url" name="url" value="' + getURL() + '"/></td>'
+                + '</div></form>');
+            }
+
+
+        };
+    </script>
+    <!--问政调用css-->
+    <style>
+        .thread_title{}
+        .thread_content{width:324px;height:44px;overflow: hidden}
+        .thread_content a{color: #BE0115;font-size: 12px;}
+        .answer{width:274px;height:38px;line-height:20px;overflow: hidden}
+    </style>
+    <script>
+        $(document).ready(function () {
+            useDefaultImg();
+        });
+        
+
+
+
+        function SetATagForUrl(idString){
+
+            var content = document.getElementById(idString);
+            var str=content.innerHTML;
+            var re = /(http://[w./]+)(?![^<]+>)/gi;
+            content.innerHTML=str.replace(re,"<a href='$1' target='_blank'>$1</a>");//http
+
+            str=content.innerHTML;
+            var re2 = /(https://[w./]+)(?![^<]+>)/gi;
+            content.innerHTML=str.replace(re2,"<a href='$1' target='_blank'>$1</a>");//https
+        }
+
+        //没有题图时使用默认图片
+        function useDefaultImg(){
+            $(".main img").each(function () {
+                if ($(this).attr("src") == ""){
+                    $(this).attr("src","/images100001/default.jpg");
+                }
+            })
+        }
+    </script>
+    <style>
+    .content .article img{ max-width:100%; height:auto;}
+    </style>
+</head>
+
+<body>
+
+<script src='http://about.changsha.cn/public/js/topmenu.js' charset="utf-8"></script>
+<div class="main W_1k">
+    <div class="right w_648 l_border">
+        <div class="list">
+            <div class="r_title"><div class="det_position">您所在的位置：<a href="http://www.changsha.cn/">星辰在线</a> > <a href="http://news.changsha.cn/">长沙新闻网</a> > <a href="/h/230/list.html">湘江评论</a> </div></div>
+            <div class="content">
+                <div class="li">
+                    <h2>邵宁：让钟扬这样的科学家成为青少年的偶像</h2>
+                    <div class="time_info"><a href="/h/230/list.html" target="_blank">湘江评论</a><span id="hit_count" class="visited" style="display:none;"></span>|<span class="time">2017-09-27  22:<span class="showminute">56</span></span></div>
+                    <div class="editor"> 来源：新民晚报 | 作者：邵宁 | 编辑：乐先文</div>
+                    <div class="article">
+                        <div id='tempNewsContentDiv'><p></p>
+<p>　　前天，著名植物学家、复旦大学研究生院院长钟扬突然遭遇车祸，不幸英年早逝，复旦大学官网变成了黑色，而在4000公里外的拉萨，同样有许多人深切悼念他：&ldquo;雪山垂泪，雅江悲咽，西藏大学全体师生不胜悲恸。&rdquo;</p>
+<p>　　30余年从教、16年援藏、10年引种红树；在生物信息学、进化生物学前沿领域获得独创性成果；为国家和上海的种子库收集上千种植物的4000万颗种子；在世界屋脊从事科研，把西藏大学的生物多样性研究推向世界&hellip;&hellip;钟扬短短53年的生命中，竟然做了那么多的事，令人钦佩。</p>
+<p>　　钟扬的生命不算长，但却达到了罕见的高度。为采集种子，他冒着高原反应，和学生攀爬在雪山脚下、跋涉在荆棘丛中，早已把生死置之度外。因为他坚信&ldquo;一个基因可以为一个国家带来希望，一粒种子可以造福万千苍生&rdquo;。一粒种子是微小的，但4000万颗种子，对于地球上的植物与生态保护有着无可估量的价值。钟扬身上，体现了一位科研工作者的责任与担当。这也是一位科学家的社会价值所在。</p>
+<p>　　钟扬的生命还有着别样的深度。在漫长的科考道路上，他意识到西藏这片神奇的土地，更需要的是教育工作者。他带出了藏族第一个植物学博士，他用培养高端科研人才的方式，开创了一条教育援藏的新路。从钟扬身上，我们看到了一种大爱。正如他在上海临港播下的红树林种子，10年已经成林，他在西藏播下的科学研究的种子和民族团结的种子，也已生根发芽，必将长成参天大树。</p>
+<p>　　钟扬生命的宽度同样令人惊叹。与一些埋头于实验室的科学家不同，他还是一位优秀的科普工作者，他写文章、开讲座，把艰深的科学知识变成有趣的故事，上海自然博物馆新馆还有他撰写的关于青藏高原的中英文介绍&hellip;&hellip;科普工作，让青少年爱上科学，让普通百姓理解科学，同样是高尚而有意义的事业。</p>
+<p>　　当然，对广大网民来说，钟扬还是一个陌生的名字。最近，&ldquo;中国天眼&rdquo;之父南仁东去世，也引发了震动。但这位曾放弃高薪回国，燃烧20年生命，研制出500米口径球面电射望远镜的科学家，很多人却不认识他。这并不奇怪，我国一些卓越的科学家，却远远不如一些企业家、演艺明星有名。然而，一个国家的竞争力最终取决于科技创新能力，而一个国家科技发展的繁荣程度，取决于民众对科学的认识和热爱，对科学家的尊重。</p>
+<p>　　科学道路永远是艰辛的，伟大的科学家都有一种锲而不舍精神，他们不断克服困难、迎接挑战，在极限中超越自我。这种精神，是全人类的宝贵财富。让科学精神得到传播，让科学家成为青少年的偶像。这是媒体的职责，更需要全社会的努力。</p>
+<p>　　&ldquo;有的人活着，他已经死了；有的人死了，他还活着。&rdquo;用诗人臧克家的名句来形容钟扬和南仁东，再恰当不过了。一辈子为祖国的科学事业献身的科学家，同样是时代的英雄，同样值得景仰。</p>
+<p></p></div>
+                    </div>
+                    <div style="text-align: center;">
+			<img style="width: 50%; margin: 0px auto;" src="/images100001/2dcode.jpg">
+		    </div>
+                    <div class="adv_6"><div class="site_ad_288"></div><script language="javascript" src="/upload/site_ad/4/site_ad_288.js" charset="utf-8"></script></div>
+                    <div class="label">标签：科学家　青少年;偶像</div>
+                    <div class="related_news">
+                        <ul>
+                        
+                        <!--相关新闻-->
+                            
+                                    
+                                    <li><a href="/html/413/20170712/2245687.html" target="_blank">梦想把地球变透明：科学家黄大年“以身许国”的生命理论</a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/html/413/20170524/2237182.html" target="_blank">中国科学家研制出自修复复合水凝胶</a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/html/230/20170519/2236444.html" target="_blank">文峰：伟大科学家之伟大在于赤子情怀</a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/html/417/20170421/505889.html" target="_blank">科学家发现系外“超级地球” 具备生命所需条件(图) </a></li>
+                                    
+                                
+
+                        </ul>
+                    </div>
+                    <!-----------comment------------>
+                    <div id="comment" idvalue="2" style="width:98%;margin:5px auto;display:none;"></div>
+                    <div style="width:100%;margin:5px auto;display:none;">
+                        <dl id="commentmessage"></dl>
+                        <a name="comment"></a>
+                        <div id="comment_pagerbutton"></div>
+                    </div>
+                    <!-----------comment-->
+                </div>
+                <div class="clean"></div>
+                <div class="right_ad">
+                    <ul>
+                        <li><div class="site_ad_289"></div><script language="javascript" src="/upload/site_ad/4/site_ad_289.js" charset="utf-8"></script></li>
+                        <li><div class="site_ad_290"></div><script language="javascript" src="/upload/site_ad/4/site_ad_290.js" charset="utf-8"></script></li>
+                        <li><div class="site_ad_291"></div><script language="javascript" src="/upload/site_ad/4/site_ad_291.js" charset="utf-8"></script></li>
+                    </ul>
+                    <div class="clean"></div>
+                </div>
+                <!-- 老新闻中心频道集合推荐调用 js -->
+                <script type="text/javascript" src="http://news.changsha.cn/h/7688/news2_channnel_rec_2015.js"></script>
+                <!-- 星辰影像人像调用 js-->
+                <script type="text/javascript" src="http://www.image1.cn/news2_image1_renxiang_2015.js"></script>
+                <!-- 老新闻中心消费咨询调用 js -->
+                <script type="text/javascript" src="http://news.changsha.cn/h/7688/news2_contantdown_1078_2015.js"></script>
+                <!-- 老新闻中心咨询精选调用 js 
+                <script type="text/javascript" src="http://news.changsha.cn/h/7688/news2_contantdown_7692_2015.js"></script>-->
+               
+    <div class="announce">
+    <script src="http://about.changsha.cn/public/js/copyright.js" charset="utf-8"></script>
+      <!---
+      <b>版权声明</b><br />
+    ①长沙晚报报业集团书面授权星辰在线，在互联网上使用、发布、交流集团所属系列媒体的新闻信息。未经权利人授权，任何媒体、网站不得转载、摘编或利用其它方式使用长沙晚报报业集团任何作品。已经本网授权使用作品的，应在授权范围内使用，并注明“来源：星辰在线”或“来源：星辰在线-长沙晚报”。否则，本网将追究其相关法律责任。<br />
+    ②本网未注明“来源：星辰在线”或“星辰在线-长沙晚报”的作品均为转载稿，此类稿件不代表本网观点。如果本网转载的稿件涉及您的版权、名誉权等问题，敬请立即通知我们，并提供真实、有效的书面证明，我们将在核实后采取有效措施妥善处理。<br />
+    联系方式：星辰在线新闻中心 联系电话：0731-82205980 传真：0731-82205938<br />
+    附：长沙晚报报业集团系列媒体：《长沙晚报》、《星辰在线》、《知识博览报》、《晚报文萃》、《学生·家长·社会》、《浏阳日报》、《掌上长沙》、《星沙时报》、《高新麓谷》、《湘江早报》。
+    -->
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="left w_324">
+    <div class="search"><input type="text" id="searchkey" value="输入关键词……">
+    <div class="search_btn" style="line-height:24px;cursor:pointer;float:right;width:52px;text-align:center" onclick="search()">搜索</div>
+    </div>
+            <script type="text/javascript">
+
+
+            $(function(){
+                $("#searchkey").focus(function(){
+                    if($(this).attr("value")=="输入关键词……"){
+                        $(this).attr("value","");
+                    }
+                });
+
+                $('#searchkey').bind('keypress',function(event){
+                    if(event.keyCode == "13")
+                    {
+                        var searchkey=document.getElementById("searchkey").value;
+                        if(searchkey==""){
+                            alert("请输入搜索内容!");
+                        }else{
+                            window.location.href="http://so.changsha.cn/search.php?q="+encodeURIComponent(searchkey);
+                         
+                            //window.location.href="/default.php?mod=search&site_id=1&search_key="+searchkey;
+                        }
+                    }
+                });
+            });
+            function search(){
+            var searchkey=document.getElementById("searchkey").value;
+                        if(searchkey==""){
+                            alert("请输入搜索内容!");
+                        }else{
+                            window.location.href="http://so.changsha.cn/search.php?q="+encodeURIComponent(searchkey);
+                         }
+            }
+        </script>
+
+    <div class="img_adv border_B">
+        <ul>
+            <li><div class="site_ad_283"></div><script language="javascript" src="http://news.changsha.cn/upload/site_ad/4/site_ad_283.js" charset="utf-8"></script></li>
+            <li><div class="site_ad_284"></div><script language="javascript" src="http://news.changsha.cn/upload/site_ad/4/site_ad_284.js" charset="utf-8"></script></li>
+        </ul>
+        <div class="clean"></div>
+    </div>
+    
+    
+    <!--
+    
+    <div class="hot_box border_B">
+        <div class="title"><a>热读新闻</a></div>
+        <ul>
+        
+        
+            
+                    
+                    <li><a href="/h/409/20160315/408427.html" target="_blank">湖南卫视搅动“辣椒江湖” 纪录片《辣椒的味道</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408419.html" target="_blank">湘潭一只母鸡一天生6个蛋 专家：工作30年没见</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408367.html" target="_blank">孙金龙任新疆生产建设兵团政委 曾任湖南省委</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408363.html" target="_blank">永州市通报7起违反作风建设规定典型问题</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408364.html" target="_blank">孙法军任湘西州委常委、副州长提名人选</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408354.html" target="_blank">湖南省工商局：家用电器抽检合格率低于50%</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408337.html" target="_blank">网售2元一盒丁桂儿脐贴竟是益阳人卖的假药</a></li>
+                    
+                
+                    
+                    <li><a href="/h/409/20160315/408303.html" target="_blank">永州今年农村五保分散供养标准提至3200元/年</a></li>
+                    
+                
+      
+        </ul>
+    </div>
+    <div class="hot_box border_B">
+        <div class="title"><a>热读新闻</a></div>
+        <ul>
+        
+        
+            <ic id="channel_4" type="document_news_list" where="day_belong_site" where_value="30" order="hit" top="8" title="42">
+                <item>
+                    <![CDATA[
+                    <li><a href="{c_DocumentNewsUrl}" target="_blank">{f_DocumentNewsTitle}</a></li>
+                    ]]>
+                </item>
+            </ic>
+        </ul>
+    </div>-->
+    <div class="ad_l border_B">
+        <div class="site_ad_285"></div><script language="javascript" src="http://news.changsha.cn/upload/site_ad/4/site_ad_285.js" charset="utf-8"></script>
+    </div>
+    <div class="tuijian_box">
+        <div class="title"><a href="http://news.changsha.cn/html/180/list.html" target="_blank">热门推荐</a></div>
+        <div class="imgs_list">
+            <ul>
+                
+                        
+                        <li><a href="http://news.changsha.cn/zt2017/html/110674/index.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170926/title_pic1_59c9961124b47.jpg" width="155" height="100" /><div class="title">湖南省首届武警反恐特种作战演练</div></a></li>
+                        
+                    
+                        
+                        <li><a href="http://news.changsha.cn/html/186/20170926/2256269.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170927/title_pic1_59cafe8fa0918.jpg" width="155" height="100" /><div class="title">“湘粤港直通快车”通车  全程运输时间缩短10小时</div></a></li>
+                        
+                    
+                        
+                        <li><a href="http://news.changsha.cn/html/187/20170926/2256260.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170927/title_pic1_59cafe3d337e5.jpg" width="155" height="100" /><div class="title">“辰小星”有了“身份证” 这一年他早已走遍中国!</div></a></li>
+                        
+                    
+                        
+                        <li><a href="http://news.changsha.cn/html/187/20170926/2256265.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170927/title_pic1_59cafdad96a5e.jpg" width="155" height="100" /><div class="title">开启奇妙之旅 “辰小星”探班武警反恐特种作战大比武</div></a></li>
+                        
+                    
+                        
+                        <li><a href="http://news.changsha.cn/html/187/20170926/2256213.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170927/title_pic1_59cafcc2a621b.jpg" width="155" height="100" /><div class="title">星辰福利新升级!国庆中秋带着孩子去蹦床吧!</div></a></li>
+                        
+                    
+                        
+                        <li><a href="http://news.changsha.cn/html/187/20170926/2256264.html" target="_blank"><img src="http://news.changsha.cn/upload/4/document_news/180/20170927/title_pic1_59cafc4aa8416.jpg" width="155" height="100" /><div class="title">星城萌娃上演两型T台秀 趣味传递生态文明理念</div></a></li>
+                        
+                    
+            </ul>
+            <div class="clean"></div>
+        </div>
+    </div>
+    <div class="ad_l border_B" style="border-bottom:none">
+        <div class="site_ad_286"></div><script language="javascript" src="http://news.changsha.cn/upload/site_ad/4/site_ad_286.js" charset="utf-8"></script>
+    </div>
+    <div id="ad_l_fixed">
+        <div class="ad_l border_B">
+            <div class="site_ad_287"></div><script language="javascript" src="http://news.changsha.cn/upload/site_ad/4/site_ad_287.js" charset="utf-8"></script>
+        </div>
+        <div class="redian_zt">
+            <div class="title"><a href="http://ms.changsha.cn/h/65/list.html" target="_blank">咨询热点</a></div>
+            <div class="zt_list">
+                <ul id="thread_list_without_reply">
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+    .onFloat {position:fixed;top:0;background:#ffffff;width:324px}
+</style>
+<script>
+    $(document).ready(function () {
+        fixeBlock();
+        ShowThreadWithoutReply(65,4)
+    });
+    //固定左下悬浮框
+    //比较 元素到文档顶部的距离 和 窗口向下滚动的距离 实现样式切换
+    function fixeBlock(){
+        var fixDiv = $("#ad_l_fixed");
+        var distanceToTop = (fixDiv.offset().top);
+        $(window).scroll(function () {
+            var scrollHeight = ($(window).scrollTop());
+            if (scrollHeight >= distanceToTop) {
+                fixDiv.addClass("onFloat");
+            }else{
+                if (fixDiv.hasClass("onFloat")){
+                    fixDiv.removeClass("onFloat");
+                }
+            }
+        })
+    }
+
+    //输出咨询热点
+    function ShowThreadWithoutReply(channelid, topcount) {
+        $.ajax({
+            url:"http://func.changsha.cn/index.php",
+            data:{a:"doc",f:"thread",m:"frontlist",p:1,ps:topcount,cid:channelid},
+            dataType:"jsonp",
+            jsonp:"jsonpcallback",
+            success:function(data){
+                var listcontent = '';
+                $.each(data, function (i, v) {
+                    listcontent+='<li style="height:22px;width:324px;line-height:22px;overflow: hidden "><a href="http://ms.changsha.cn/h/'+channelid+'/'+v["f_year"]+v["f_month"]+v["f_day"]+'/'+v["documentthreadid"]+'.html" target="_blank">'+  v["subject"] +'</a></li>';
+                });
+                $("#thread_list_without_reply").html(listcontent);
+            }
+        });
+    }
+</script>
+    <div class="clean"> </div>
+</div>
+<script src='http://about.changsha.cn/public/js/csxwwfoot.js' charset="utf-8"></script>
+<div class="icon_logo">
+    <ul>
+        <li><a href="http://weibo.com/hncsol" target="_blank"><img src="/images100001/sinalogo.png" width="39" height="39" /></a></li>
+        <li><a href="http://e.t.qq.com/csnews" target="_blank"><img src="/images100001/tencentlogo.png" width="39" height="39" /></a></li>
+        <li style="display:none"><img src="/images100001/weixinlogo.png" width="39" height="39" /></li>
+    </ul>
+</div>
+<div class="back_2_top"><a href="javascript:scroll(0,0)"><img src="/images100001/back_2_top.jpg" width="39" height="39" /></a></div>
+<script type="text/javascript">var visitConfig = encodeURIComponent("http://news.changsha.cn") +"||4||230||3||2256471||"+encodeURI("");</script> 
+<script type="text/javascript" src="/front_js/visit.js" charset="utf-8"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_30005919'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30005919' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html><script type="text/javascript">var visitConfig = encodeURIComponent("https://icms3.changsha.cn") +"||4||230||3||2256471||"+encodeURI("");</script><script type="text/javascript" src="https://icms3.changsha.cn/front_js/visit.js" charset="utf-8"></script>

@@ -1,0 +1,1996 @@
+
+
+
+
+<!-- 自定义标签函数 -->
+
+<script>
+var ua = navigator.userAgent;
+var k = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+var m = false;
+for (var v = 0; v < k.length; v++) {
+	if (ua.indexOf(k[v]) > 0) { m = true; break; }
+}
+var c = window.location.href;
+if(m){
+	if(c.indexOf("www")>0){
+		document.location.href=c.replace("www", "m");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/m.dia");
+	}
+}else{
+	if(c.indexOf("/m.dia")>0){
+		document.location.href=c.replace("m.dia", "www.dia");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/www.dia");
+	}
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="点赞网是聚焦全民生活圈的互联网筹资平台，已有17000+项目筹款成功。现已为个人大病求助开通“绿色通道”，微信即可发布，操作简单，筹多少拿多少，提现一天到账。" name="keywords">
+<title>钟扬 - 点赞网</title>
+<style>
+html,body{width:100%; height:100%; margin:0; padding:0;}
+#scrollTop{margin-left:700px!important;}
+</style>
+<script src="/new/js/jquery-2.1.3.min.js"></script>
+<script src="/new/js/jquery.SuperSlide.js"></script>
+<script src="/new/js/jquery.base64.js"></script>
+<script src="/new/js/layer-v3.0.1/layer/layer.js"></script>
+<script>
+var startpraisedt="1440570600000"; 
+var endpraisedt="1442332500000";
+var status="8";
+</script>
+<link href="/new/css/common.css" rel="stylesheet" />
+<link href="/new/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+
+<style>
+body,html{width:100%; height:100%;}
+</style>
+</head>
+<header class="header">
+  	<div class="header_main">
+     	<a href="/index.act" class="header_logo">
+         	<img src="/new/images/head_logo.svg">
+     	</a>
+     	<div class="header_search">
+         	<input class="search_text write_inp1" placeholder="输入项目名称" type="text" id="globalSearchName" value="" onkeydown="if(event.keyCode==13){gosubmit();}">
+         	<img class="input_prompt" src="/new/images/input_prompt.svg">
+         	<a class="search_sub red_litter" href="javascript:void(0);" onclick="gosubmit();"><img src="/new/images/search.svg"></a>
+     	</div>
+     	
+     	<div class="header_right">
+         	<div class="ullist black_color">
+             	<a href="/index.act">首页</a>
+             	<a href="/specialindex.act">专题</a>
+             	<a href="/help.act">帮助中心</a>
+             	<a href="/about.act">关于点赞</a>
+             	
+         	</div>
+         	<a class="border_color6 launch blue_color" href="/user/activity/toCreate.act"><img src="/new/images/addto.svg">发起项目</a>
+         	
+         	
+     	</div>
+  	</div>
+  	
+  	
+  	<!--weixinshare start  -->
+<div class="wechatbg"></div>
+  <div class="wechatpop">
+     <a class="wechatclose"></a>
+     <h2>分享到微信朋友圈</h2>
+     <div id="qrdiv"></div>
+     <p>打开微信，点击底部的“发现”，使用“扫一扫”即可将网页分享到我的朋友圈</p>
+  </div>
+
+<!--weixinshare end  -->
+  	
+  	
+  	<div class="header_tittle black_color8">
+       	<em><a  class="black_color9" href="/index.act">首页</a></em>
+  	</div>
+</header>
+
+<style>
+.userprofileinfo{ position: fixed; top:0; left:0; z-index: 99999;height:0px;width:0px;}
+</style>
+<iframe class="userprofileinfo" id="userActivityIframe"></iframe>
+<iframe src="/refreshIframe.act" style="width:0px;height:0px;" frameborder="0"></iframe>
+<script src="/script/qrcode.js"></script>
+<script src="/new/js/jquery.base64.js"></script>
+<script>
+$(window).load(function() {
+	var left_height = $(".main_left").height();
+	var right_height = $(".main_right").height();
+	 if(left_height > right_height){
+		 $(".main_center").css("min-height",left_height + "px") 
+	 }
+	 else{
+		 $(".main_center").css("min-height",right_height + "px") 
+	 }	 
+});
+
+var url = window.location.pathname;
+$(function(){
+	$(".ullist a").each(function(){
+	var a = $(this).attr('href');
+		if(url==a){
+			 $(this).addClass("border_color10");
+			 return;
+		}
+	})
+});
+
+var myActLoad=0;
+
+$("#pop_personal").click(function(){
+	showUserPersonal("");
+});
+
+function showUserPersonal(userId){
+	var iframeWidth = $(window).width();
+	var iframeHeight = $(window).height();
+	
+	$("#userActivityIframe").show();
+	$("#userActivityIframe").attr("src", "/loginUserInfo/" + userId + ".act");
+
+	$(".userprofileinfo").css("width", iframeWidth);
+	$(".userprofileinfo").css("height", iframeHeight);
+}
+
+$("#xiangmu").mouseover(function(){
+	if(0==myActLoad++){
+    	$(".choice_right").load("/user/activity/getMyact.act",
+    			function(response,status,xhr){
+    		if(xhr.status=="403"){//未登录
+    			var returnUrl=window.location.href;
+    			var en=$.base64.encode(returnUrl);
+    			window.location.href="/login.act?returnUrl="+en;
+    		}
+		}); 
+	}
+	$(".personal_center").show();
+});
+$("#xiangmu").mouseout(function(){
+	 $(".personal_center").hide();
+});
+
+function gosubmit(){
+	var searchname = document.getElementById("globalSearchName").value.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+	searchname = encodeURI(searchname);
+	if(searchname != ""){
+		document.location.href = "/discover/search.act?globalSearchName=" + searchname;
+	}
+}
+
+var isgot = 0;
+function clickwechat(a){
+	if(isgot==0){
+		 var qrcode = new QRCode(document.getElementById("qrdiv"), {
+		       width : 172,//设置宽高
+		       height : 172
+		   }); 
+	 qrcode.makeCode(a);
+	 isgot=1;
+ }
+	 
+  $(".wechatbg").fadeIn();
+  $(".wechatpop").fadeIn();
+}
+$(".wechatclose").click(function(){
+	 $(".wechatbg").fadeOut();
+	 $(".wechatpop").fadeOut();
+});
+
+function sinashare(url){
+	var iWidth=600;
+	var iHeight=400;
+	var iTop = (window.screen.availHeight-30-iHeight)/2;
+	var iLeft = (window.screen.availWidth-10-iWidth)/2;
+	if(url == ""){
+		url = "http://dianzan.it/index.act?i=&t=0";
+	}
+    title = "刚刚点赞了我们的活动，点赞网让我对活动的支持态度转变为了赞助费！:)你也快来参与吧";
+    window.open("http://service.weibo.com/share/share.php?title="+title+"&url="+encodeURIComponent(url)+"&pic=&searchPic=false&style=simple","","height="+iHeight+", width="+iWidth+", top="+iTop+", left="+iLeft); 
+}
+
+//腾讯微博
+function zomeshare(url){
+	var iWidth=600;
+	var iHeight=400;
+	var iTop = (window.screen.availHeight-30-iHeight)/2;
+	var iLeft = (window.screen.availWidth-10-iWidth)/2;
+	if(url == ""){
+    	url = "http://dianzan.it/index.act?i=&t=0";
+	}
+ 	title = "刚刚点赞了我们的活动，点赞网让我对活动的支持态度转变为了赞助费！:)你也快来参与吧";
+    window.open('http://v.t.qq.com/share/share.php?url='+encodeURIComponent(url)+'&title='+encodeURI(title)+'&appkey=',"","height="+iHeight+", width="+iWidth+", top="+iTop+", left="+iLeft);
+}
+
+//qq空间
+function sharetoqqzone(url){
+	var iWidth=600;
+    var iHeight=400;
+    var iTop = (window.screen.availHeight-30-iHeight)/2;
+    var iLeft = (window.screen.availWidth-10-iWidth)/2;
+    if(url == ""){
+    	url = "http://dianzan.it/index.act?i=&t=0";
+    }
+    title = "刚刚点赞了我们的活动，点赞网让我对活动的支持态度转变为了赞助费！:)你也快来参与吧";
+    var shareqqzonestring = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary='+title+'&url='+encodeURIComponent(url);
+    window.open(shareqqzonestring,'',"height="+iHeight+", width="+iWidth+", top="+iTop+", left="+iLeft);
+}
+</script>
+
+<div class="details">
+   <div class="details_tittle">
+       <h2>钟扬</h2>
+       <p class="black_color9">由<span class="blue_color_blue_1">北京市 </span>
+       的<span class="blue_color_blue_1">15710026718</span>发起</p>
+   </div>
+   <div class="details_content">
+       <div class="details_introduce">
+            <div class="details_img">   
+            	<div class="imgVedio">    
+					 <div class="img_measure"  id="play_img"><img class="first_figure" src="http://cdn.dianzan.it/upload/activity/2015/08/1440569098679_59.jpg" /></div>
+					 <div class="vedio_bg"></div>  	
+					
+				</div>
+                 <p class="tittlelabel black_color1">
+                      <em class="black_color9"><img src="/new/images/address.svg">上海市杨浦区 </em>
+                     <em><img src="/new/images/category.svg">
+							<span class="black_color9">教师</span>
+                     </em>
+                 </p>
+                 <p class="describe black_color8">钟扬，复旦大学研究生院院长、生命科学学院教授，教育部“长江学者奖励计划”特聘教授，中组部第六批、第七批援藏干部，全国先进工作者、援藏先进个人。从事植物学、生物信息学研究和教学工作近30年，1994年获国务院特殊津贴，2001年、2007年两次获教育部自然科学一等奖。“我是学生物的，生物讲究群体效应。就拿高原生态学这个领域来说，再用10年，培养10名博士生，聚集起20个人，肯定能做出有世界影响的成果。”</p>
+                 <div class="shareinfo black_color8">分享到
+                   <a class="border_radius3 black_color14 newP_reviseIfm" href="javascript:;" data-url="/activity/0b8d8a34e1631cca.act"><img style="top:9px;" src="/new/images/wechat_gray.svg">微信</a>
+                   <a class="border_radius3 black_color14" href="javascript:sinashare('http://dianzan.it/activity/0b8d8a34e1631cca.act');"><img style="top:5px;" src="/new/images/sina_gray.svg">新浪微博</a>
+                   <a class="border_radius3 black_color14" href="javascript:sharetoqqzone('http://dianzan.it/activity/0b8d8a34e1631cca.act');"><img style="top:7px;" src="/new/images/zone_gray.svg">QQ空间</a>
+                  
+                 </div>
+            </div>
+       </div>      
+       
+       <div class="details_present">
+                
+                <div class="raise box_shadow3">
+                   <div class="border_color1 record">
+                     <h2>已筹得 ￥<span  class="blue_color2" style="font-size: 24px; display: inline-block; margin-top:-7px; color:#FD5960">7</span></h2>
+                     <p class="cause black_color4">目标金额￥20,000</p>
+                     <p class="loadscale gray_bg2">
+                     <img style="width:0%" 
+                     src="/new/images/speed.jpg"></p>
+                     <p class="other black_color8"><em>0%</em>
+                     <em class="em1" style="margin-left:30px;">
+                    已结束
+					</em>
+					
+					<em class="em1">已有7人支持</em></p>
+                   </div>
+                   <div class="border_color1 letters">
+                   
+					
+                   		
+         				
+		         			<!--无回报  -->
+		         			
+		         			
+		         			<!--有回报  -->
+		         			
+		         				
+		         					
+		         					
+		         						<p>
+		                      				该项为公益类项目，须在2015年09月15日  23:55前，达到该类别最低￥1元的成功标准，
+											否则已支持的订单将由系统自动取消；订单取消后，您支付的金额将在1-7个工作日内日自动退还至您的付款账户中。
+		                      			</p>
+		         					
+		         				
+		         			
+         				
+         			
+         			
+                    	<button class="blue_sub2 blue_sub20" style="cursor:pointer">马上支持</button>	
+                   </div>
+                   <div class="column">
+                        <div class="newP_reviseIfm follow  black_color14" style="float:right;cursor: pointer;" data-url="/activity/0b8d8a34e1631cca.act"><img src="/new/images/share.svg"/>&nbsp;分享</div>
+                      <div class="followedColumn">
+	                      
+
+
+	
+		<div class="follow black_color14"
+			id="followact" style="overflow: visible;">
+			<em class="concerned" style="cursor:pointer"><img
+				class="followimg" src="/new/images/follow.svg">关注</em>
+		</div>
+	
+	
+
+<script>
+$("#followact em:first-child").click(function(){
+	if(!checkLogin("")){return;}//登录检测
+	$.post("/user/followed.act",{followed:1,id:"5276",type:1},function(data){
+		$("div .followedColumn").html(data);
+	});
+});
+$("#unfollowact em:first-child").click(function(){
+	if(!checkLogin("")){return;}//登录检测
+	
+	$.post("/user/followed.act",{followed:0,id:"5276",type:1},function(data){
+		$("div .followedColumn").html(data);
+	});
+});
+</script>
+                      </div>
+                       <div style="clear:both;"></div>
+                   </div>
+                </div>
+                   
+                 
+               <!-- 投票 -->
+                
+                
+                
+
+<script src="/new/js/jquery-browser.js"></script>
+<script src="/new/js/qrcode.js"></script>
+<script src="/script/share.js"></script>
+<div class="invoice_box_wx share_wx">
+	<div class="invoice_money">
+		<div class="share_trans activityQrcode"></div>
+		<p class="share_transFont">扫码分享到微信</p>
+		<div class="link_url">
+			<span class="link_tex">项目地址</span>
+			<input class="share_url activityUrl border_radius4" />
+			<span class="copy_btn border_radius4" data-clipboard-text="">复制链接</span>
+		</div>			
+	</div>
+	<div class="invoice_cr">
+		<div class="share_more">
+			<p>更多分享</p>
+			<a class="sina"></a>
+		    <a class="qqzone"></a> 
+		   <!--  <a class="qqweibo"></a> -->
+<!-- 	     	<a class="douban" href="javascript:;"></a> -->
+<!-- 			<a class="facebook" href="javascript:;"></a> -->
+<!-- 			<a class="twitter" href="javascript:;"></a> -->
+		</div>
+		<button class="invoice_close write_sub">取消</button>
+	</div>
+</div>
+<script type="text/javascript" src="/new/js/clipboard.min.js"></script>
+<script>
+//微信分享 弹出层
+$(function() {
+	
+	var clip = new Clipboard('.copy_btn');
+    clip.on('success', function(e) {
+        alert('项目链接已经复制到剪贴板');
+    });
+	
+	var win = $(window).height();
+	$(".newP_reviseIfm").click(
+		function() {
+			$(".invoice_bank").hide();
+			$(".invoice_box_wx").addClass("am-modal-active");
+		
+			if ($(".sharebg").length > 0) {
+				$(".sharebg").addClass("sharebg-active");
+				$("body").height(win).css("overflow", "hidden");
+			} else {
+				$("body").height(win).css("overflow", "hidden");
+				$("body").append('<div class="sharebg"></div>');
+				$(".sharebg").addClass("sharebg-active");
+			}
+			$(".sharebg-active,.invoice_close").click(function() {
+				$("body").height("").css("overflow", "");
+				$(".invoice_box_wx").removeClass("am-modal-active");
+				
+				setTimeout(function() {
+					$(".sharebg-active").removeClass("sharebg-active");
+					$(".sharebg").remove();
+				}, 300);
+			})
+			var actUrl = "http://www.dianzan.it" + $(this).data("url");
+			$(".activityUrl").val("" + actUrl);
+			$(".sina").attr("href",
+					'javascript:sinashare("' + actUrl + '");');
+			$(".qqzone").attr("href",
+					'javascript:sharetoqqzone("' + actUrl + '");');
+			$(".qqweibo").attr("href",
+					'javascript:zomeshare("' + actUrl + '");');
+			$(".activityQrcode").empty();
+			$(".activityQrcode").qrcode({
+				text : actUrl,
+				height : 130,
+				width : 130,
+				src : "/new/images/qrcode.png"
+			});
+			
+			$(".copy_btn").attr("data-clipboard-text",actUrl);
+		});
+});
+</script>
+       
+                <div class="promoter cl">
+                    <div class="promoter_left">
+                        <h5>15710026718</h5>
+                        <p style="margin-top:5px;"><img src="/new/images/promoter.svg"><em class="black_color14">已发起20次项目</em><em class="black_color14">|</em><em class="black_color14">支持过别人2次 </em></p>  
+                       	
+                          		
+                          		
+                          		
+                          		
+                          	
+                    </div>
+                    <div>
+	                    <img class="promoter_rightimg" style="cursor:pointer" src="http://cdn.dianzan.it/upload/avatar/2015/08/1438571477988_47.jpg" id="createoratar">
+	                </div>
+	                
+	                <div class="assn_iden_box">
+                    </div>
+       			</div>
+   </div>
+ </div>
+<div style="clear:both"></div>  
+</div>  
+   
+<div class="details_region border_color9">
+      <ul>
+         <li><a class="border_color7" id="pro_desc">项目介绍</a></li>
+    	
+         <li><a id="actupdatebt">项目进度</a></li>
+         <li><a id="commentbt">赞友留言</a></li>
+         <li><a id="historybt" name="historybt">支持历史</a></li>
+      </ul>
+</div>
+
+<div class="project_bgcolor">
+<div class="project_details cl">
+	
+	
+    <div class="introduction cl">
+        
+       	&nbsp;
+    </div>
+    
+     
+    
+    
+	
+    
+    
+	<div class="activtiy_update">
+		&nbsp;
+	</div>
+	
+	
+	
+	<div class="dynamic_update">
+		&nbsp;
+	</div>
+	
+	
+	
+	<div class="support_list">
+		&nbsp;
+	</div>
+	
+  
+ 
+ 
+
+
+
+
+<script>
+var ua = navigator.userAgent;
+var k = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+var m = false;
+for (var v = 0; v < k.length; v++) {
+	if (ua.indexOf(k[v]) > 0) { m = true; break; }
+}
+var c = window.location.href;
+if(m){
+	if(c.indexOf("www")>0){
+		document.location.href=c.replace("www", "m");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/m.dia");
+	}
+}else{
+	if(c.indexOf("/m.dia")>0){
+		document.location.href=c.replace("m.dia", "www.dia");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/www.dia");
+	}
+}
+</script>
+
+
+    <div class="sponsor">
+	
+
+         <div class="box_shadow3">
+            <h5 class="black_color14">无需出资，也能帮助项目<em class="black_color15">7人已支持</em></h5>
+           <!--  <img class="sponsor_img" src="/new/images/login03.jpg"> -->
+            <div class="sponsor_padd"><img class="sponsor_img" src="http://cdn.dianzan.it/upload/fund/2016/12/1480924725237_7.png"></div>
+            <p class="black_color17">本次点赞由<a class="black_color16" href="http://dianzan.it">点赞基金 - 社会责任基金</a>为您出资</p>
+<!--             <p class="black_color14">选择您希望基金方提供的金额</p> -->
+<!--             <p class="black_color18">不同的金额所对应的广告时长不同</p> -->
+			<div class="merchant"><img src="http://cdn.dianzan.it/upload/fund/2016/12/1480924725237_7.png"></div>
+            <h4 class="merchant_name">点赞基金 - 社会责任基金</h4>
+            <span class="merchant_bottom"></span>
+            <p class="merchant_text">让态度有价值，为梦想众筹！</p>
+             <!--  <h4 class="merchant_money blue_color_blue_1">￥<span>100</span></h4> -->
+            <p class="ponding" style="margin-top:30px;">
+            	
+            		<a class="border_color15 border_color6" id="20" data-price="1.0" style="border: 1px solid #F3EAEB!important;margin: 0;margin-top: 0px;font-size: 14px;text-align: center;color: #42C7F9;"> ￥
+            		<span>1.00</span>
+            		<input type="hidden" name="videourl" value="http://218.92.225.216/xdispatch/7xnn0y.com1.z0.glb.clouddn.com/diazanvideo20161212.mp4 "/>
+            		</a>
+            	
+            </p>
+            <p style="margin-top:10px; margin-bottom:5px;"><button class="gray_bg40 white_color g_video" style="cursor:pointer">免费点赞支持</button></p>
+         </div>
+     	
+        
+         	
+         		 <div class="sustain border_radius1" awardid="237">
+                   <h4 class="green_color"> ￥298.00</h4>
+                   <p class="fashion border_color3">
+                       <em class="fashion_left black_color8"></em><em class="fashion_right black_color15">
+                       		
+                       		
+                       			
+                       				暂无人支持
+                       			
+                       			
+                       		
+                       		
+                       			/限10000人
+                       		
+                       </em>
+                   </p>
+                   <ul class="black_color14">
+                   	55度杯是LKK洛可可创新设计集团自行研发、设计、生产的一款快速变温水杯。与普通保温水杯不同，55度杯采用特殊工艺，利用物理降温原理，可以将所有高于55度的液体冷却，也能把低于55度的冷水加热。让老师能感受到我们的温度，让爱的人能感受我们的温度，让身边所有的陌生人能感受到我们的温度，让整个世界更有温度，更有爱！
+                   </ul>
+                   <p class="distribu black_color14">
+                   	
+                   	
+                   		配送费用：无
+                   	
+                   	
+                   		
+                   </p>
+                   <p class="black_color14">预定回报时间：
+                   	项目结束后天内发送</p>
+         		</div>
+         		
+         	
+         		 <div class="sustain border_radius1" awardid="268">
+                   <h4 class="green_color"> ￥39.00</h4>
+                   <p class="fashion border_color3">
+                       <em class="fashion_left black_color8"></em><em class="fashion_right black_color15">
+                       		
+                       		
+                       			
+                       				暂无人支持
+                       			
+                       			
+                       		
+                       		
+                       			/限10000人
+                       		
+                       </em>
+                   </p>
+                   <ul class="black_color14">
+                   	现在的中国，存在很多像卡丘空间那样的一团团乱麻，各种社会问题彼此纠缠。但庆幸的是，我们正在试图一点点地解锁，正在向着正确的方向一点点地迈进。众多问题中，有一个维度影响深远，严重制约着中国的进一步发展，这就是道德。不过，道德问题已在一定程度上具备了解锁条件，我们甚至期待由此能产生一系列连锁反应。
+                   </ul>
+                   <p class="distribu black_color14">
+                   	
+                   	
+                   		配送费用：无
+                   	
+                   	
+                   		
+                   </p>
+                   <p class="black_color14">预定回报时间：
+                   	项目结束后天内发送</p>
+         		</div>
+         		
+         	
+          
+         
+		
+         <div class="accusation_cont">
+             <img src="/new/images/hine01.png">
+                                       举报
+         </div>
+        <!--  <P class="policy">该活动有虚假、欺骗等行为或已违反国家相关政策</P> -->
+         
+<!--          <img class="advertisement_img border_radius4" src="/new/images/advertising.jpg"> -->
+         
+     </div>
+     <!--  -->
+
+<div class="details_bg"></div>
+<div class="has_submitted border_radius4">举报已提交</div>
+<form id="prosecuteForm" action="/user/activity/prosecute.act" method="post">
+	<div class="report_eject border_radius4 report_ejectadd">
+	  <img class="close_eject" src="/new/images/close_pop.png">
+	  
+	  <div class="report_option">
+	           <ul>
+	             <li class="leftopt1"><input type="radio" name="contentid" id="report_1" value="1"><label for="report_1"><img src="/new/images/unchecked.svg">色情、淫秽或低俗内容</label></li>
+	             <li><input type="radio" name="contentid" id="report_2" value="2"><label for="report_2"><img src="/new/images/unchecked.svg">广告或者垃圾信息</label></li>
+	             <li class="leftopt1"><input type="radio" name="contentid" id="report_3" value="3"><label for="report_3"><img src="/new/images/unchecked.svg">激进时政或意识形态话题内容</label></li>
+	             <li><input type="radio" name="contentid" id="report_4" checked="checked" value="4"><label for="report_4"><img src="/new/images/onchecked.svg">其他问题</label></li>
+	           </ul>
+	  </div>
+	  <div class="report_textarea">
+	      <textarea maxlength="30" id="contents"  name="contents"></textarea>
+	      <em><a>30</a>/30</em>
+	  </div>
+	  <div class="determine_yes">
+	     <a class="white_color green_bg">确定</a>
+	  </div>
+	
+	</div>
+	<input type="hidden" name="activityid" value="5276">
+</form>
+
+<div class="details_video" id="a1">
+   <video id="myvideo" name="media"  src=""></video>
+ <a class="close_video"><img src="/new/images/video_close.png"></a>
+ <p class="close_tittle white_color"><img src="/new/images/play_go.png">已观看<em class="time_shu">0</em>秒</p>
+  <div class="finish_video">
+     <h5 class="gray_bg3 border_color3">感谢您对项目的支持！</h5>
+     <div class="finish_main gray_bg4">
+         <h6>您本次的支持额是</h6>
+         <p id="supportam">￥5.00</p>
+     </div>
+     <div class="finish_prompt">
+        <button class="finish_left write_sub">我不喜欢这个广告内容</button>
+        <button class="finish_right write_sub">3秒后返回项目详情</button>
+     </div>
+     <p class="text_prompt border_color25 green_color">了解更详细的点赞规则</p>
+  </div>
+  <div class="finish_pause">
+     <h5 class="gray_bg3 border_color3">提示</h5>
+     <div class="finish_main gray_bg4">
+         <p>该广告是点赞基金的出资方，如果您中途退出，系统则视为本次支持失败，资金将无法进入发起方的账户中。</p>
+     </div>
+     <div class="finish_prompt">
+        <button class="finish_left2 write_sub">我不喜欢这个广告内容</button>
+        <button class="finish_right2 write_sub">继续观看，支持该项目</button>
+     </div>
+     <p class="text_prompt border_color25 green_color">了解更详细的点赞规则</p>
+  </div>
+  
+  <div class="play_progress">
+      <em class="play_ratio"></em>
+  </div>
+</div>
+
+<script>
+var textNum = 30;
+var pattern = textNum;
+$(".report_textarea em a").html(pattern);
+    $(".report_textarea textarea").keyup(function(){
+	  var textmain = $(this).val().length;
+	    if(textmain<=30){
+	    	$(".report_textarea em a").html(textNum-textmain);
+	}   
+}); 
+
+$(".accusation_cont").click(function(){
+	
+	if("" == ""){//未登录跳转
+ 		var returnUrl=window.location.href;
+		var en=$.base64.encode(returnUrl);
+		window.location.href="/login.act?returnUrl="+en;
+		 return;
+	 }
+	
+	$(".details_bg").fadeIn();
+	$(".report_eject").slideDown();
+	$(".report_option ul li label").find("img").attr("src","/new/images/unchecked.svg");
+	$(".report_option ul li").eq("3").find("img").attr("src","/new/images/onchecked.svg");
+	$(".report_option ul li").eq("3").find("input").prop("checked","checked");
+})
+
+$(".report_option ul li label").each(function(e){
+  $(this).click(function(){
+	$(".report_option ul li label").find("img").attr("src","/new/images/unchecked.svg");
+	$(this).find("img").attr("src","/new/images/onchecked.svg");
+	$(".report_eject").removeClass("report_ejectadd");
+	$(".report_textarea").hide();
+	if(e==3){
+		$(".report_eject").addClass("report_ejectadd");	
+		$(".report_textarea").fadeIn();
+	}
+	
+  })	
+})
+
+$(".determine_yes a").click(function(){
+	var val=$('input:radio[name="contentid"]:checked').val();
+	var cont = $("#contents").val();
+	if (val == "4" && cont ==""){
+		alert("请填写举报原因");
+		return;
+	}
+	
+	$.post("/user/activity/prosecute.act",$("#prosecuteForm").serialize(), function(a){
+		if(a == "0000"){
+			$(".report_eject").hide();
+			$(".has_submitted").fadeIn();
+			setTimeout(function(){
+				$(".details_bg").fadeOut();
+				$(".has_submitted").fadeOut();
+			}, 1000);
+			
+		}else if(a == "0001"){
+			alert("您已举报过该活动!");
+			$(".report_eject").hide();
+			$(".details_bg").hide();
+			return;
+		}else{
+			var returnUrl=window.location.href;
+			var en=$.base64.encode(returnUrl);
+			window.location.href="/login.act?returnUrl="+en;
+			return;
+		}
+	});
+	
+})
+
+$(".close_eject").click(function(){
+	$(".details_bg").fadeOut();
+	$(".report_eject").slideUp();
+})
+
+
+var supportamount=0;
+var targetdisplay=Number("20000.0");
+var hasGet=Number("7.0");
+var video1=document.getElementById("myvideo");
+$(function(){
+	if(showAwardtype == "0"){
+		$(".border_radius1").hide();
+		$(".accusation_cont").hide();
+	}
+});
+$(".g_video").click(function(){
+	
+	if(status == "4"){//审核通过，未上线
+	   	 layer.open({
+				    content: "当前不在资金筹备期，去看看其他活动吧",
+				    btn: '我知道了'
+				  });
+	   	 return;
+	   }
+	
+	/*  if($(".ponding .border_color6").length==0){
+			alert("请选择点赞金额");
+			return;
+	 } */
+
+	//判断项目超筹
+	var isMore='true';
+	if(isMore=='false'){
+		//当前选中金额是否超出
+		supportamount=Number($(".ponding .border_color6").data("price"));
+		var s=hasGet+supportamount;
+		if(s>targetdisplay){
+			alert("当前项目不允许超筹,请选择其他金额");
+			return;
+		}
+	}
+	 if("" == ""){//未登录跳转
+ 		var returnUrl=window.location.href;
+		var en=$.base64.encode(returnUrl);
+		window.location.href="/login.act?returnUrl="+en;
+		 return;
+	 }
+	 
+	 if("" == "294927"){
+		 alert("不能为自己的项目点赞");
+		 return;
+	 }
+	 
+	
+	
+	$.post("/user/getPraiseStatus.act", {id:"5276"}, function(a){
+		if(a=='0'){
+			//可以点赞
+			$("#myvideo").attr('src', $(".border_color6 input[name='videourl']").val());
+			video1.play();
+			$(".details_bg").fadeIn();
+			$(".details_video").fadeIn();
+			
+			$("body").css("overflow","hidden")
+		    
+			var video_width = $("#myvideo").width();
+			var win_width = $("body").width();
+			
+			$("#myvideo").css("margin-left",(win_width -video_width)/2 + "px");
+			
+			var video=document.getElementById("myvideo");//获取video对象
+			video.controls=false;//设置控制条不显示
+
+			var aud = document.getElementById("myvideo");
+			aud.onended = function() {
+				supportamount=$(".ponding .border_color6").text();
+				$("#supportam").html(supportamount);
+				$.post("/user/praise.act",{id:5276,praiseId:$(".ponding .border_color6").attr("id")},function(d){
+						
+				})
+				$(".finish_pause").slideUp();
+			    $(".finish_video").slideDown(function(){
+				   var time=3;
+				   var interval = setInterval(function(){
+					   time--;
+					   $(".finish_right").html(time+"秒后返回项目详情");
+					   if(time==0){
+						   clearInterval(interval);
+						   window.location.href="/activity/5276.act";
+					   }
+				   },1000);
+			   });			
+			   };
+			
+			video.ontimeupdate = function () { 
+				var vTime = video.currentTime; 
+				var vTime1 = video.duration; 
+				$(".time_shu").html(vTime.toFixed(2));
+				$(".play_ratio").css("width",vTime/vTime1*win_width + "px")
+			};
+		
+		}else{
+			if(a=='1'){
+				$(".preparation_bg").slideDown();
+				$(".details_preparation").slideDown();
+				return;
+			}else if(a=='2'){
+				alert("为此活动已点过赞了，去看看别的吧！");
+				return;
+			}else if(a=='3'){
+				alert("您的点赞已用完，请明天再来！");
+				return;
+			}else if(a=='4'){
+				alert("点赞已达限额，请选择其他活动。");
+				return;
+			}else if(a=='5'){
+				alert("您当前为团队帐户，无法点赞，请切换回普通注册用户再参与，谢谢。");
+				return;
+			}else if(a=='6'){
+				alert("您的操作频率过快， 请稍后再试，谢谢。");
+				return;
+			}else if(a=='7'){
+				alert("点赞失败， 请稍后再试，谢谢。");
+				return;
+			} else if(a=='8'){
+				//alert("点赞失败， 您当前未绑定手机号，请前往个人中心进行绑定");
+				  if (confirm("点赞失败， 您当前未绑定手机号，前往个人中心进行绑定")){
+				    	window.location.href="/user/pwd/toFindPassword.act";
+				    } else{
+				    	alert("您已取消本次点赞！")
+				    }
+				return;
+			}else if(a == "30"){
+				alert("点赞失败， 请稍后再试，谢谢。");
+				return;
+			}
+		}
+	}); 
+	
+	
+	
+	
+
+})
+
+	// video1.pause;
+	$(".close_video").click(function(){
+		
+		if($(".finish_video").css("display") == "none"){
+			video1.pause();
+			$(".close_tittle").find("img").attr("src","/new/images/play_no.png");
+			$(".finish_pause").slideDown();
+		}
+		
+	})
+$(".finish_left").click(function(){
+	 $(".finish_video").hide();
+	 $(".details_bg").hide();
+	 $(".details_video").hide();
+	 $("body").css("overflow","")
+	setTimeout(function(){
+		  window.location.href="/activity/5276.act";
+	 },2000)
+})
+$(".finish_right").click(function(){
+	 window.location.href="/activity/5276.act";
+})
+$(".finish_left2").click(function(){
+	 video1.pause();
+	 $(".finish_video").hide();
+	 $(".details_bg").hide();
+	 $(".details_video").hide();
+	 $(".finish_pause").hide();
+	 $("body").css("overflow","") 
+	 $(".close_tittle").find("img").attr("src","/new/images/play_go.png");
+})
+$(".finish_right2").click(function(){
+	 video1.play();
+     $(".finish_pause").fadeOut();
+     $(".close_tittle").find("img").attr("src","/new/images/play_go.png");
+})
+
+
+
+window.onresize = function(){  
+	var video_width = $("#myvideo").width();
+	var win_width = $("body").width();
+    
+	$("#myvideo").css("margin-left",(win_width -video_width)/2 + "px")
+	$(".details_video").find(".close_video").css("right",(win_width -video_width)/2 + "px")
+	$(".details_video").find(".close_tittle").css("right",(win_width -video_width)/2 + "px")
+ } 
+
+$(".ponding a").click(function(){
+	$(".ponding a").removeClass("border_color6");
+	$(this).addClass("border_color6");
+})
+$(".sustain").mouseover(function(){
+	$(this).addClass("border_radius2");
+	$(this).removeClass("border_radius1");
+})
+$(".sustain").mouseout(function(){
+	$(this).addClass("border_radius1");
+	$(this).removeClass("border_radius2");
+})
+
+$(".sustain").click(function(){
+	var now=new Date().getTime();
+	if(startpraisedt<now && now<endpraisedt && status==6){
+		/* if("" == ""){//未登录跳转
+			var returnUrl=window.location.pathname;
+			var en=$.base64.encode(returnUrl);
+			window.location.href="/login.act?returnUrl="+en; 
+			 return;
+		 } */
+		//window.location.href="/payback/supportway.act?type="+'1'+"&id="+'5276';
+		window.location.href="/payback/supportway.act?type="+'1'+"&id="+'5276'+"&awardid="+$(this).attr("awardid");
+	}else{
+		$(".preparation_bg").slideDown();
+		$(".details_preparation").slideDown();
+		return;
+	}
+});
+
+
+
+
+</script>
+ 
+
+<div id="scrollTop"> 回到顶部</div>
+<script type="text/javascript">
+	function myEvent(obj,ev,fn){
+		if(obj.attachEvent){
+			obj.attachEvent('on'+ev,fn);
+		}else{
+			obj.addEventListener(ev,fn,false);
+		}
+	}
+	myEvent(window,'load',function(){
+		var oscrollTop=document.getElementById('scrollTop');
+		var pH=document.documentElement.clientHeight;
+		var timer=null;
+		var scrollTop;
+		window.onscroll=function(){
+			scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			if(scrollTop>=pH){
+				oscrollTop.style.display='block';
+			}else{
+				oscrollTop.style.display='none';
+			}
+			return scrollTop;
+		};
+		oscrollTop.onclick=function(){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var now=scrollTop;
+				var speed=(0-now)/10;
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				if(scrollTop==0){
+					clearInterval(timer);
+				}
+				document.documentElement.scrollTop=scrollTop+speed;
+				document.body.scrollTop=scrollTop+speed;
+			}, 30);
+		}
+	});
+</script>
+ </div>   
+</div>    
+        
+<div style="clear:both"></div> 
+
+
+<footer class="footer gray_bg4 border_color19">
+
+<div class="map">
+ <div class="map_content">
+
+
+    <div class="show_images"><img src="/new/images/show_girl.png"></div>
+    <div class="item">
+    <div class="online_service">
+          <p class="red">400-772-1955</p>
+          <p>(周一至周五  9:30-18:00)</p>
+    </div>
+        <dl> 
+          <dt>公司</dt>
+           <dd><a href="/about.act?pageNum=1">关于我们</a></dd>
+           <dd><a href="/about.act?pageNum=2">我们的团队</a></dd>
+           <dd><a href="/about.act?pageNum=3">联系我们</a></dd>
+       </dl>
+   </div>
+
+  <div class="item">
+    <dl> 
+        <dt>特色</dt>
+         <dd><a class="showIframe">点赞APP</a></dd>
+   </dl>
+ </div>
+ 
+ <div class="item">
+   <dl> 
+      <dt>帮助中心</dt>
+        <dd><a target="_blank" href="http://help.dianzan.it/one/category/%E8%AE%A9%E6%80%81%E5%BA%A6%E6%9C%89%E4%BB%B7%E5%80%BC">Hello，点赞!</a></dd>
+        <dd><a target="_blank" href="http://help.dianzan.it/two/category/%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81">筹款流程和注意事项</a></dd>
+        <dd><a target="_blank" href="http://help.dianzan.it/three/category/%E7%B3%BB%E7%BB%9F%E7%99%BB%E5%BD%95">疑难杂症</a></dd>
+   </dl>
+ </div>
+ <div class="item last_item">
+   <dl> 
+      <dt>关注</dt>
+        <dd><a class="showIframe_wx">点赞@微信</a></dd>
+        <dd><a target="_blank" href="http://www.weibo.com/likefund">点赞@微博</a></dd>
+<!--         <dd><a href="">点赞@Facebook</a></dd> -->
+  </dl>
+</div>
+</div>
+</div>
+
+<div class="nav">
+
+</div>
+
+<div class="link">
+	<dl>
+		<dt>友情链接</dt>
+		<dd><a href="http://www.douban.com" target="_blank">豆瓣</a></dd>
+		<dd><a href="http://www.mafengwo.cn" target="_blank">蚂蜂窝</a></dd>
+		<dd><a href="http://www.chinaz.com" target="_blank">站长之家</a></dd>
+		<dd><a href="http://www.youth.cn" target="_blank">中国青年网</a></dd>
+	</dl>
+</div>
+
+<div class="icp">
+<span>Copyright © dianzan.it 2017 All Rights Reserved</span><span>沪ICP备 14013568号</span><span>骆明信息科技发展(上海)有限公司</span><span><a  key ="592282ebefbfb024dc2acf1d"  logo_size="83x30"  logo_type="business"  href="http://www.anquan.org" ><script src="//static.anquan.org/static/outer/js/aq_auth.js"></script></a><a  key ="592282ebefbfb024dc2acf1d"  logo_size="83x30"  logo_type="common"  href="http://www.anquan.org" ><script src="//static.anquan.org/static/outer/js/aq_auth.js"></script></a></span>
+</div>
+
+
+
+
+</footer>
+
+<iframe src="" class="iframeBOX appIf"></iframe>
+<iframe src="" class="iframeBOX wxIf"></iframe>
+
+<script type="text/javascript">
+function checkLogin(user){
+	if(user == ""){//未登录跳转
+		var returnUrl=window.location.href;
+		var en=$.base64.encode(returnUrl);
+		window.location.href="/login.act?returnUrl="+en;
+		 return false;
+	 }
+	return true;
+}
+
+function checkMobileBind(mobile){
+	if(mobile=="10000000000"
+		||mobile=="20000000000"
+		||mobile=="30000000000"
+		||mobile=="40000000000"
+		||mobile=="50000000000"
+		||mobile==""){
+		if(confirm("请前往个人中心绑定手机号")){
+			window.location.href="/user/pwd/toFindPassword.act";
+		}
+		return false;
+	}else{
+		return true;
+	}
+}
+
+// $(".show_images").click(function(){
+// 	$(".show_bgcolor").slideDown();
+// 	$(".show_bgimages").slideDown();
+// });
+
+// $(".show_bgcolor").click(function(){
+// 	$(".show_bgcolor").slideUp();
+// 	$(".show_bgimages").slideUp();
+// });
+
+// $(".close_showgirl").click(function(){
+// 	$(".show_bgcolor").slideUp();
+// 	$(".show_bgimages").slideUp();
+// });
+
+$(window).load(function() {
+	 $(".nav dl dd a").each(function(e){
+		 var textlength = $(this).text().length;
+		 if(textlength>21){
+	        $(this).css("width","185px")
+		 }
+	 });
+});
+
+$(function(){
+	$(".nav").load("/discover/includeCategory.act",{isFoot:1});
+});
+
+// function openDailog() {
+//    var Video = document.getElementById("video_mute");     
+//    Video.load();
+//    Video.play();
+//    Video.muted=true;
+//    $("video").attr("controls","controls")
+// }
+
+//点赞app and 微信关注
+$(function(){
+	$(".showIframe").click(function(){
+		$(".appIf").after("<div class='pop_bg'></div>");
+		$(".appIf").show();
+		
+		if($(".appIf").attr("src") == ""){
+			$(".appIf").attr("src", "/common/downloadApp.act");
+		}
+	});
+	
+	$(".showIframe_wx").click(function(){
+		$(".wxIf").after("<div class='pop_bg'></div>");
+		$(".wxIf").show();
+		
+		if($(".wxIf").attr("src") == ""){
+			$(".wxIf").attr("src", "/common/followWeChat.act");
+		}
+	});
+});
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c0a4b158d5e52eeb0baa7a99092f2ba2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71889030-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+	Tracker_cid = '20252';
+	Tracker_opts = {
+		land: [],
+		staytime: []
+	};
+</script>
+<script type="text/javascript" src="//pic.fancyapi.com/SDK/tracker.source_0.0.1-min.js"></script>
+
+
+<noscript><img src='/zh_CN/htmledition/images/transparent.png' lazysrc="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=igsEj1agtu00wJ" style="display:none" height="1" width="1" alt="" /></noscript>
+
+
+<div class="preparation_bg"></div>
+<div class="details_preparation border_radius4">
+    <img class="close_bombd" src="/new/images/close_bombd.svg">
+    <div class="preparation_icon"><img src="/new/images/no_preparation.svg"></div>
+    <p class="black_color8">当前不在资金筹备期，去看看其他活动吧</p>
+    <div class="details_determine"><button class="determine_bu blue_sub20 white_color">确定</button></div>
+</div>
+<script>
+var ua = navigator.userAgent;
+var k = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+var m = false;
+for (var v = 0; v < k.length; v++) {
+	if (ua.indexOf(k[v]) > 0) { m = true; break; }
+}
+var c = window.location.href;
+if(m){
+	if(c.indexOf("www")>0){
+		document.location.href=c.replace("www", "m");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/m.dia");
+	}
+}else{
+	if(c.indexOf("/m.dia")>0){
+		document.location.href=c.replace("m.dia", "www.dia");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/www.dia");
+	}
+}
+</script>
+
+
+
+
+
+<script>
+function comments(){
+	needlogin();
+}
+function reply(cmid){
+	needlogin();
+}
+function needlogin(){
+	//alert("请先登录才可操作。");
+	
+	//$(".al_cont").css("display","block");
+	if("" == ""){//未登录跳转
+ 		var returnUrl=window.location.href;
+		var en=$.base64.encode(returnUrl);
+		window.location.href="/login.act?returnUrl="+en;
+		 return;
+	 }
+	 
+	return;
+}
+function dotask(aid, id){
+	needlogin();
+}
+function doaward(id){
+	needlogin();
+}
+</script>
+
+
+<script>
+var activityId= '5276';
+var currentPage = 0;
+function toPage(i){
+	 currentPage = i;
+	$.get("/comments.act",{id:activityId,pageNo:i,nd:new Date()},function(a){
+		$("#commentsarea").html(a);
+        $(".comment_count").click(function (){
+        	var cmid = $(this).attr("id");
+        	disreply(cmid);
+        });
+        $(".comment_del").click(function (){
+        	var cmid = $(this).attr("id");
+        	if(confirm("确定删除此条评论吗？")){
+        		$.post("/user/removeComment.act",{id:cmid},function(text){
+        			if(text=="success"){
+        				alert("已删除评论信息。");
+        				location.reload();
+        			}
+        			if(text=="failure"){
+        				alert("删除失败，请稍后再试!");
+        			}
+        			if(text=="havereply"){
+        				alert("该评论下有回复，不可删除");
+        			}
+        		});
+        	}else{
+        		return false;
+        	}
+        });
+	});
+}
+
+function discomments(){
+	$.get("/comments.act",{id:'5276',pageNo:currentPage,nd:new Date()},function(a){
+		$("#commentsarea").html(a);
+		
+        $(".comment_count").click(function (){
+        	var cmid = $(this).attr("id");
+        	disreply(cmid);
+        });
+        
+        $(".comment_del").click(function (){
+        	var cmid = $(this).attr("id");
+        	if(confirm("确定删除此条评论吗？")){
+        		$.post("/user/removeComment.act",{id:cmid},function(text){
+        			if(text=="success"){
+        				alert("已删除评论信息。");
+        				location.reload();
+        			}
+        			if(text=="failure"){
+        				alert("删除失败，请稍后再试!");
+        			}
+        			if(text=="havereply"){
+        				alert("该评论下有回复，不可删除");
+        			}
+        		});
+        	}else{
+        		return false;
+        	}
+        });
+	});
+}
+function disreply(cmid){
+	$.get("/reply.act",{id:cmid,nd:new Date()},function(a){
+		$("#area_comment_count"+cmid+" .activitycommit_dl").remove();
+		$("#area_comment_count"+cmid).append(a);
+		$("#area_comment_count"+cmid).toggleClass("dn");
+	});
+}
+function shareit(id){
+	var iWidth=600;
+	var iHeight=400;
+	var iTop = (window.screen.availHeight-30-iHeight)/2;
+	var iLeft = (window.screen.availWidth-10-iWidth)/2; 
+	var activityName = escape('钟扬');
+	window.open("http://service.weibo.com/share/share.php?title=%23make%20good%20happen%23%20我刚刚通过点赞支持了'" + unescape(activityName) + "'的活动，希望大家都来支持&url=http://dianzan.it/activity/"+id+".act&pic=&searchPic=false&style=simple","","height="+iHeight+", width="+iWidth+", top="+iTop+", left="+iLeft);
+// 	window.open('http://service.weibo.com/share/share.php?title=%23make%20good%20happen%23%20我刚刚通过点赞支持了钟扬的活动，希望大家都来支持&url=http://dianzan.it/activity/'+id+'.act&pic=&searchPic=false&style=simple','','height='+iHeight+', width='+iWidth+', top='+iTop+', left='+iLeft);
+}
+function setActivityUpdateImg(path){
+	$("#upimg").val(path);
+}
+function checkContents(type, formid){
+	//状态
+	if(type == 1){
+	var contents = $.trim($("#contents_" + type).val());
+		if(contents == ""){
+			alert("请填写进展内容");
+			return;
+		}
+	}else if(type == 2){//图片
+		var upimg = $("#upimg").val();
+		if(!$("#upimg").val()){
+			alert("请上传图片");
+			return;
+		}
+	}else if(type == 4){
+		var contents = $.trim($("#contents_" + type).val());
+		var title = $.trim($("#title").val());
+		if(contents == "" || title == ""){
+			alert("请填写文章标题及内容");
+			return;
+		}
+	}
+		
+// 	$("#" + formid).submit();
+	var ajaxCallUrl="/user/activity/updateInfo.act";
+	$.ajax({
+        cache: true,
+        type: "POST",
+        url:ajaxCallUrl,
+        data:$("#" + formid).serialize(),
+        async: false,
+        error: function(request) {
+            alert("发布失败,请稍后再试!");
+        },
+        success: function(data) {
+            if (data=="0000") {
+            	if("2" == 58){
+            		alert("发布成功，请耐心等待审核。");
+            	}else{
+					alert("发布成功!");
+            	}
+				location.reload();
+			}else if(data=="0001"){
+				alert("出错啦！请检查您的操作，刷新操作页面后重试。");	
+			}else if(data=="0002"){
+				alert("出错啦！请检查输入是否正确。");	
+			}else {
+				alert("出错啦！请稍后再试。");
+			}
+        }
+    });
+}
+
+function shareVideo(formid,id){
+	if ($.trim($("#video").val())=="") {
+		alert("请选择需上传的视频!");
+		return;
+	}
+
+	$("#succ").css("display","block");
+	$("#referring").css("display","none")
+	
+	$.get("/user/activity/uploadVideo.act",{activityid:id,contents:$("#contents_3").val()},function(data){
+		var result=JSON.parse(data);
+		$("#token").val(result[0].token);
+		$("#key").val(result[0].customName);
+		$("#"+formid).submit();
+	});
+}
+
+function deleteComment(cmid){
+	if(confirm("确定删除此条评论吗？")){
+		$.post("/user/removeComment.act",{id:cmid},function(text){
+			if(text=="success"){
+				alert("已删除评论信息");
+				location.reload();
+			}else if(text=="havereply"){
+				alert("该评论下有回复，不可删除");
+				location.reload();
+			}else if(text=="failure"){
+				alert("删除失败，请稍后再试");
+			}
+		});
+	}else{
+		return false;
+	}
+}
+</script>
+<form id="doTaskForm" action="/user/task/dotask.act" method="post">
+	<input type="hidden" id="activityid" name="activityid" />
+	<input type="hidden" id="taskid" name="taskid" />
+	<input type="hidden" id="url" name="url" />
+</form>
+
+
+
+
+<script>
+var ua = navigator.userAgent;
+var k = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+var m = false;
+for (var v = 0; v < k.length; v++) {
+	if (ua.indexOf(k[v]) > 0) { m = true; break; }
+}
+var c = window.location.href;
+if(m){
+	if(c.indexOf("www")>0){
+		document.location.href=c.replace("www", "m");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/m.dia");
+	}
+}else{
+	if(c.indexOf("/m.dia")>0){
+		document.location.href=c.replace("m.dia", "www.dia");
+	}else if(c.indexOf("/dia")>0){
+		document.location.href=c.replace("/dia", "/www.dia");
+	}
+}
+</script>
+
+
+
+<script>
+function praise(){
+	needlogin();
+}
+function follow(){
+	needlogin();
+}
+</script>
+
+
+
+
+
+
+<!-- 弹出登陆框start -->
+<div class="al_cont"  style="display:none">
+		<div class="al_opacity"></div>
+		<div class="al_login">
+			<div class="al_tlt">
+				<span class="al_hide"></span>
+				<div class="al_logo"><em><img src="/images/logo70.png" /></em></div>
+			</div>
+			<div class="al_log">
+				<div class="error" id="errorTipsHead">
+					
+					
+					<!-- <img src="/images/al_05.png" /> -->
+				</div>
+				<div class="account" style="position: relative;">
+					<div>
+					    <div class="select_num" style="margin-top:5px; ">
+                                     <a class="switch_state">
+                                        <img class="nationality" src="/images/CN.png">
+                                        <em><img src="/images/path_down.png"></em>
+                                     </a> 
+                                     <span class="area_code" style="font-size:14px;">+86</span>
+                        </div>
+                        <input class="al_ip" style="margin-left:90px;"  placeholder="请输入手机号" type="text" id="mobile">
+                        <ul class="switch_list">
+                                    <li class="cnnub"><img src="/images/CN.png"><span>中国</span><em>+86</em></li>
+                                    <li><img src="/images/GB.png"><span>英国</span><em>+44</em></li>
+                        </ul> 
+					    
+					</div>
+				</div>
+	            
+	             <div class="account al3" >
+	            	<div>
+	            	   <input class="message al_ip" type="text"  id="vcode" placeholder="请输入图形验证码" style="float:left; text-indent: 1em;" />
+	            	   <div id="vcodeInfo" ></div>
+	            	</div>
+	            </div>
+	            <div class="account al4" style="margin-bottom:10px;">
+	            	<div>
+	            	<input class="message al_ip" type="password" style="text-indent: 1em;"  placeholder="请输入6-20位登录密码" id="password"/>
+	            </div>
+	            </div>
+	            
+	            <div class="popup_remember"><span><a href="/forgotpwd.act">忘记密码？</a> <!-- <input type="checkbox" name="autoLogin" value="1">自动登录 --></span><a href="/register.act">快速注册</a></div> 
+	            
+	            <a class="referring" style="cursor:pointer;"  onclick="needloginck();" >登  录</a>
+	           <!--  <div class="al_botomA">
+	            	 <div class="shortcut_login1">快捷登录：</div>
+	            	 <span><img src="/images/qq_login.png">使用QQ账号快捷登录</span>
+                     <span style="margin-left:10px;"><img src="/images/wechat_login.png">微信扫码登录</span>
+	            </div>     -->
+			</div>
+		</div>
+	</div>
+<!-- 弹出登陆框end -->
+
+<script type="text/javascript">
+$(function(){
+	menunub();
+	$(document).click(function(event){ 
+		$(".switch_list").hide();
+       });	
+});
+ 
+
+
+function menunub(){
+$(".switch_state").click(function(){
+	if($(".switch_list").css("display") == "none"){
+	   $(".switch_list").slideDown();
+	   
+	   $(".switch_list li").click(function(){
+		   var urlimg = $(this).find("img").attr("src");
+		   var urlnub = $(this).find("em").text();
+		   $(".nationality").attr("src",urlimg);
+		   $(".area_code").html(urlnub);
+	   })
+	}
+	else{
+	   $(".switch_list").hide();
+	}
+	event.stopPropagation();
+})
+}
+
+
+var wait = 60;
+function time(o) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.value="立即获取验证码";
+		$("#btn").css("color","#fff");
+		wait = 60;
+		
+	} else {
+		o.setAttribute("disabled", true);
+		o.value="(" + wait + "s)后重新发送";
+		wait--;
+		
+		$("#btn").css("color","#000");
+		setTimeout(function() { 
+			time(o); 
+		}, 1000);
+	}
+}
+function checkMobile(){
+	var mobile = $.trim($("#mobile").val());
+    var dataRegex = /^0?(1[34578][0-9])[0-9]{8}$/;
+    var hkRegex =/^[0-9]{8}$/;
+    var englandRegex= /^0?7[0-9]{9}$/;
+    if (mobile == ""){
+    	$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请输入手机号");
+		$("#mobile").focus();
+        return false;
+    }
+    
+    if($(".area_code").text()=="+86"){
+		if(!dataRegex.test(mobile) && !hkRegex.test(mobile)){
+			$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请输入正确的手机号");
+			$("#mobile").focus();
+	        return false;
+		}
+	}else{
+		if (!englandRegex.test($("#mobile").val())) { 
+			$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请输入正确的手机号");
+			$("#mobile").focus();
+	        return false;
+		}
+	}
+    return true;
+}
+
+
+
+function needloginck(){
+	var mobile= $("#mobile").val();
+	var vcodehead = $("#vcodehead").val();
+	var vcode = $("#vcode").val();
+	var password = $("#password").val();
+	if(!checkMobile()){
+		return false;
+	}
+
+	if($.trim($("#vcode").val())==''){
+		$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请先输入数字验证码");
+		return false;
+	}
+	
+	if(vcodehead == ""){
+		$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请输入验证码");
+		return false;
+	}else{
+		$("#errorTipsHead").html("");
+	}
+	
+	if(password == ""){
+		$("#errorTipsHead").html("<img src='/images/al_05.png' /> 请输入密码");
+		return false;
+	}
+ 	$.post("/needlogin.act",{returnUrl:window.location.href,mobile:mobile,vcode:vcode, vcodehead:vcodehead,password:password},function(d){
+		if(d.indexOf("error")==0){
+			$("#errorTipsHead").html("<img src='/images/al_05.png' />"+d.substring("error-".length));
+		}else{
+			window.location.reload();
+		}
+	});
+}
+
+$(".al_hide").click(function(){
+	$(".al_cont").css("display","none");
+});
+</script>
+<script type="text/javascript" src="/new/js/imgcode.js"></script>
+</body>
+</html>
+<script>
+
+$(window).scroll(function(){
+	var dettop = $(window).scrollTop();
+    var foottop = $(".footer").offset().top;
+    var detheight = $(window).height();
+    if(dettop > foottop - detheight){
+    	$("#scrollTop").addClass("scrollbottomlist");
+    }
+    if(dettop < foottop - detheight){
+    	$("#scrollTop").removeClass("scrollbottomlist");
+    }
+})
+$(function(){
+	var url = location.search; //获取url中"?"符后的字串 
+	if (url.indexOf("?") != -1 && url.replace("?","") == "supportList") {//代表有锚点
+		$.post("/activity/getSupportHistory.act",{activityId:5276,pageNo:0},function(d){
+			$(".support_list").html(d);
+			
+			$("#pro_desc").removeClass("border_color7");
+			$("#historybt").addClass("border_color7");
+			
+		    $(".introduction").hide();
+		    $(".activity_update").hide();
+		    $(".dynamic_update").hide();
+		    $(".support_list").show();
+		    if("1" == "0"){
+		    	$(".budget_details").hide();
+		    }
+		});
+	}
+
+	$(document).on("click",".doVote",function(){
+	    if(status == "4"){//审核通过，未上线
+	    	 layer.open({
+				    content: "当前不在投票期，投票将于2015年08月26日启动，敬请期待",
+				    btn: '我知道了'
+				  });
+	    	 return;
+	    }
+
+		var now=new Date().getTime();
+		if(now>endpraisedt){//活动已结束
+	    	 layer.open({
+				    content: "投票已结束，去看看其他活动吧",
+				    btn: '我知道了'
+				  });
+	    	 return;
+		}
+		$.ajax({ 
+			type : "post",
+			dataType : "json",
+			url : "/user/doVote.act",
+			data : {
+				activityid:"5276"
+			},
+			success : function(r) {
+				if(r.success){
+					//信息框
+					  layer.open({
+					    content: r.msg,
+					    btn: '我知道了'
+					  });
+					  doVoteNum= $("#doVoteNum").html();
+					  doVoteNum=Number(doVoteNum)+1;
+					  $("#doVoteNum").html(doVoteNum);
+				}else{
+					 //信息框
+					  layer.open({
+					    content: r.msg,
+					    btn: '我知道了'
+					  });
+				}
+			},
+			error : function(err) {
+				if(err.status==403){
+					window.location.href="/login.act";
+					return;
+				}
+				 layer.open({
+					    content: err.status,
+					    btn: '我知道了'
+					  });
+			}
+		});
+	});
+});
+
+    $(".close_bombd").click(function(){
+    	$(".preparation_bg").slideUp();
+		$(".details_preparation").slideUp();  
+    })
+    $(".preparation_bg").click(function(){
+    	$(".preparation_bg").slideUp();
+		$(".details_preparation").slideUp();  
+    })
+    $(".determine_bu").click(function(){
+    	$(".preparation_bg").slideUp();
+		$(".details_preparation").slideUp();  
+    })
+    
+    
+	$("#playVedio iframe").css("height","394px");
+	$("#playVedio iframe").css("width","680px");
+	var showAwardtype = 1;//显示众筹项 0：不显示 1：显示
+
+$(".on_comment").each(function(){
+	$(this).click(function(){
+		if($(this).parent(".hourtime").next(".comment_content").css("display")=="none"){
+			$(this).parent(".hourtime").next(".comment_content").slideDown();
+	    }
+		else{
+			$(this).parent(".hourtime").next(".comment_content").slideUp();
+		}
+	})  
+})
+ 
+var schemeCode=65;
+$(".budget_details").eq(0).find(".programme").find("h4").each(function(){
+	$(this).find("em").before(String.fromCharCode(schemeCode)+"方案总预算");
+	schemeCode++;
+});
+
+$(".details_region ul li a").each(function(e){
+	$(this).click(function(){
+		var a=$(window).scrollTop();
+		if(a>895){
+	    	$(window).scrollTop(895);
+		}
+		
+		$(".details_region ul li a").removeClass("border_color7");
+		$(this).addClass("border_color7");
+		var tabid = $(this).attr("id");
+		  
+		if(tabid == "pro_desc"){
+			$(".introduction").show();
+			$(".activtiy_update").hide();
+			$(".dynamic_update").hide();
+			$(".support_list").hide();
+			if("1" == "0"){
+				$(".budget_details").hide();
+			}
+		}
+		
+		else if(tabid == "budgetbt"){
+			$(".introduction").hide();
+			$(".activtiy_update").hide();
+			$(".dynamic_update").hide();
+			$(".support_list").hide();
+			$(".budget_details").show();
+		}
+		
+		else if(tabid == "actupdatebt"){
+			$(".introduction").hide();
+			$(".activtiy_update").show();
+			$(".dynamic_update").hide();
+			$(".support_list").hide();
+			if("1" == "0"){
+				$(".budget_details").hide();
+			}
+			
+			toPageUpdates(0);
+		}
+		
+		else if(tabid == "commentbt"){
+			$(".introduction").hide();
+			$(".activtiy_update").hide();
+			$(".dynamic_update").show();
+			$(".support_list").hide();
+			if("1" == "0"){
+				$(".budget_details").hide();
+			}
+			
+			$.get("/activity/getCommentsList.act",{activityId:5276},function(a){
+				  $(".dynamic_update").html(a);
+			});
+		}
+		
+		else if(tabid == "historybt"){
+			$(".introduction").hide();
+			$(".activtiy_update").hide();
+			$(".dynamic_update").hide();
+			$(".support_list").show();
+			if("1" == "0"){
+				$(".budget_details").hide();
+			}
+			
+			if($(".support_list").eq(0).text().trim()==""){
+				$.post("/activity/getSupportHistory.act",{activityId:5276,pageNo:0},function(d){
+					$(".support_list").html(d);
+				});
+			}
+		}
+	});
+});
+
+$(".blue_sub2").click(function(){
+	
+	if(status == "4"){//审核通过，未上线
+   	 layer.open({
+			    content: "当前不在资金筹备期，去看看其他活动吧",
+			    btn: '我知道了'
+			  });
+   	 return;
+   }
+	
+	var now=new Date().getTime();
+	if(startpraisedt<now && now<endpraisedt && status==6){
+		window.location.href="/payback/supportway.act?type="+'1'+"&id="+'5276';
+	}else{
+		//alert("当前不在资金筹备期，请选择其他活动。");
+		$(".preparation_bg").slideDown();
+		$(".details_preparation").slideDown();
+		return;
+	}
+});
+
+function toPage(i) {
+	$.post("/activity/getSupportHistory.act", {
+		activityId : 5276,
+		pageNo : i
+	}, function(d) {
+		$(".support_list").html(d);
+	});
+};
+
+function toPageUpdates(i) {
+	$.get("/activity/loadUpdate/5276.act",{activityId:5276, pageNo:i},function(a){
+		  $(".activtiy_update").html(a);
+	});
+};
+
+function toPageComments(i) {
+	$.get("/activity/getCommentsList.act",{activityId:5276,pageNo:i},function(a){
+		  $(".dynamic_update").html(a);
+	});
+};
+
+
+//滑动 标题栏 
+$(function() {
+    $(window).scroll(function() {
+        var scrollHeight = $(document).scrollTop();
+        var header = $(".header").height();
+        var content = $(".details").height();
+        
+        var contentwidth = $(".details_region").width();
+        
+        var distance = header + content;
+        if (scrollHeight > distance) {
+            $(".details_region").addClass("lighted");
+            $(".column").addClass("details_list");
+            $(".details_list").css("right",(contentwidth - 1040)/2 + "px")
+            
+        } else {
+            $(".details_region").removeClass("lighted");
+            $(".column").removeClass("details_list");
+        }
+    });
+});
+
+$(window).resize(function(){
+	var contentwidth2 = $(".details_region").width();
+	$(".details_list").css("right",(contentwidth2 - 1040)/2 + "px");   
+});
+
+$("#createoratar").click(function(){
+	showUserPersonal("310998ff721eb903");
+});
+
+$(function(){
+	if($("#playVedio").length>0){		
+		$("#play_img").addClass("playvedio");
+		$("#play_img").mouseover(function(){
+			$(".vedio_bg").show();		
+		});
+		$(".vedio_bg").mouseout(function(){
+			$(".vedio_bg").hide();		
+		});
+		}	
+	$(".vedio_bg").on("click",function(){			
+		var url = $("#playVedio iframe").attr("src");
+		url = url.replace('auto=0', 'auto=1');
+		$("#playVedio iframe").attr("src", url);
+		$("#play_img").hide();
+		$(".vedio_bg").hide();
+	});
+});
+
+
+
+$(document).on("click", ".view_rules",function(){
+	$(".selection-rules").toggle();
+});
+
+$(function(){
+	
+	
+	$(".header_tittle").append("<em><img style='margin-top:-1px;' src='/new/images/hierarchy_arrow.svg'></em><em><a href='/specialindex.act'>专题</a></em>");
+	$(".header_tittle").append("<em><img style='margin-top:-1px;' src='/new/images/hierarchy_arrow.svg'></em><em><a href='/topic_v3/2.act'>寻找最美教师</a></em>");
+	
+	$(".header_tittle").append("<em><img style='margin-top:-1px;' src='/new/images/hierarchy_arrow.svg'></em><em><a href='/activity/0b8d8a34e1631cca.act'>钟扬</a></em>");
+});
+
+$(".assn_iden").mouseover(function(){
+	$(".assn_iden_box").load("/activity/auth/communityauth.act?uid=294927");
+	$(".assn_iden_box").show();
+	
+});
+$(".assn_iden").mouseout(function(){
+	$(".assn_iden_box").hide();
+});
+
+</script>

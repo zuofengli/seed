@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>--><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="880546264" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        
+<script nonce="880546264" type="text/javascript">
+    var biz = ""||"MzA5NTIyODgzOQ==";
+    var sn = "" || ""|| "58e91b483e1da88b9bec8260ccf27702";
+    var mid = "" || ""|| "2650193065";
+    var idx = "" || "" || "1";
+    window.__allowLoadResFromMp = true; 
+    
+</script>
+<script nonce="880546264" type="text/javascript">
+var page_begintime=+new Date,is_rumor="",norumor="";
+1*is_rumor&&!(1*norumor)&&biz&&mid&&(document.referrer&&-1!=document.referrer.indexOf("mp.weixin.qq.com/mp/rumor")||(location.href="http://mp.weixin.qq.com/mp/rumor?action=info&__biz="+biz+"&mid="+mid+"&idx="+idx+"&sn="+sn+"#wechat_redirect")),
+document.domain="qq.com";
+</script>
+<script nonce="880546264" type="text/javascript">
+var MutationObserver=window.WebKitMutationObserver||window.MutationObserver||window.MozMutationObserver,isDangerSrc=function(t){
+if(t){
+var e=t.match(/http(?:s)?:\/\/([^\/]+?)(\/|$)/);
+if(e&&!/qq\.com(\:8080)?$/.test(e[1])&&!/weishi\.com$/.test(e[1]))return!0;
+}
+return!1;
+},ishttp=0==location.href.indexOf("http://");
+-1==location.href.indexOf("safe=0")&&ishttp&&"function"==typeof MutationObserver&&"mp.weixin.qq.com"==location.host&&(window.__observer_data={
+count:0,
+exec_time:0,
+list:[]
+},window.__observer=new MutationObserver(function(t){
+window.__observer_data.count++;
+var e=new Date,r=[];
+t.forEach(function(t){
+for(var e=t.addedNodes,o=0;o<e.length;o++){
+var n=e[o];
+if("SCRIPT"===n.tagName){
+var i=n.src;
+isDangerSrc(i)&&(window.__observer_data.list.push(i),r.push(n)),!i&&window.__nonce_str&&n.getAttribute("nonce")!=window.__nonce_str&&(window.__observer_data.list.push("inlinescript_without_nonce"),
+r.push(n));
+}
+}
+});
+for(var o=0;o<r.length;o++){
+var n=r[o];
+n.parentNode&&n.parentNode.removeChild(n);
+}
+window.__observer_data.exec_time+=new Date-e;
+}),window.__observer.observe(document,{
+subtree:!0,
+childList:!0
+})),function(){
+if(-1==location.href.indexOf("safe=0")&&Math.random()<.01&&ishttp&&HTMLScriptElement.prototype.__lookupSetter__&&"undefined"!=typeof Object.defineProperty){
+window.__danger_src={
+xmlhttprequest:[],
+script_src:[],
+script_setAttribute:[]
+};
+var t="$"+Math.random();
+HTMLScriptElement.prototype.__old_method_script_src=HTMLScriptElement.prototype.__lookupSetter__("src"),
+HTMLScriptElement.prototype.__defineSetter__("src",function(t){
+t&&isDangerSrc(t)&&window.__danger_src.script_src.push(t),this.__old_method_script_src(t);
+});
+var e="element_setAttribute"+t;
+Object.defineProperty(Element.prototype,e,{
+value:Element.prototype.setAttribute,
+enumerable:!1
+}),Element.prototype.setAttribute=function(t,r){
+"SCRIPT"==this.tagName&&"src"==t&&isDangerSrc(r)&&window.__danger_src.script_setAttribute.push(r),
+this[e](t,r);
+};
+}
+}();
+</script>
+
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/favicon22c41c.ico">
+<script nonce="880546264" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+        if (encode) {
+            replace.reverse();
+        }
+        for (var i=0,str=this;i< replace.length;i+= 2) {
+             str=str.replace(new RegExp(replace[i],'g'),replace[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+        window.appmsg_token = "";
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+        <title>追忆著名植物学家、复旦大学教授钟扬——那个为人类寻觅种子的人，那个为未来保存希望的人</title>
+        
+<style>html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.6}body{-webkit-touch-callout:none;font-family:-apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background-color:#f3f3f3;line-height:inherit}body.rich_media_empty_extra{background-color:#fff}body.rich_media_empty_extra .rich_media_area_primary:before{display:none}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:16px}*{margin:0;padding:0}a{color:#607fa6;text-decoration:none}.rich_media_inner{font-size:16px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.rich_media_area_primary{position:relative;padding:20px 15px 15px;background-color:#fff}.rich_media_area_primary:before{content:" ";position:absolute;left:0;top:0;width:100%;height:1px;border-top:1px solid #e5e5e5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5);top:auto;bottom:-2px}.rich_media_area_primary .original_img_wrp{display:inline-block;font-size:0}.rich_media_area_primary .original_img_wrp .tips_global{display:block;margin-top:.5em;font-size:14px;text-align:right;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.rich_media_area_extra{padding:0 15px 0}.rich_media_title{margin-bottom:10px;line-height:1.4;font-weight:400;font-size:24px}.icon_original_tag_primary{display:inline-block;padding:1px .65em;margin-top:-0.2em;vertical-align:middle;line-height:1.4;font-size:12px;border-top-left-radius:.85em 50%;-moz-border-radius-topleft:.85em 50%;-webkit-border-top-left-radius:.85em 50%;border-top-right-radius:.85em 50%;-moz-border-radius-topright:.85em 50%;-webkit-border-top-right-radius:.85em 50%;border-bottom-left-radius:.85em 50%;-moz-border-radius-bottomleft:.85em 50%;-webkit-border-bottom-left-radius:.85em 50%;border-bottom-right-radius:.85em 50%;-moz-border-radius-bottomright:.85em 50%;-webkit-border-bottom-right-radius:.85em 50%;border:1px solid #9e9e9e;color:#8c8c8c}.icon_original_tag_primary.title_tag{background-color:#e94442;border-color:#d04b4e;color:#fff;margin-bottom:.5em;padding:2px .65em;border-top-left-radius:.95em 50%;-moz-border-radius-topleft:.95em 50%;-webkit-border-top-left-radius:.95em 50%;border-top-right-radius:.95em 50%;-moz-border-radius-topright:.95em 50%;-webkit-border-top-right-radius:.95em 50%;border-bottom-left-radius:.95em 50%;-moz-border-radius-bottomleft:.95em 50%;-webkit-border-bottom-left-radius:.95em 50%;border-bottom-right-radius:.95em 50%;-moz-border-radius-bottomright:.95em 50%;-webkit-border-bottom-right-radius:.95em 50%}.rich_media_meta_list{margin-bottom:18px;line-height:20px;font-size:0}.rich_media_meta_list em{font-style:normal}.rich_media_meta{display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:10px;font-size:16px}.meta_original_tag{display:inline-block;vertical-align:middle;padding:1px .5em;border:1px solid #9e9e9e;color:#8c8c8c;border-top-left-radius:20% 50%;-moz-border-radius-topleft:20% 50%;-webkit-border-top-left-radius:20% 50%;border-top-right-radius:20% 50%;-moz-border-radius-topright:20% 50%;-webkit-border-top-right-radius:20% 50%;border-bottom-left-radius:20% 50%;-moz-border-radius-bottomleft:20% 50%;-webkit-border-bottom-left-radius:20% 50%;border-bottom-right-radius:20% 50%;-moz-border-radius-bottomright:20% 50%;-webkit-border-bottom-right-radius:20% 50%;font-size:15px;line-height:1.1}.meta_enterprise_tag img{width:30px;height:30px!important;display:block;position:relative;margin-top:-3px;border:0}.rich_media_meta_text{color:#8c8c8c}span.rich_media_meta_nickname{display:none}.rich_media_thumb_wrp{margin-bottom:6px}.rich_media_thumb_wrp .original_img_wrp{display:block}.rich_media_thumb{display:block;width:100%}.rich_media_content{overflow:hidden;color:#3e3e3e}.rich_media_content *{max-width:100%!important;box-sizing:border-box!important;-webkit-box-sizing:border-box!important;word-wrap:break-word!important}.rich_media_content p{clear:both;min-height:1em}.rich_media_content em{font-style:italic}.rich_media_content fieldset{min-width:0}.rich_media_content .list-paddingleft-2{padding-left:30px}.rich_media_content blockquote{margin:0;padding-left:10px;border-left:3px solid #dbdbdb}img{height:auto!important}@media screen and (device-aspect-ratio:2/3),screen and (device-aspect-ratio:40/71){.meta_original_tag{padding-top:0}}@media(min-device-width:375px) and (max-device-width:667px) and (-webkit-min-device-pixel-ratio:2){.mm_appmsg .rich_media_inner,.mm_appmsg .rich_media_meta,.mm_appmsg .discuss_list,.mm_appmsg .rich_media_extra,.mm_appmsg .title_tips .tips{font-size:17px}.mm_appmsg .meta_original_tag{font-size:15px}}@media(min-device-width:414px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:3){.mm_appmsg .rich_media_title{font-size:25px}}@media screen and (min-width:1024px){.rich_media{width:740px;margin-left:auto;margin-right:auto}.rich_media_inner{padding:20px}body{background-color:#fff}}@media screen and (min-width:1025px){body{font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}.rich_media{position:relative}.rich_media_inner{background-color:#fff;padding-bottom:100px}}.radius_avatar{display:inline-block;background-color:#fff;padding:3px;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;overflow:hidden;vertical-align:middle}.radius_avatar img{display:block;width:100%;height:100%;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background-color:#eee}.cell{padding:.8em 0;display:block;position:relative}.cell_hd,.cell_bd,.cell_ft{display:table-cell;vertical-align:middle;word-wrap:break-word;word-break:break-all;white-space:nowrap}.cell_primary{width:2000px;white-space:normal}.flex_cell{padding:10px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex_cell_primary{width:100%;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;box-flex:1;flex:1}.original_tool_area{display:block;padding:.75em 1em 0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#3e3e3e;border:1px solid #eaeaea;margin:20px 0}.original_tool_area .tips_global{position:relative;padding-bottom:.5em;font-size:15px}.original_tool_area .tips_global:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #dbdbdb;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area .radius_avatar{width:27px;height:27px;padding:0;margin-right:.5em}.original_tool_area .radius_avatar img{height:100%!important}.original_tool_area .flex_cell_bd{width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.original_tool_area .flex_cell_ft{font-size:14px;color:#8c8c8c;padding-left:1em;white-space:nowrap}.original_tool_area .icon_access:after{content:" ";display:inline-block;height:8px;width:8px;border-width:1px 1px 0 0;border-color:#cbcad0;border-style:solid;transform:matrix(0.71,0.71,-0.71,0.71,0,0);-ms-transform:matrix(0.71,0.71,-0.71,0.71,0,0);-webkit-transform:matrix(0.71,0.71,-0.71,0.71,0,0);position:relative;top:-2px;top:-1px}.weui_loading{width:20px;height:20px;display:inline-block;vertical-align:middle;-webkit-animation:weuiLoading 1s steps(12,end) infinite;animation:weuiLoading 1s steps(12,end) infinite;background:transparent url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iciIgd2lkdGg9JzEyMHB4JyBoZWlnaHQ9JzEyMHB4JyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjRTlFOUU5JwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoMCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSc0Ni41JyB5PSc0MCcgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHJ4PSc1JyByeT0nNScgZmlsbD0nIzk4OTY5NycKICAgICAgICAgIHRyYW5zZm9ybT0ncm90YXRlKDMwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4KICAgICAgICAgICAgICAgICByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyM5Qjk5OUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9J2luZGVmaW5pdGUnLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjQTNBMUEyJwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoOTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNBQkE5QUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCMkIyQjInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxNTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCQUI4QjknCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxODAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDMkMwQzEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyMTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDQkNCQ0InCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEMkQyRDInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEQURBREEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNFMkUyRTInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0Pgo8L3N2Zz4=) no-repeat;-webkit-background-size:100%;background-size:100%}@-webkit-keyframes weuiLoading{0%{-webkit-transform:rotate3d(0,0,1,0deg)}100%{-webkit-transform:rotate3d(0,0,1,360deg)}}@keyframes weuiLoading{0%{-webkit-transform:rotate3d(0,0,1,0deg)}100%{-webkit-transform:rotate3d(0,0,1,360deg)}}.gif_img_wrp{display:inline-block;font-size:0;position:relative;font-weight:400;font-style:normal;text-indent:0;text-shadow:none 1px 1px rgba(0,0,0,0.5)}.gif_img_wrp img{vertical-align:top}.gif_img_tips{background:rgba(0,0,0,0.6)!important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endcolorstr = '#99000000');border-top-left-radius:1.2em 50%;-moz-border-radius-topleft:1.2em 50%;-webkit-border-top-left-radius:1.2em 50%;border-top-right-radius:1.2em 50%;-moz-border-radius-topright:1.2em 50%;-webkit-border-top-right-radius:1.2em 50%;border-bottom-left-radius:1.2em 50%;-moz-border-radius-bottomleft:1.2em 50%;-webkit-border-bottom-left-radius:1.2em 50%;border-bottom-right-radius:1.2em 50%;-moz-border-radius-bottomright:1.2em 50%;-webkit-border-bottom-right-radius:1.2em 50%;line-height:2.3;font-size:11px;color:#fff;text-align:center;position:absolute;bottom:10px;left:10px;min-width:65px}.gif_img_tips.loading{min-width:75px}.gif_img_tips i{vertical-align:middle;margin:-0.2em .73em 0 -2px}.gif_img_play_arrow{display:inline-block;width:0;height:0;border-width:8px;border-style:dashed;border-color:transparent;border-right-width:0;border-left-color:#fff;border-left-style:solid;border-width:5px 0 5px 8px}.gif_img_loading{width:14px;height:14px}i.gif_img_loading{margin-left:-4px}.gif_bg_tips_wrp{position:relative;height:0;line-height:0;margin:0;padding:0}.gif_bg_tips_wrp .gif_img_tips_group{position:absolute;top:0;left:0;z-index:9999}.gif_bg_tips_wrp .gif_img_tips_group .gif_img_tips{top:0;left:0;bottom:auto}.rich_media_global_msg{position:fixed;top:0;left:0;right:0;padding:1em 35px 1em 15px;z-index:2;background-color:#c6e0f8;color:#8c8c8c;font-size:13px}.rich_media_global_msg .icon_closed{position:absolute;right:15px;top:50%;margin-top:-5px;line-height:300px;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);background:transparent url(//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/icon_appmsg_msg_closed_sprite.2x2eb52a.png) no-repeat 0 0;width:11px;height:11px;vertical-align:middle;display:inline-block;-webkit-background-size:100% auto;background-size:100% auto}.rich_media_global_msg .icon_closed:active{background-position:0 -17px}.preview_appmsg .rich_media_title{margin-top:1.9em}@media screen and (min-width:1024px){.rich_media_global_msg{position:relative;margin:0 20px}.preview_appmsg .rich_media_title{margin-top:0}}.pages_reset{color:#3e3e3e;line-height:1.6;font-size:16px;font-weight:400;font-style:normal;text-indent:0;letter-spacing:normal;text-align:left;text-decoration:none;white-space:normal}.weapp_element,.weapp_display_element,.mp-miniprogram{display:block;margin:1em 0}.share_audio_context{margin:16px 0}.weapp_text_link{font-size:17px}.weapp_text_link:before{content:'';display:inline-block;line-height:1;background-size:12px 12px;background-repeat:no-repeat;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAb1BMVEUAAAB4it11h9x2h9x2h9x2htx8j+R8i+B1h9x2h9x3h92Snv91htt2h9x1h9x4h9x1h9x1h9x2idx1h9t2h9t1htt1h9x1h9x1htx2h9x1h912h9x4h913iN17juOOjuN1iNx2h9t4h958i+B1htvejBiPAAAAJHRSTlMALPLcxKcVEOXXUgXtspU498sx69DPu5+Yc2JeRDwbCYuIRiGBtoolAAAA3ElEQVQoz62S1xKDIBBFWYiFYImm2DWF///G7DJEROOb58U79zi4O8iOo8zuCRfV8EdFgbYE49qFQs8ksJInajOA1wWfYvLcGSueU/oUGBtPpti09uNS68KTMcrQ5jce4kmN/HKn9XVPAo702JEdx9hTUrWUqVrI3KwUmM1NhIWMKdwiGvpGMWZOAj1PZuzAxHwhVSplrajoseBnbyDHAwvrtvKKhdqTtFBkL8wO5ijcsS3G1JMNvQ5mdW7fc0x0+ZcnlJlZiflAomdEyFaM7qeK2JahEjy5ZyU7jC/q/Rz/DgqEuAAAAABJRU5ErkJggg==');vertical-align:middle;font-size:11px;color:#888;border-radius:10px;background-color:#f4f4f4;margin-right:6px;margin-top:-4px;background-position:center;height:20px;width:20px}.weui-mask{position:fixed;z-index:1000;top:0;right:0;left:0;bottom:0;background:rgba(0,0,0,0.6)}.weui-dialog{position:fixed;z-index:5000;width:80%;max-width:300px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#fff;text-align:center;border-radius:3px;overflow:hidden}.weui-dialog__hd{padding:1.3em 1.6em .5em}.weui-dialog__title{font-weight:400;font-size:18px}.weui-dialog__bd{padding:0 1.6em .8em;min-height:40px;font-size:15px;line-height:1.3;word-wrap:break-word;word-break:break-all;color:#999}.weui-dialog__bd:first-child{padding:2.7em 20px 1.7em;color:#353535}.weui-dialog__ft{position:relative;line-height:48px;font-size:18px;display:-webkit-box;display:-webkit-flex;display:flex}.weui-dialog__ft:after{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid #d5d5d6;color:#d5d5d6;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.weui-dialog__btn{display:block;-webkit-box-flex:1;-webkit-flex:1;flex:1;color:#3cc51f;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative}.weui-dialog__btn:active{background-color:#eee}.weui-dialog__btn:after{content:" ";position:absolute;left:0;top:0;width:1px;bottom:0;border-left:1px solid #d5d5d6;color:#d5d5d6;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleX(0.5);transform:scaleX(0.5)}.weui-dialog__btn:first-child:after{display:none}.weui-dialog__btn_default{color:#353535}.weui-dialog__btn_primary{color:#0bb20c}</style>
+<style>
+        </style>
+<!--[if lt IE 9]>
+<link onerror="wx_loaderror(this)" rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_pc2c9cd7.css">
+<![endif]-->
+
+    </head>
+    <body id="activity-detail" class="en_US mm_appmsg">
+        
+<script nonce="880546264" type="text/javascript">
+    var write_sceen_time = (+new Date());
+</script>
+
+<div id="js_article" class="rich_media">
+    
+    <div id="js_top_ad_area" class="top_banner"></div>
+    
+    <div class="rich_media_inner">
+                
+        <div id="page-content" class="rich_media_area_primary">
+            
+                        <div id="img-content">
+                
+                <h2 class="rich_media_title" id="activity-name">
+                    追忆著名植物学家、复旦大学教授钟扬——那个为人类寻觅种子的人，那个为未来保存希望的人                                    </h2>
+                <div id="meta_content" class="rich_media_meta_list">
+                                        <span id="copyright_logo" class="rich_media_meta meta_original_tag">原创</span>
+                                                            <em id="post-date" class="rich_media_meta rich_media_meta_text">2017-09-25</em>
+
+                                        <em class="rich_media_meta rich_media_meta_text">姜澎</em>
+                                        <a class="rich_media_meta rich_media_meta_link rich_media_meta_nickname" href="##" id="post-user">文汇教育</a>
+                    <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">文汇教育</span>
+
+                    <div id="js_profile_qrcode" class="profile_container" style="display:none;">
+                        <div class="profile_inner">
+                            <strong class="profile_nickname">文汇教育</strong>
+                            <img class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                            <p class="profile_meta">
+                            <label class="profile_meta_label">微信号</label>
+                            <span class="profile_meta_value">wenhuieducation</span>
+                            </p>
+
+                            <p class="profile_meta">
+                            <label class="profile_meta_label">功能介绍</label>
+                            <span class="profile_meta_value">《文汇报》最具可读性的周刊之一，教育大家、专家发表专业意见的首选平台，全国教育专业周刊的领航者。 
+目前开设考试、学前/家教、校园、作文、留学/就业、新知等诸多板块，聚焦教育界新事大事，为所有关心教育的人提供最新动向和权威解读。</span>
+                            </p>
+                            
+                        </div>
+                        <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">
+                            <i class="profile_arrow arrow_out"></i>
+                            <i class="profile_arrow arrow_in"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                
+                
+                
+                                                
+                                                                
+                
+                <div class="rich_media_content " id="js_content">
+                    
+
+                    
+
+                    
+                    
+                    <section class="" data-tools="135编辑器" data-id="86013" style="max-width: 100%;box-sizing: border-box;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;font-family: 微软雅黑;line-height: 25.6px;widows: 1;border-width: 0px;border-style: none;border-color: initial;background-color: rgb(255, 255, 255);word-wrap: break-word !important;"><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicZibDJZ9UGaiaXa6TGh5f8lsx2TuYNbn1C4Fj1Wloygkcvicox9OWlfhLQ/0?wx_fmt=jpeg" class="" data-ratio="1.2" data-w="500"  /></p></section><p><br  /></p><p><span style="color: rgb(0, 122, 170);"><span style="color: rgb(62, 62, 62);font-size: 16px;text-align: center;widows: 1;">复旦大学钟扬教授，是那个曾经说过，</span><span style="font-size: 16px;text-align: center;widows: 1;color: rgb(0, 122, 170);">要给100年后的上海留下一片红树林，在上海造出一道美丽的海岸线的人。</span><span style="color: rgb(62, 62, 62);font-size: 16px;text-align: center;widows: 1;">他果真花了10年时间在南汇的海边筛选出一批树种，如今已有一片小小的红树林初长成，而且不用再生活在暖棚里了。</span></span></p><p><span style="color: rgb(0, 122, 170);"><br  /></span></p><p><span style="color: rgb(0, 122, 170);">他也是那个花了十多年时间，默默地在青藏高原收集种子，为了给我们的后代保留足够生物多样性的人。</span>他说：“如果一百多年以后还有癌症，如果那时候人们发现有一种植物有抗癌作用，而由于气候变化的原因，这个植物在西藏已经没有了，但是一百多年前有个姓钟的教授好像采过，那不就造福了大家了吗？”</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>就在上个月，他在接受文汇报记者采访时还兴冲冲地说：“到了我这个年龄，其实在哪个岗位都不重要了，我已经想好了100个小故事，要为小学生们录下来，这些故事都是从一个问题开始，既有趣又有科学性，引导孩子学会提问。”他还想好了第一个故事是从“长颈鹿会不会游泳”开始。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p><span style="color: rgb(0, 122, 170);">他还在策划，要召集一批热心的科学家为中学生们排演舞台连续剧，专门为高中生展示不同的大学、不同的专业</span>，名字就叫“那些大学，那些专业”，因为“每年接待太多的孩子和家长，他们对大学既不理解，对专业更不了解”。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>可是，这些红树林不会再等到钟扬周末抽时间去看它们了，而这100个小故事也很难再继续下去了……因为这个一辈子都在收集种子的人，在今天早晨6点多从内蒙古鄂尔多斯赶往银川的出差途中，遭遇车祸，永远离开了人世。</p><p><br  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUiciaqbEXNn7ehTrPDVB5ET0DjlAXEDmaKa8fgwuJ47Wraaiaia8x2ue1kRw/0?wx_fmt=jpeg" class="" data-ratio="0.784375" data-w="1280"  /></p><p><br  /></p><p><span style="color: rgb(121, 123, 170);text-decoration: underline;"><strong>“钟老师干活，真的太拼了！” &nbsp;</strong></span></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>当消息传到复旦大学，所有的人第一反应都是，“钟老师干活，真的太拼了！”早晨6点多就赶路，这对钟扬来说并不稀罕，他的工作时间常常要到凌晨三四点，常和他打交道的人往往会在半夜一两点收到他回复的邮件、修改的文章。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>熟悉钟扬的人都知道，他算得上是个传奇人物——</p><p><br  /></p><blockquote><p><span style="color: rgb(136, 136, 136);"><strong><span style="font-size: 14px;">过去十多年中，<span style="font-size: 14px;color: rgb(0, 122, 170);">他为国家和上海的种子库，收集了上千种植物的四千万颗种子</span>，在他看来，是为人类的未来储存下了希望，也是丰富的基因宝藏。</span></strong></span></p><p><span style="color: rgb(136, 136, 136);"><strong><span style="color: rgb(136, 136, 136);font-size: 14px;">&nbsp; &nbsp; &nbsp;&nbsp;</span></strong></span></p><p><span style="color: rgb(0, 122, 170);"><strong><span style="font-size: 14px;">他为西藏大学申请到第一个生态学博士点，第一个国家自然科学基金项目，</span></strong></span><span style="color: rgb(136, 136, 136);"><strong><span style="color: rgb(136, 136, 136);font-size: 14px;">成为西藏自治区第一位长江特聘教授，培养出了西藏大学第一位植物学博士，带出了西藏自治区第一个生物学教育部创新团队。</span></strong></span></p><p><span style="color: rgb(136, 136, 136);"><strong><span style="color: rgb(136, 136, 136);font-size: 14px;"><br  /></span></strong></span></p><p><span style="color: rgb(136, 136, 136);"><strong><span style="color: rgb(136, 136, 136);font-size: 14px;">他在开展青藏高原生物资源研究的过程中，<span style="font-size: 14px;color: rgb(0, 122, 170);">帮助西藏建立起的科研“地方队”</span>，已在进化生物学等研究方面，与日本、欧美鼎足而立。</span></strong></span></p></blockquote><p><br  /></p><p>他曾经说过：<span style="color: rgb(0, 122, 170);">“任何生命都有结束的一天，但我毫不畏惧，因为我的学生会将科学探索之路延续，而我们所采集的种子也许会在几百年后的某一天生根发芽，到那时不知会完成多少人的梦想。”</span></p><p><br  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicXbJEh60eOvxKqKpicJrE36uLX3WmEKzYfH57fes3AvJQx3FVLQgAAaQ/0?wx_fmt=jpeg" class="" data-ratio="0.5671875" data-w="1280"  /></p><p><br  /></p><p>前年，他因长期太过疲劳导致脑出血，住院很久。痊愈后，他和身边的人说，自己做了三个决定：第一是不再喝酒了，因为长期在青藏高原野外考察，天冷时晚上会喝酒御寒；第二是短期内不坐飞机出差了；第三是暂缓去西藏考察。<br  /></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>可是，“除了第一个决定他做到了，另外两个决定没过多久，就被‘打破’了。” 与钟扬同年被引进到复旦大学的生命科学学院教授卢宝荣告诉记者，钟扬做完这个决定没多久，就又坐着飞机出差，又去西藏了。今年，他又有一名藏族博士生毕业了。</p><p><br  /></p><p><span style="color: rgb(121, 123, 170);text-decoration: underline;"><strong>遵从内心，聪明而有大智慧</strong></span></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>1979年，钟扬初中刚毕业，就考上了中科大少年班。当时，他的父亲任湖北省高招办主任。当年，为了让更多被文革耽误的年轻人能够上大学，湖北省出台政策，不允许非毕业班的学生参加高考，因此父亲禁止他去参加高考，因为自己的儿子不能破例。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>去年，他在以自己的藏族名字“索顿”为笔名，为本报撰写的文章《一个招办主任儿子的高考经历》中，回忆了这段往事。（文章链接：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NTIyODgzOQ==&amp;mid=2650182072&amp;idx=1&amp;sn=17e1508e3ac44f294041d1a813f6c790&amp;scene=21#wechat_redirect" target="_blank">一个招办主任儿子的高考</a>）</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>于是，钟扬瞒着父亲，悄悄地到母亲的户籍所在地湖南报名高考，一举考上了中科大少年班。结果，他学了五年信息科学，毕业后被分配到了中科院武汉植物研究所，一待就是15年，并由此爱上了植物学研究，还担任了副所长，算是干到了“副局级”。</p><p><br  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicAD5StVMriaaolxEAUWsYFe2icWKTQnQAMXsf9kfs4LlZFHgah9Oqte3Q/0?wx_fmt=jpeg" class="" data-ratio="1.50234375" data-w="1280"  /></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>2000年，他放弃一切待遇，两手空空地来到复旦大学任教。他曾在接受记者采访时说：“<span style="color: rgb(0, 122, 170);">人就是要做自己感兴趣的事情，才能不负人生。</span>我对植物学感兴趣，但我们当时的植物研究所只能在华中地区转悠，而在高校搞研究，想去哪儿就能去哪儿。就只做个普通教授又怎样呢？”</p><p>&nbsp; &nbsp; &nbsp; &nbsp;</p><p>不久后，钟扬被复旦大学聘为生命科学学院常务副院长。2001年，他又放弃了副院长的职务，到西藏大学担任一名普通教授。他说：“研究生物的人当然应该去西藏，青藏高原有2000种特有植物，一颗种子可以造福千万苍生。那是每个植物学家都应该去的地方。”</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>一提起钟扬，复旦大学生命科学学院年轻教授李辉说：“钟老师是有大智慧的人。做科学研究的人很多，但真正有科学思想，能够称得上科学家的人不多。<span style="color: rgb(0, 122, 170);">钟老师就是那种对自己的研究对象有宏观理解和哲学思考，并且能够站在更高的高度来看自己研究领域，同时能做出出色研究，并做精彩科普的人。”</span></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>每一个听过钟扬讲座的人，都感怀于他的智慧和遵从内心的经历。<span style="color: rgb(0, 122, 170);">每一个怀念钟扬的人，不妨去上海自然博物馆走走看看，馆内关于青藏高原的中英文介绍，都是他逐字推敲写出来的。</span>让青藏高原这样生物资源丰富的地方与上海这样生物多样性相对匮乏的地方联合起来，造福人类，一直都是钟扬的心愿。</p><p><br  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicljlpnwtFXyicJjBe1w6eJgI0AoNm62YJ0N0vUxpt2kb8c6gRdsD8K7Q/0?wx_fmt=jpeg" class="" data-ratio="0.56484375" data-w="1280"  /><br  /></p><p style="font-size: 13px;line-height: normal;font-family: &#39;Helvetica Neue&#39;;min-height: 15px;"><br  /></p><p><span style="color: rgb(121, 123, 170);text-decoration: underline;"><strong>个性鲜明，最关心人才培养</strong></span></p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p><span style="color: rgb(0, 122, 170);">在西藏十多年，为了调查和保护青藏高原的生物多样性，在海拔2000多米到6000多米的高原上，钟扬一年要行走3万公里。</span>为了赶时间，他的工作没有固定的时间表，休息更是只能见缝插针，常常只能在累的时候打个盹。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>“钟老师干活太拼命，他想要做的事情太多，太累了！”卢宝荣说，研究生院的工作琐碎而繁多，凡是钟扬想到的事情，他从来都不耽搁。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>除了研究，钟扬最关心的就是人才培养。“研究生的‘水课’太多。”钟扬几次在接受采访时谈到这一点。但要解决这个问题，谈何容易？！身为复旦大学研究生院院长，钟扬想尽办法，<span style="color: rgb(0, 122, 170);">设计了研究生FIST课程项目，在寒暑假邀请学术大师为研究生密集授课，</span>“也许我不能改变所有课程的质量，但可以借此提高研究生的学术品位，让他们知道什么是好的学术。”</p><p><br  /></p><p>有导师平时培养学生不用心，但到了学生论文盲审通不过时，就要到研究生院来吐槽。钟扬老师却说：“当我们发现了问题而不说出来，那问题就会越来越大。”</p><p>&nbsp;&nbsp; &nbsp;&nbsp;</p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUiciaa1Dz78wolsCULuL13UUZNztiaZ4PXMoFDMS0uOjeghswIFjn8zKrbg/0?wx_fmt=jpeg" class="" data-ratio="0.7484375" data-w="1280"  /></p><p><br  /></p><p>卢宝荣和钟扬一度都在复旦大学生物多样性科学研究所共事。有一年，研究所的负责人面临退休，谁来当所长？最受所里成员尊重的钟扬只说了一句话：<span style="color: rgb(0, 122, 170);">“谁最年轻，谁来当所长。”</span>果真，所里最年轻的教师担任了所长，将研究所运行得有声有色。</p><p>&nbsp; &nbsp; &nbsp;&nbsp;</p><p>钟扬的实验室里，<span style="color: rgb(0, 122, 170);">有研究生、本科生，甚至还有初中生。</span>不久前，他在接受本报记者采访时说，他的实验室也对中学生开放，不是教授知识，也不是为了帮助学生得奖，带他们做项目，而是每周和这些中学生聊天，聊科学，也让他们看实验，“只要学生肯花时间，没有急功近利的想法，他们可以在这里亲眼看到、并且感受到科学研究的成功与失败的过程，这比给他们讲授一些空洞的道理更有意义。”</p><p><br  /></p><p><iframe class="video_iframe" frameborder="0" allowfullscreen="allowfullscreen" data-vidtype="-1" data-ratio="1.7647058823529411" data-w="480" scrolling="no" data-src="https://v.qq.com/iframe/preview.html?vid=a0140jq18gd&amp;width=500&amp;height=375&amp;auto=0"></iframe></p><p style="text-align: center;"><span style="font-size: 14px;color: rgb(136, 136, 136);">钟扬教授援藏微电影《播种未来》</span></p><p><br  /></p><p><strong><span style="text-decoration: underline;">相关链接：</span></strong></p><p><br  /></p><p>不久前，钟扬做客“一席”，讲述了自己通过收集一颗颗普普通通的种子来造福苍生的追求和故事。谨以此文缅怀钟扬教授。</p><section><section class="" powered-by="xiumi.us"><section class=""><section class=""><section class="" powered-by="xiumi.us"><section class=""><section class=""><p><br  /></p><section style="max-width: 100%;box-sizing: border-box;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;background-color: rgb(255, 255, 255);word-wrap: break-word !important;"><section class="" powered-by="xiumi.us" style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"><section class="" style="margin-top: 0.5em;margin-bottom: 0.5em;max-width: 100%;box-sizing: border-box;text-align: center;word-wrap: break-word !important;"><p style="max-width: 100%;min-height: 1em;box-sizing: border-box !important;word-wrap: break-word !important;"><iframe class="video_iframe" data-vidtype="2" allowfullscreen="" frameborder="0" data-ratio="1.7666666666666666" data-w="848" scrolling="no" data-src="https://v.qq.com/iframe/preview.html?vid=f0539mv8vdr&amp;width=500&amp;height=375&amp;auto=0"></iframe></p><p style="max-width: 100%;min-height: 1em;box-sizing: border-box !important;word-wrap: break-word !important;"><span style="color: rgb(136, 136, 136);font-size: 14px;">钟扬教授演讲完整视频</span><br  /></p></section></section></section><p><br  /></p><p style="text-align: center;"><strong>《种子方舟》</strong></p><p style="text-align: center;">&nbsp;钟扬</p><p><br  /></p></section></section></section></section></section></section></section><p>大家好，我是钟扬，植物学家，来自复旦大学和西藏大学，非常高兴今天有机会跟大家讲一讲种子的故事。作为植物学家，我们经常在讲，一个基因可以拯救一个国家，一粒种子可以造福万千苍生。</p><p>&nbsp;</p><p>1984年，我大学毕业以后到中国科学院工作了16年，是在中科院的武汉植物研究所。我们所里面最重要的一个植物是猕猴桃，它是1904年由英联邦国家的传教士和那些专门来寻求各种各样奇花异草的人，在湖北宜昌农村意外发现的，我们叫他们“植物猎人”。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.8145363408521303" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscLM4Igcz3M8EaMVaUxxGMQoxOqbUOtA6cKlhw8BBYBCeKicBVb3SibhSw/640?wx_fmt=jpeg" data-type="jpeg" data-w="399" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我们今天知道它叫猕猴桃，可是当时即使在宜昌城和武汉都没有人吃它。找到这种植物以后，他们觉得它成熟了以后味道非常美，而且有一种特殊的风味。我们现在知道它维生素C的含量特别高，酸和甜的比例会随着时间变化带给这种水果一种特殊的味道。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>他们当时从树上剪下来20多根枝条带了回去。在我们现在植物学家看来，这简直是个意外。为什么？我们今天知道了这个植物是雌雄异株，所以他光把雄的剪回去，或者把雌的剪回去，是无论如何不能繁殖的。而当时全世界的生物学家没有一个人知道植物的雌雄异株的机制。</p><p>&nbsp;</p><p>顺便提一句，植物雌雄异株的机制后来被知道，是因为日本科学家从中国的银杏中发现了植物的精子，才知道植物原来有雌雄之分。大多数植物是雌雄同株的，一类植物上既有雌花也有雄花，它们可以授粉，可以繁育后代。</p><p>&nbsp;</p><p>而像这种雌雄异株的植物需要巧合。20多根枝条带到了英联邦国家，最后终于传到了新西兰。最后在新西兰他们居然用一个副本，一个雄性和两个雌性进行杂交，得到了新西兰非常重要的品种，在国际上被取名叫Hayward。</p><p>&nbsp;</p><p>猕猴桃在新西兰取得成功是来自中国的一个植物的基因，一个植物带过去了，成了我们广义上的“种子”，我们叫植物种质资源。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.6661538461538462" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uMWsPU4bEB61AeZeL9XBtJiafuzTLukUfga064kL6EzIpOBiczJJXuoZ9uqicTM9x2aibEarCXcqM6BRw/640?wx_fmt=jpeg" data-type="jpeg" data-w="650" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>几年前，我被新西兰国家生物资源的会议邀去作大会报告，当时主持人说钟教授告诉我们一个新西兰如何从中国偷了猕猴桃的故事。我用的英文词叫“引进”，他用的是“偷”。确实，因为并没有拿签证，也没有跟我们任何部门申报，所以那不应该称为引进。</p><p>&nbsp;</p><p>但是他们还是作出了巨大的努力。首先，他们的植物学家进行了反复研究，终于筛选出世界上最好的品种之一，Hayward；第二，他们相关的文化管理和经济学家们，巧妙地把英文名称Chinese gooseberry改成了Kiwifruit。</p><p>&nbsp;</p><p>Kiwi是新西兰的一个国鸟，这样的话在国际市场上让人听起来就像是新西兰的东西。而且这个名称后来又被翻译回中国了，变成了奇异果。</p><p>&nbsp;</p><p>另外他们也有管理学上成功的经验。他们跟我们不一样，他们猕猴桃种植区旁边必须要建机场，以保证三天之内能够运到全世界各地。而我们的猕猴桃现在还拿来扶贫，什么地方不能运，我们就什么地方种猕猴桃。</p><p>&nbsp;</p><p>最后的结果是，我们无论如何也吃不到那么新鲜的猕猴桃。这当然是一个管理上的问题。新西兰解决了这些问题以后，利用中国的这个资源，让猕猴桃成为了新西兰第一大产业。这让中国植物学家也倍感心酸。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.6" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uMWsPU4bEB61AeZeL9XBtJiaMWibHgghcGlIDS2OH6DJapzY9bBMOcPgIsvrE91UyYdvOvj7tYibb1Og/640?wx_fmt=jpeg" data-type="jpeg" data-w="1000" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>但是新西兰的植物学家也不轻松，为什么？因为他们国家一个排第一的农业产业，居然建立在中国的三棵植物身上。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>那么我们来设想一下，如果他当时取的这三棵植物并不是整个猕猴桃种群里最好的呢？如果这个猕猴桃有一种病害，有一种虫害，有一种特殊的东西能够对它进行毁灭性的打击呢？那么新西兰的农业就要遭受这么巨大的损失吗？所以他们知道真正的遗传宝库在中国。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>而仅仅在湖北，在武汉，我们大概收集了70多种猕猴桃。这70多种有的并不好吃，有的长得并不好，但是它是我们今后的真正的种子。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>猕猴桃只是一个例子，更重要的例子，粮食作物的“绿色革命”在国际上是由欧美驱动的，最后在墨西哥等国家广泛在70年代发展起来的高产作物来自一种矮秆基因，叫HYV。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我们现在回头来看，主要是从野生资源中筛选到了矮秆基因，植物不需要长那么高，特别是农作物，长矮一点，让它的营养生殖减少一点，多结一些种子。发现矮秆基因的科学家罗曼·保尔先生获得了诺贝尔和平奖。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.6" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uMWsPU4bEB61AeZeL9XBtJiaJOGqswibqgsDlkshhskLKurDEPuZxZzpFD0LOBj2mh2ZrvaZPYFFTLQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="1000" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>在我们国家，大家知道袁隆平先生在海南岛发现了一种叫野稗的野生稻子资源。然后通过反复的选育，终于得到了杂交水稻，带来了我们农业上完全可以称为革命的一些变革。</p><p>&nbsp;</p><p>我自己本人也参加了上海农业基因中心的工作，我和罗立军教授一起，到处去收集旱稻。在我国的云南、贵州、湖南这些山区里面，农民在缺水的时候也种一些水稻。它看起来产量并不高，可是实际上有很好的耐旱性。我们收集了大量农家土生土长的品种。</p><p>&nbsp;</p><p>我们也把它进行杂交，最终获得了一个新的品种，叫杂交旱稻。袁隆平先生获得国家科技进步发明奖一等奖的同时，我们获得了国家的二等奖。今后在上海地区和江南地区缺水的情况下，我们也可以获得这样的种子资源。</p><p>&nbsp;</p><p>种种这些迹象表明，如果我们能获得种子，对我们的未来是一件非常好的事。这些种子可以为我们提供水果，可以为我们提供花卉，改善我们的生活，更重要的是有粮食作物。还有比它更重要的吗？还有，那就是医药。</p><p>&nbsp;</p><p>我们的医药也缺乏，很多是来自天然产物。包括我们现在了解到的青蒿素，它也是来自植物，一种叫青蒿的、黄花蒿的植物。如果有了它的种子，我们就可以在全国乃至世界各地进行栽培，从中获取青蒿素这样有用的药物。</p><p>&nbsp;</p><p>但是非常糟糕的是，由于全球环境的破坏，人类活动的剧烈，在了解和知道它能否被利用之前，它就已经没有了。怎么办？很多科学家就提出了各种各样的方案。2000年新的世纪到来以后，科学家终于决定把这些保护生物多样性的想法付诸实现。世界上目前最引人注目的种子库是斯瓦尔巴特种子库，我们称之为种子方舟或末日种子库。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.7265917602996255" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscCvmlhUGsIROwkPIVmWiaAtN8yqfNiaRGLdsJGXTiaWI64IVdVeb5DTL6A/640?wx_fmt=jpeg" data-type="jpeg" data-w="267" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>它设置在离北极1000公里左右属于挪威管的永久冰川冻土层里面。不仅是工程上、科学上设计非常精妙，而且它还特地考虑了人类在遭受核打击和停电的情况下，到底种子能保存多久。</p><p>&nbsp;</p><p>因为我们现在保存种子基本是超低温和干燥两种方式。超低温大多数是靠空调来实现的，如果停电了以后怎么办？这里面包括了人类的剧烈活动，有些完全是作死的行为。由于进化的原因或者由于环境气候变化，一部分植物要死去，或者要消失掉。但是我们居然自己还可以打仗，通过打仗来消灭我们的生物资源。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>所以在这样的一种特殊情况下，斯瓦尔巴特的种子库它不仅能够保护一批种子，更重要的是有非常强烈的警示意义。只要它立在北极这个地方，就让我们清楚地了解到生物多样性并不太多了，我们应该行动起来。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.6819085487077535" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgsck3zwt6yeaib1glwyhcpauuTibQicxy9KDeFn48kU6rm8Z1B1owQVyOkug/640?wx_fmt=jpeg" data-type="jpeg" data-w="503" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>科学上光靠这个不行，我们还需要更为精妙的设计，那就是英国皇家植物园邱园。首先它收集的地方非常地广泛，在那里可以轻易地找到来自非洲和亚洲所有的种子。因此我们可以分析全世界关于种子的现状，以及评估环境变化以后种子的状况。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>第二个特点，它的收集的目标非常明确。因为那里的科学权威特别多，所以它非常系统地来收集一些农作物的种子。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="1.2377807133421401" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscm4Tl26e2P9ya8BAjGOPAXNzHOU7zHb1tGew7sk0OsnS3G2aJvD4icxg/640?wx_fmt=jpeg" data-type="jpeg" data-w="757" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>举个例子，我本人对它里面的豆科植物特别感兴趣。我自己一点都不喜欢吃豆类的东西，特别是后来到西藏时间久了以后，由于痛风等原因，我对豆类植物更不感兴趣了。在西藏豆类植物也不多，主要是青稞，可是青稞现在面临着巨大的问题，这个问题就来自全球环境变化。</p><p>&nbsp;</p><p>科学家已经做过分析，在过去的60年间，青藏高原的年平均气温上升了二点几度。一方面这是个喜讯，这二点几度会导致农业增长。你如果有机会再到西藏旅游的话，就会发现西藏的山变得更绿了，而且我们平常的植物在周围长得更好了。</p><p>&nbsp;</p><p>但是凡事有一个极限。如果气温再这么继续升高，我们预测当年平均气温提高四度的时候，西藏的农业将面临崩溃。在这样一种特殊的情况下，我们一定要研究一个应对的措施。因为我们无法改变全球气候的变化，所以只能想如何去应对它。</p><p>&nbsp;</p><p>我们的邻国印度已经开始遭受气温上升的灾难了。我们发现它在进行替换，它在教当地人吃一种叫黑豆的东西。黑豆原来就有，但是产量不高，或者栽培的面积不大，所以它必须经过豆类植物的改良。然后让他们吃各种各样他们原来不吃的豆子。</p><p>&nbsp;</p><p>这个工作我们在西藏还没有开始做。会不会做呢？以后植物学家为了应对未来的发展，说不定要做。而像在英国皇家的邱园，我发现它居然收集了世界上最多的豆子。所以可见这样的种子库今后可能会造福全人类。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.721958925750395" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscFcNd2U4J2g7tnNgC1zSxwjDsos3oM1IwexT1CNT7k0LQOZ8yBPCpLg/640?wx_fmt=jpeg" data-type="jpeg" data-w="633" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>第三点，邱园的科学家们非常认真地从科学上探讨了一个种子究竟如何保存才能达到我们要的效果。他们现在摸索出来的条件是负20度的温度，相对湿度在15度左右。所有植物的保存时间，它的标准是定在80年到120年。一种样本的数量要达到5000粒。如果是濒危的物种，本来就没有5000粒，说不定你去采就把它采濒危了，所以一般情况下濒危物种只需要500粒。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>邱园的种子艺术不仅是在做科学，而且已经跟艺术结合，产生了奇妙的效果。如果有人还记得2010年上海的世博馆，英国馆就是英国邱园的科学家来设计的。它是一粒一粒的种子，封装在特殊的材料里面做成的。设计是英国的，里面有很多的种子是我们中国科学家提供的，也包括了我提供的种子。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.6681514476614699" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscMPhfehcEKowXauNTagpVcmEcFtLTd1icKz9gaWyZFCPUBF6Rw7jdbNg/640?wx_fmt=jpeg" data-type="jpeg" data-w="449" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>这些种子看起来非常小，但是在显微镜、扫描镜下，都特别漂亮、特别美丽，无论是结构还是色彩。这些东西表明什么呢？种子可能给我们的生活，或为我们今后的建筑，或为我们的艺术，或为我们的材料科学，提供崭新的思路。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.26533996683250416" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_png/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscXRBqZiaE9ofl9W7xpaW6IklKOLxoibVW0gdGVIj402I6UE9WLOEicwjIQ/640?wx_fmt=png" data-type="png" data-w="603" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我工作的地方是青藏高原。青藏高原是国际生物多样性的热点地区，到这样的地方去收集种子很可能有它的特殊意义。首先，在全世界第一批确定的二十几个生物多样性的热点地区，我国就有三个，其中最为重要的是以横断山区为特征的青藏高原。</p><p>&nbsp;</p><p><img class="" data-ratio="0.5971128608923885" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_png/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgsciaywTvW25ZqHhtWj4Fz8Ink7MFAwmyPZWuaSgiceuRGrI7ZSPknJYebA/640?wx_fmt=png" data-type="png" data-w="762" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>青藏高原的植物有多少呢？目前我们按科的等级，它有212个科。意思是青藏高原在科的水平的植物，占到了我国的32.9%，约占1/3。西藏的面积占我国的1/7，但是它的植物，在科的等级占到了32%，在属的等级占到了38%，超过了1/3。</p><p>&nbsp;</p><p>其中，青藏高原一共有将近6000个高等植物物种，就是能够结种子的，占到全国的18%。更为重要的是，其中有1000个左右是只有在西藏才有的植物，我们把它称之为特有种。不仅数量很大，而且质量非常地好。</p><p>&nbsp;</p><p>顺便提一句，即使是这样一个庞大的数字，我们认为也被严重地低估了。我最近去采种子的地方是墨脱，大家知道墨脱是我国最后一个通公路的县。我们采种子的地方最近的离印度边境25公里，是我国藏南一个大约7万平方公里的地区，50年来植物学家很少涉足。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>而即使在珠峰下面，我们沿着往珠穆朗玛峰的路上，往右边拐就去珠峰，往左边拐我们可以在日喀则地区发现一个嘎玛沟。我们第一次进去的时候，如果是骑马的话，单程需要7天的时间，所以100年来植物学家没有在这个地区留下记录。因此我们的数目显然不涉及这些地区到底有什么稀奇古怪的奇花异草。由此我们断定这些地方的总数量是被低估了。</p><p>&nbsp;</p><p>在青藏高原寻找植物的工作要坚持时间长，我大概坚持了十多年，一直在做野生植物资源的收集。其中最重要的集中在那七年时间，那七年间我们要为中国的种子库做出我们的贡献。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我从武汉调到复旦大学工作，但是我发现上海在我国的生物多样性排名倒数第一，北京排名倒数第二。在这个两个生物多样性相对贫乏的地区，集中了我国生物多样性研究差不多一半的人才。后来我申请了援藏。</p><p>&nbsp;</p><p>我和我的学生，包括我的第一个藏族博士，我们在一起收集一种叫西藏巨柏的种子。那种种子都在河边，非常难收集，我们大概用了三年的时间把这个种子给收集齐了。</p><p>&nbsp;</p><p><img class="" data-ratio="1.1647230320699709" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uMTsicW9Co8J3jjDZOkLSXgqume5kNWyqgCPI59UFC7GttjEuoZzAXheAQYyQmvicNAVkk5O0P2KxCw/640?wx_fmt=jpeg" data-type="jpeg" data-w="686" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>在收集过程中，我也认识了一些国外的科学家。有一位奇人，他出生在中国的湖北，是一位英国人。去世之前，他要求人生最后的五年要到湖北华中科技大学工作。他曾经担任过悉尼大学植物学系的主任，所以对植物的了解，对国际植物的需求是非常清晰的。最后他把他所有的资料，他的研究成果，都放在了湖北。</p><p>&nbsp;</p><p>在这个过程中，他特地建议我去找英国皇家邱园的科学家来进行合作，在那里，我们找到了蔡杰先生。他是中国人，但是在英国皇家邱园工作。当我们要他提供能够给中国植物学家进行植物种子研究的资料的时候，他马上同意参加我们的团队。</p><p>&nbsp;</p><p>我们四个人分析了当时邱园所有的植物，发现里面居然没有一粒来自中国西藏的种子。因此它关于全球变化的预测，在这个版图上是少了一块。因此我们写了一篇小文章，阐述全世界气候变化必须要有西藏的种子。</p><p>&nbsp;</p><p>Nature杂志在2008年发表了我们这封来信，同时也呼吁世界科学家重视西藏的种子。事实上我们一方面呼吁，一方面就要来加以实施。2004年开始由中国科学院主导建立了中国西南野生生物资源库，云南的昆明。这个种子库从数量上来说，至少在我国，在亚洲肯定是第一大，也是世界上并列的三大种子库之</p><p>一。<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="0.34227467811158796" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscGLNddweHibo6B4JedFk3T03s3N1f0C0GHiaFxtGtDeeCwicEAk9LOmWNg/640?wx_fmt=jpeg" data-type="jpeg" data-w="932" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我来讲一下收集种子的故事，听起来可能非常浪漫。我每次做招生宣传都欢迎年轻的孩子们读植物学。我都讲请你们报考复旦大学或者西藏大学植物学，这好像是我们八项规定以后比较少有的公费旅游的专业。大概能跟我们专业媲美的也只有烹饪系，他们还可以公款吃喝。</p><p>&nbsp;</p><p>话是这么说，实际上根本不足以抵御我们工作的艰苦。我来讲一个光核桃的故事。作为植物学家我去采植物的种子，我最喜欢的是蒲公英。如果发现开花并且结了种子，我就用手去抓一把，然后一摊开，一般情况下里面有200颗。</p><p>&nbsp;</p><p>但是在中国植物的中，我们最讨厌的种子大家知道是什么吗？椰子。这么大一颗，8000颗。我们大概需要两卡车才能把它拖回来，然后这才算一科的种子。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我们就说这个光核桃吧，这个种子，从它后面的拉丁名，可能有人就会知道了，它实际上是光核的桃，不是光的核桃。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="1.0981818181818181" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscotxgjnkse3KJg23q54M2MMR3xpXUTZsooGQxB6vkos3MG7rPdBEu0A/640?wx_fmt=jpeg" data-type="jpeg" data-w="275" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>什么道理呢？我们所有的桃子中间那个核是皱皱巴巴的，有皱纹，而它没有，是光的。这个桃子有什么用呢？没什么用。目前查来查去，大概它最大的用处就是藏药里面有少许的用途吧。但是我们需要它，也许它就像猕猴桃一样，多少年以后它终于可以跟我们的水蜜桃杂交了。</p><p>&nbsp;</p><p>杂交完以后显然我们想它有什么优点呢？水蜜桃很好吃，那它有什么优点呢？它抗虫、抗病、抗旱、抗寒。所有这样的优点，我们就可以通过非转基因的方式，经过杂交，再加上自然选择，来获得一种新型的桃子品种。所以我们知道潜在的意义是很大的，在潜在意义没有兑现之前，要紧的是先把它收集起来。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>一个桃子里面有多少种子呢？一个里面一颗。所以我先收集8000颗，8000个桃子，装了两大麻袋，把它运回拉萨放在我的实验室里面。</p><p>&nbsp;</p><p>如何把里面的种子取出来成了一个关键。如果有自动化方式就非常好，但是没有，也没有合适的尺寸。所以我就摆在门口，铺了一个台子，所有路过的汉族、藏族、老师、学生，每个人必须尝一尝。</p><p>&nbsp;</p><p>尝多少呢？7颗。我们认为如果超过了10颗，很多同志一辈子都不想再见我了。这7颗拿了以后，他们都非常淳朴，特别是藏族朋友，一边吃一边呸呸，然后告诉我这个东西不能吃。他们说：老师，你采错了，它真的不能吃，而且很不好吃。</p><p>&nbsp;</p><p>确实，我也知道不好吃，因为它以前就是猴子吃的。可是我们必须这样把它吃完，用牙刷好好地把边给刷干净，刷完了以后用布把它擦干，擦干以后必须晾干，因为不能暴晒，暴晒以后种子质量就会坏。</p><p>&nbsp;</p><p>我们把这收集的8000粒送到中国科学院的昆明植物所，刚才说的种子库里面。科学家们看有没有裂的，有没有被虫蛀的，把所有的外观做完了，然后抽样进行发芽试验。发芽试验结束了以后登记下来，最后筛选5000个，把它封到瓶子里面。这样有可能放80年到120年，这就算一个样。那一年夏天我做了500个样。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>有人就说：老师，我们能不能发现一个种群？那个种群种子特别多，我一次做50万颗不就完了吗？那没有用。我们做遗传资源的有几个特点，第一个，沿着海拔2000多到3000米，我们慢慢地来搜寻这个种子。由于遗传之间的杂交问题，不同的个体和不同的品种花粉之间有可能产生杂交。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>我们规定两个样之间的空间距离不得小于50公里，让它们之间隔开。这样我们一天要走800公里，每走过50公里看见一个种子赶紧收集那几个，装上麻袋，然后开车去另外一个点。</p><p>&nbsp;</p><p><img class="" data-ratio="0.6401799100449775" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_png/DDSSkL2T0uMTsicW9Co8J3jjDZOkLSXgqDRHy0NvEdxcibJC70jzIINgpGbH6gO9xcSXyYzMPicAr7sesXa1xurpQ/640?wx_fmt=png" data-type="png" data-w="667" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>同时在整个西藏境内，任何一个物种不得超过5个群体。这样的话，大约7年时间，我们收集了4000多个样，按照估计的话，大约1000个物种，占到了西藏物种的1/5。今年起，我们要开始在墨脱的新一轮的收集。</p><p>&nbsp;</p><p>如果这样，在未来的10年中，我们有可能再完成20%的任务。这样合在一起，我们大约能收集到超过西藏植物的1/3以上。我想如果我们这样的课题组都来做这样的工作的话，在未来的20年，我们有可能把西藏的高等植物收到75%。</p><p>&nbsp;</p><p>在我们的工作中，还有一些特殊的植物，比方说香柏。香柏当时很不起眼，它分布在海拔4000米以上的地方，当地的老百姓把它晒干以后拿到庙里面去烧。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p><img class="" data-ratio="1.271375464684015" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscpDkqMaQmwmBUOFvGMzKHJicSbUwnPGWjicTGibgTtptibVfABue5CNWGjQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="269" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>&nbsp;<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>但是它除了有特殊的香味以外，还有抗菌抗病毒等等相关的成分。我们拿来进行了分析，在复旦大学收集了400份各种植物的材料，跟美国癌症研究所确定，在这些种子里面发现了四种是有比较好的抗癌效果。这四种中包括了香柏的种子。</p><p>&nbsp;</p><p>如果有人问我，钟老师，你收集了那么多种子，难道到目前来说一点用都没有吗？你是一个做研究的科学家，在国际上能引起轰动吗？那当推拟南芥的种子。</p><p>&nbsp;</p><p>拟南芥的种子，在座的学过植物学的就可以了解，全世界一半的植物学家都在研究这种植物。这种植物，我们把它称之为植物界的小白鼠，它就叫模式生物。我们做了任何的医学研究，做了任何的药物研究，都要到小白鼠上去做实验。</p><p>&nbsp;</p><p>关于植物，关于作物，关于它的抗寒抗逆性，以及分子生物学的机制，我们全部都是用拟南芥去做。全世界的科学家都在寻找拟南芥，并且找到了各种各样的拟南芥，就是这幅地图上绿色标示的区域。</p><p>&nbsp;</p><p><img class="" data-ratio="0.6482213438735178" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgscevFEEHUaZEa0B5DcSZvA0ic8BR5cby7GGnjhuwburibH4bdv7sB76FQg/640?wx_fmt=jpeg" data-type="jpeg" data-w="1012" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p>我们用的最多的，一个在哥伦比亚，一个是来自西班牙的。其中，西班牙的海拔比较高，大约能到海拔2000多米。那么我们在想西藏有没有呢？如果西藏有的话，它是不是西藏隆起的证据呢？那我们就去寻找。</p><p>&nbsp;</p><p>通过差不多10年左右的时间，我们终于找到了这个全世界海拔最高的拟南芥，它分布在海拔4150米。在这么高的一个环境下，拟南芥当然生活得很不好，很惨，也没有什么种子。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>但拟南芥在室内生长得非常地快。我们为什么拿它做模式生物呢？它长得特别小，但是它种子结得特别多。第三，它的遗传基础非常地清晰。</p><p>&nbsp;</p><p>我们发现了这个植物以后，做了分子生物学分析，证明它是全世界一个崭新的生态型。同时，它也指示了青藏高原最后一次跟全世界其他拟南芥分开的时间，大约在19万年前。更重要的是，最终我们在上海把它栽培成功了。</p><p>&nbsp;</p><p><img class="" data-ratio="0.6258169934640523" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/DDSSkL2T0uPYBfaBntWoD2ia5MNFicLgsc9tXV1TicbGwLP5sWDn03Q3ZJsmqLkOkVicYEribb1IFo1awy52HCbuuNQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="612" style="box-sizing: border-box !important;word-wrap: break-word !important;width: auto !important;visibility: visible !important;"  /></p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>现在这个植物的种子，通过中国科学家在国际大会和国内的会议作报告，已经成为了一种新型的研究材料。这个材料我现在提供给了北京、上海、广州、中国科学院、北京大学、中山大学等等，我们都在栽培，而且都取得了成功。</p><p>&nbsp;</p><p>所以这表明了，如果在野外，我们只要找到一个种子或者少数的种子，很有可能把它栽培成功。这在我们植物学界那就是真正的叫希望的种子。</p><p>&nbsp;</p><p>各位肯定要问：钟教授，你收集这么多种子，对我们普通的人来讲，这么多年，你的意义何在呢？</p><p>&nbsp;</p><p>2013年，上海教师节期间给我拍了一个宣传片。我回头一想，那时候我在西藏工作了13年，13年做了一些什么事呢？我想我做了几件事，其中第一件事就是收集种子。</p><p>&nbsp;</p><p>这个种子实际上是应对全球的变化。你猜测一下，假设一百多年以后还有癌症，假设那时候大家发现有一种植物有抗癌作用，然而由于气候的变化，这个植物在西藏已经没有了，但是一百多年前有个姓钟的教授好像采过了。</p><p>&nbsp;</p><p>都一百多年了，姓不姓钟有什么关系呢，是不是教授又有什么关系呢？大家问我，我们的孩子如果采了这些种子能考上大学吗？一百多年过去了，没有人在乎你是不是教授。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>等终于发现了那个罐子，那个罐子里面有多少？5000粒。拿出来一种，只有500粒能活，最后种起来以后只有50粒能结种子。但是那个植物不就恢复了吗？</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>当然也有人说，如果一百年以后这个种子没有用了呢？我期待看到种子没有用的那一天。说明什么？说明那个植物还在。我们连这样的尝试都不要做那该多好。这是第一件事。</p><p>&nbsp;</p><p>第二件事，我在西藏是一位教授。实际上我从复旦大学到西藏大学以后，在复旦大学的研究生招生量在逐年地减少。因为人的精力有限，所以我一般在西藏培养学生。大家也觉得很有意思，就问我从国内一流的复旦大学，移到世界最高学府的西藏大学，在最高学府当老师有什么体会？</p><p>&nbsp;</p><p>我说那个地方是高原，特别地慢，培养人特别慢。今年我的第五位博士德吉毕业了，藏族博士，也是我培养的七个少数民族博士中新近毕业的一名。</p><p>&nbsp;</p><p>我在复旦大学可以培养很多博士，但是他们不一定对我们刚才所说的种子，或者像这样高劳动强度的、低回报的工作真的有那么大帮助。但是在西藏，我培养的藏族博士，他们毕业以后，至少这五个里面有四个都留在了西藏大学，都在西藏工作。</p><p>&nbsp;</p><p>所以我一想，我们这个片子起什么名字呢？最后起的叫《播种未来》。什么意思呢？就是当下没什么收获嘛，所以我们只好播种未来。</p><p><br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p>另外，那个片子也出了一点事故。当时是上海市有一位著名的导演要跟我们一起去拍，他非常浪漫。他告诉我，钟老师，我要给你拍一个30分钟的片子，要很好很好地描述你在西藏的故事。我说你先去了以后再说。我们调子稍微低一点。但他的情绪非常高涨，感染了我们，感染了整个团队。</p><p>&nbsp;</p><p>但是不好的消息是，他去了以后第一个就倒了。你想想，任何一个片子，导演先倒了以后就没有办法。但是好在我们的摄影非常地认真，他坚持把我们工作的情景拍下来了，而且也比较艺术性地剪接，后来终于以一个新的形式挽救了我们。</p><p>&nbsp;</p><p>30分钟的片子拍不了，他把它剪在一起，变成了五分钟的微电影，微电影只需要5分钟。当然配音的也找不着了，所以我自己给它配了音。最后送到国际电影节去参展，拿了微电影的纪录片金奖。</p><p>&nbsp;</p><p>所以，这个故事有了这样的结局，一方面来自西藏美丽的风光，一方面也来自种子赐予我们的灵感和一切。</p><p>&nbsp;</p><p>谢谢大家。</p><p><br  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicVCyQullaDnD3nPLb7VS8Eib328eH3Wq5dDC8OSWG7sAcI0s4sU2xzfg/0?wx_fmt=jpeg" class="" data-ratio="0.571875" data-w="1280"  /></p><p><br  /></p><p><span style="font-size: 14px;color: rgb(0, 122, 170);"><strong>钟扬教授曾说，“一个基因可以拯救一个国家，一粒种子可以造福万千苍生。” “人生没有绝对，不必等到临终才来回首自己的人生，只要把每个年龄段该干的事都干了，就能不负人生。”</strong></span></p><p><br  /></p><p><span style="font-size: 14px;color: rgb(0, 122, 170);"><strong>三十余年教龄，十六年援藏，海边的那片红树林，多少人含泪重读这一切，想念那个挑战极限只为播种未来的<strong style="color: rgb(0, 122, 170);font-size: 14px;white-space: normal;">钟扬教授</strong>！</strong></span></p><p><br  /></p><p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;text-align: right;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(136, 136, 136);font-size: 14px;box-sizing: border-box !important;word-wrap: break-word !important;">编辑：宸萱</span><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;word-wrap: break-word !important;"><br data-filtered="filtered" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></span></p><hr style="max-width: 100%;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"  /><hr style="max-width: 100%;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"  /><p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><span style="max-width: 100%;color: rgb(136, 136, 136);font-size: 14px;box-sizing: border-box !important;word-wrap: break-word !important;">本文部分内容来自“一席”（ID：yixiclub）。本帐号文章除注明外均为原创，未经授权请勿转载！<span style="max-width: 100%;">长按下方二维码可关注“文汇教育”。</span></span><br data-filtered="filtered" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></p><p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;white-space: normal;line-height: 25.6px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><img class="" data-ratio="0.9799196787148594" data-s="300,640" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTNB7ewYceIM5vPFnIIvNsZ01J812wYxhicnVOQMdVeYcMMjGZCoPCm69PYiaPp4LoLDTF5p7IWkLdyA/640?wx_fmt=jpeg" data-type="jpeg" data-w="498" style="box-sizing: border-box !important;word-wrap: break-word !important;visibility: visible !important;width: 556px !important;" width="auto"  /></p><p><br  /></p><p><br  /></p>
+                </div>
+                <script nonce="880546264" type="text/javascript">
+                    var first_sceen__time = (+new Date());
+
+                    if ("" == 1 && document.getElementById('js_content')) {
+                        document.getElementById('js_content').addEventListener("selectstart",function(e){ e.preventDefault(); });
+                    }
+
+                    
+                    (function(){
+                        if (navigator.userAgent.indexOf("WindowsWechat") != -1){
+                            var link = document.createElement('link');
+                            var head = document.getElementsByTagName('head')[0];
+                            link.rel = 'stylesheet';
+                            link.type = 'text/css';
+                            link.href = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_winwx315a9c.css";
+                            head.appendChild(link);
+                        }
+                    })();
+                </script>
+                
+                
+                                
+                <div class="ct_mpda_wrp" id="js_sponsor_ad_area" style="display:none;"></div>
+
+                
+                                <div class="reward_area tc" id="js_preview_reward" style="display:none;">
+                    <p id="js_preview_reward_wording" class="tips_global reward_tips" style="display:none;"></p>
+                    <p>
+                        <a class="reward_access" id='js_preview_reward_link' href="##">赞赏</a>
+                    </p>
+                </div>
+                <div class="reward_qrcode_area reward_area tc" id="js_preview_reward_qrcode" style="display:none;">
+                    <p class="tips_global">长按二维码向我转账</p>
+                    <p id="js_preview_reward_ios_wording" class="reward_tips" style="display:none;"></p>
+                    <span class="reward_qrcode_img_wrp"><img class="reward_qrcode_img" src="//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/appmsg/pic_reward_qrcode.2x3534de.png"></span>
+                    <p class="tips_global">受苹果公司新规定影响，微信 iOS 版的赞赏功能被关闭，可通过二维码转账支持公众号。</p>
+                </div>
+                            </div>
+                        
+                        <div class="rich_media_tool" id="js_toobar3">
+                                            <div id="js_read_area3" class="media_tool_meta tips_global meta_primary" style="display:none;">阅读 <span id="readNum3"></span></div>
+
+                <span style="display:none;" class="media_tool_meta meta_primary tips_global meta_praise" id="like3">
+                    <i class="icon_praise_gray"></i><span class="praise_num" id="likeNum3"></span>
+                </span>
+
+                <a id="js_report_article3" style="display:none;" class="media_tool_meta tips_global meta_extra" href="##">投诉</a>
+
+            </div>
+
+
+                    </div>
+
+        <div class="rich_media_area_primary sougou" id="sg_tj" style="display:none"></div>
+
+        
+        <div class="rich_media_area_extra">
+
+            
+                        <div class="mpda_bottom_container" id="js_bottom_ad_area"></div>
+                        
+            <div id="js_iframetest" style="display:none;"></div>
+                        
+                        <div class="rich_media_extra" id="js_cmt_area" style="display:none">
+            </div>
+                    </div>
+
+        
+        <div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+            <div class="qr_code_pc_inner">
+                <div class="qr_code_pc">
+                    <img id="js_pc_qr_code_img" class="qr_code_pc_img">
+                    <p>微信扫一扫<br>关注该公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="js_minipro_dialog" style="display:none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd">即将打开"<span id="js_minipro_dialog_name"></span>"小程序</div>
+        <div class="weui-dialog__ft">
+            <a id="js_minipro_dialog_cancel" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+            <a id="js_minipro_dialog_ok" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_primary">打开</a>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="880546264">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="880546264" type="text/javascript">
+(function() {
+	var totalCount = 0,
+			finishCount = 0;
+
+	function _loadVConsolePlugin() {
+		window.vConsole = new window.VConsole();
+		while (window.vConsolePlugins.length > 0) {
+			var p = window.vConsolePlugins.shift();
+			window.vConsole.addPlugin(p);
+		}
+	}
+	
+	function _addVConsole(uri, cb) {
+		totalCount++;
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		var node = document.createElement('SCRIPT');
+		node.type = 'text/javascript';
+		node.src = url;
+		node.setAttribute('nonce', '880546264');
+		if (cb) {
+			node.onload = cb;
+		}
+		document.getElementsByTagName('head')[0].appendChild(node);
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		window.vConsolePlugins = [];
+		_addVConsole('3.0.0/vconsole.min.js', function() {
+			
+			_addVConsole('plugin/vconsole-mpopt/1.0.1/vconsole-mpopt.js', _loadVConsolePlugin);
+		});
+	}
+})();
+</script>
+        
+<script nonce="880546264" type="text/javascript">
+
+if (!window.console) window.console = { log: function() {} };
+
+if (typeof getComputedStyle == 'undefined') {
+    if (document.body.currentStyle) {
+        window.getComputedStyle = function(el) {
+            return el.currentStyle;
+        }
+    } else {
+        window.getComputedStyle = {};
+    }
+}
+(function(){
+    window.__zoom = 1;
+    
+    (function(){
+        var validArr = ","+([0.875, 1, 1.125, 1.25, 1.375]).join(",")+",";
+        var match = window.location.href.match(/winzoom=(\d+(?:\.\d+)?)/);
+        if (match && match[1]) {
+            var winzoom = parseFloat(match[1]);
+            if (validArr.indexOf(","+winzoom+",")>=0) {
+                window.__zoom = winzoom;
+            }
+        }
+    })();
+
+    var isIE = false;
+    if (typeof version != 'undefined' && version >= 6 && version <= 9) {
+        isIE = true;
+    }
+    var getMaxWith=function(){
+        var container = document.getElementById('img-content');
+        var max_width = container.offsetWidth;
+        var container_padding = 0;
+        var container_style = getComputedStyle(container);
+        container_padding = parseFloat(container_style.paddingLeft) + parseFloat(container_style.paddingRight);
+        max_width -= container_padding;
+        var ua = navigator.userAgent.toLowerCase();
+        var re = new RegExp("msie ([0-9]+[\.0-9]*)");
+        var version;
+        if (re.exec(ua) != null) {
+            version = parseInt(RegExp.$1);
+        }
+        var isIE = false;
+        if (typeof version != 'undefined' && version >= 6 && version <= 9) {
+            isIE = true;
+        }
+        if (!max_width) {
+            max_width = window.innerWidth - 30;      
+        }
+        return max_width;
+    };
+    var getParentWidth = function(dom){
+        var parent_width = 0;
+        var parent = dom.parentNode;
+        var outerWidth = 0;
+        while (true) {
+            var parent_style = getComputedStyle(parent);
+            if (!parent || !parent_style) break;
+            parent_width = parent.clientWidth - parseFloat(parent_style.paddingLeft) - parseFloat(parent_style.paddingRight) - outerWidth;
+            if (parent_width > 0) break;
+            outerWidth += parseFloat(parent_style.paddingLeft) + parseFloat(parent_style.paddingRight) + parseFloat(parent_style.marginLeft) + parseFloat(parent_style.marginRight) + parseFloat(parent_style.borderLeftWidth) + parseFloat(parent_style.borderRightWidth);
+            parent = parent.parentNode;
+        }
+        return parent_width;
+    }
+    var getOuterW=function(dom){
+        var style=getComputedStyle(dom),
+            w=0;
+        if(!!style){
+            w = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+        }
+        return w;
+    };
+    var getOuterH =function(dom){
+        var style=getComputedStyle(dom),
+            h=0;
+        if(!!style){
+            h = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+        }
+        return h;
+    };
+    var insertAfter = function(dom,afterDom){
+        var _p = afterDom.parentNode;
+        if(!_p){
+            return;
+        }
+        if(_p.lastChild === afterDom){
+            _p.appendChild(dom);
+        }else{
+            _p.insertBefore(dom,afterDom.nextSibling);
+        }
+    };
+    var getQuery = function(name,url){
+        
+        var u  = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?")+1).match(reg);
+        return r!=null?r[2]:"";
+    };
+    (function(){
+        var images = document.getElementsByTagName('img');
+        var length = images.length;
+        var max_width = getMaxWith();
+        for (var i = 0; i < length; ++i) {
+            var src_ = images[i].getAttribute('data-src');
+            var realSrc = images[i].getAttribute('src');
+            if (!src_ || realSrc) continue;
+            var width_ = 1 * images[i].getAttribute('data-w') || max_width;
+            var ratio_ = 1 * images[i].getAttribute('data-ratio');
+            var height = 100;
+            if (ratio_ && ratio_ > 0) {
+                var img_style = getComputedStyle(images[i]);
+                var init_width = images[i].style.width;
+                
+                if (init_width) {
+                    images[i].setAttribute('_width', init_width);
+                    if (init_width != 'auto') width_ = parseFloat(img_style.width);
+                }
+                var parent_width = getParentWidth(images[i])||max_width;
+                var width = width_ > parent_width ? parent_width : width_; 
+                var img_padding_border = getOuterW(images[i])||0;
+                var img_padding_border_top_bottom = getOuterH(images[i])||0;
+                height = (width - img_padding_border) * ratio_ + img_padding_border_top_bottom;
+                images[i].style.cssText += ";width: " + width + "px !important;";
+                if (isIE) {
+                    var url = images[i].getAttribute('data-src');
+                    images[i].src = url;
+                } else {
+                    if(width > 40 && height > 40){
+                        images[i].className += ' img_loading';
+                    }
+                    images[i].src = "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+                }
+            } else {
+                images[i].style.cssText += ";visibility: hidden !important;";
+            }
+            images[i].style.cssText += ";height: " + height + "px !important;";
+        }
+    })();
+    window.__videoDefaultRatio=16/9;
+    window.__getVideoWh = function(dom){
+        var max_width = getMaxWith(),
+            width = max_width,
+            ratio_ = dom.getAttribute('data-ratio')*1||(4/3),
+            arr = [4/3, 16/9],
+            ret = arr[0],
+            abs = Math.abs(ret - ratio_);
+        for(var j=1,jl=arr.length;j<jl;j++){
+            var _abs = Math.abs(arr[j] - ratio_);
+            if(_abs<abs){
+                abs = _abs;
+                ret = arr[j];
+            }
+        }
+        ratio_ = ret;
+        var parent_width = getParentWidth(dom)||max_width,
+            width = width > parent_width ? parent_width : width,
+            outerW = getOuterW(dom)||0,
+            outerH = getOuterH(dom)||0,
+            videoW = width - outerW,
+            videoH = videoW/ratio_,
+            height = videoH + outerH;
+        return {w:width,h:height,vh:videoH,vw:videoW,ratio:ratio_};
+    };
+
+    (function(){
+        var iframe = document.getElementsByTagName('iframe');
+        for (var i=0,il=iframe.length;i<il;i++) {
+            var a = iframe[i];
+            var src_ = a.getAttribute('src')||a.getAttribute('data-src')||"";
+            if(!/http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)){
+                continue;
+            }
+            var vid = getQuery("vid",src_);
+            if(!vid){
+                continue;
+            }
+            vid=vid.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"");
+            a.removeAttribute('src');
+            a.style.display = "none";            
+            var obj = window.__getVideoWh(a),
+                mydiv = document.createElement('img');
+            mydiv.className = "img_loading";
+            mydiv.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+            mydiv.setAttribute("data-vid",vid);
+            mydiv.style.cssText = "width: " + obj.w + "px !important;";
+            insertAfter(mydiv,a);
+            a.style.cssText += ";width: " + obj.w + "px !important;";
+            a.setAttribute("width",obj.w);
+            if(window.__zoom!=1){
+                a.style.display = "block";
+                mydiv.style.display = "none";
+                a.setAttribute("_ratio",obj.ratio);
+                a.setAttribute("_vid",vid);
+            }else{
+                mydiv.style.cssText += "height: " + obj.h + "px !important;";
+                a.style.cssText += "height: " + obj.h + "px !important;";
+                a.setAttribute("height",obj.h);
+            }
+            a.setAttribute("data-vh",obj.vh);
+            a.setAttribute("data-vw",obj.vw);
+            a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+obj.vw+"&height="+obj.vh+"&auto=0");
+        }
+    })();
+
+    (function(){
+        if(window.__zoom!=1){
+            document.getElementById('page-content').style.zoom = window.__zoom;
+            var a = document.getElementById('activity-name');
+            var b = document.getElementById('meta_content');
+            if(!!a){
+                a.style.zoom = 1/window.__zoom;
+            }
+            if(!!b){
+                b.style.zoom = 1/window.__zoom;
+            }
+            var images = document.getElementsByTagName('img');
+            for (var i = 0,il=images.length;i<il;i++) {
+                images[i].style.zoom = 1/window.__zoom;
+            }
+            var iframe = document.getElementsByTagName('iframe');
+            for (var i = 0,il=iframe.length;i<il;i++) {
+                var a = iframe[i];
+                a.style.zoom = 1/window.__zoom;
+                var src_ = a.getAttribute('data-src')||"";
+                if(!/http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)){
+                    continue;
+                }
+                var ratio = a.getAttribute("_ratio");
+                var vid = a.getAttribute("_vid");
+                a.removeAttribute("_ratio");
+                a.removeAttribute("_vid");
+                var vw = a.offsetWidth - (getOuterW(a)||0);
+                var vh = vw/ratio;
+                var h = vh + (getOuterH(a)||0)
+                a.style.cssText += "height: " + h + "px !important;"
+                a.setAttribute("height",h);
+                a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+vw+"&height="+vh+"&auto=0");
+                a.style.display = "none";                
+                var parent = a.parentNode;
+                if(!parent){
+                    continue;
+                }
+                for(var j=0,jl=parent.children.length;j<jl;j++){
+                    var child = parent.children[j];
+                    if(child.className.indexOf("img_loading")>=0 && child.getAttribute("data-vid")==vid){
+                        child.style.cssText += "height: " + h + "px !important;";
+                        child.style.display = "";
+                    }
+                }
+            }
+        }
+    })();
+})();
+</script>
+<script nonce="880546264" type="text/javascript">
+
+    var not_in_mm_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/not_in_mm36906d.css";
+    var windowwx_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_winwx315a9c.css";
+    var article_improve_combo_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_combo3802da.css";
+    var tid = "";
+    var aid = "";
+    var clientversion = "0";
+    var appuin = ""||"MzA5NTIyODgzOQ==";
+
+    var source = "";
+    var subscene = "";
+    var abtest_cookie = "";
+
+    var scene = 75;
+
+    var itemidx = "";
+
+    var appmsg_token   = "";
+
+    var _copyright_stat = "1";
+    var _ori_article_type = "教育培训";
+
+    var nickname = "文汇教育";
+    var appmsg_type = "9";
+    var ct = "1506346368";
+    var publish_time = "2017-09-25" || "";
+    var user_name = "gh_18c5d1c1a874";
+    var user_name_new = "";
+    var fakeid   = "";
+    var version   = "";
+    var is_limit_user   = "0";
+    var round_head_img = "http://mmsns.qpic.cn/mmsns/IOM4NBSSuTMYugZbBsFOKGHfkBjD6EO9lzJ8Vgz8MlfFlBmf1dcYWw/0";
+    var ori_head_img_url = "http://wx.qlogo.cn/mmhead/Q3auHgzwzM4zz0ByIicsibneXIYFnPQF8EiasxRNCL3Nn3MrBGHFf4KLg/132";
+    var msg_title = "追忆著名植物学家、复旦大学教授钟扬——那个为人类寻觅种子的人，那个为未来保存希望的人";
+    var msg_desc = "三十余年教龄，十六年援藏，海边的那片红树林，多少人含泪重读这一切，想念那个挑战极限只为播种未来的钟扬教授！";
+    var msg_cdn_url = "http://mmbiz.qpic.cn/mmbiz_jpg/IOM4NBSSuTMiaQichZ2qvgkpgsq515BKUicWYiaqs6zPTnWXVtUzqgiaY2f9upZVjn474UmQzI7hbORvucibeo4xPbjQ/0?wx_fmt=jpeg";
+    var msg_link = "http://mp.weixin.qq.com/s?__biz=MzA5NTIyODgzOQ==\x26amp;mid=2650193065\x26amp;idx=1\x26amp;sn=58e91b483e1da88b9bec8260ccf27702\x26amp;chksm=88409a61bf3713775bc8cb10993272f92f2a9cf3a3069057c34f58d1b569ee9bd46bd0182f08#rd";
+    var user_uin = "0"*1;
+    var msg_source_url = '';
+    var img_format = 'jpeg';
+    var srcid = '';
+    var req_id = '1020vkijaiUA6fvIatVPqdTN';
+    var networkType;
+    var appmsgid = '' || ''|| "2650193065";
+    var comment_id = "2510140584" * 1;
+    var comment_enabled = "" * 1;
+    var is_need_reward = "0" * 1;
+    var is_https_res = ("" * 1) && (location.protocol == "https:");
+    var msg_daily_idx = "1" || "";
+    var profileReportInfo = "" || "";
+
+    var devicetype = "";
+    var source_encode_biz = "";
+    var source_username = "";
+    
+    var reprint_ticket = "";
+    var source_mid = "";
+    var source_idx = "";
+
+    var show_comment = "";
+    var __appmsgCgiData = {
+        show_msg_voice: "0"*1,
+        can_use_page : "0"*1,
+        is_wxg_stuff_uin : "0"*1,
+        card_pos : "",
+        copyright_stat : "1",
+        source_biz : "",
+        hd_head_img : "http://wx.qlogo.cn/mmhead/Q3auHgzwzM4zz0ByIicsibneXIYFnPQF8EiasxRNCL3Nn3MrBGHFf4KLg/0"||(window.location.protocol+"//"+window.location.host + "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/appmsg/pic_rumor_link.2x264e77.jpg")
+    };
+    var _empty_v = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/pages/voice/empty26f1f1.mp3";
+
+    var copyright_stat = "1" * 1;
+
+    var pay_fee = "" * 1;
+    var pay_timestamp = "";
+    var need_pay = "" * 1;
+
+    var need_report_cost = "0" * 1;
+    var use_tx_video_player = "0" * 1;
+    var appmsg_fe_filter = "contenteditable";
+
+    var friend_read_source = "" || "";
+    var friend_read_version = "" || "";
+    var friend_read_class_id = "" || "";
+
+    var is_only_read = "1" * 1;
+    var read_num = "" * 1;
+    var like_num = "" * 1;
+    var liked = "" == 'true' ? true : false;
+    var is_temp_url = "" ? 1 : 0;
+    var send_time = "";
+    var icon_emotion_switch = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/emotion/icon_emotion_switch.2x2f1273.png";
+    var icon_emotion_switch_active = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/emotion/icon_emotion_switch_active.2x2f1273.png";
+    var icon_loading_white = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/icon_loading_white2805ea.gif";
+    var icon_audio_unread = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/audio/icon_audio_unread26f1f1.png";
+    var icon_qqmusic_default = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x26f1f1.png";
+    var icon_qqmusic_source = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_source263727.png";
+
+    var topic_default_img = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/topic/pic_book_thumb.2x2e4988.png';
+    var comment_edit_icon = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/icon_edit25decf.png';
+    var comment_loading_img = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/icon_loading_white2805ea.gif';
+    var voice_in_appmsg = {
+        "1":"1"
+            };
+    var wxa_img_alert = "" != 'false';
+
+    
+    
+    
+    
+
+    
+    var weapp_sn_arr_json = "" || "";
+
+    
+    var ban_scene = "0" * 1;
+
+    var svr_time = "1507638421" * 1;
+    
+    var is_transfer_msg = ""*1||0;
+
+    var malicious_title_reason_id = "0" * 1; 
+
+        window.wxtoken = "";
+        
+    
+    
+    
+    
+    window.is_login = '0' * 1; 
+
+    window.__moon_initcallback = function(){
+        if(!!window.__initCatch){
+            window.__initCatch({
+                idkey : 27611+2,
+                startKey : 0,
+                limit : 128,
+                badjsId: 43,
+                reportOpt : {
+                    uin : uin,
+                    biz : biz,
+                    mid : mid,
+                    idx : idx,
+                    sn  : sn
+                },
+                extInfo : {
+                    network_rate : 0.01,    
+                    badjs_rate: 0.1 
+                }
+            });
+        }
+    }
+    </script>
+
+<script nonce="880546264" type="text/javascript">
+(function(){
+    window.__logClientLog = function(msg){
+        try{
+            var method;
+            if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+                method = 'writeLog';
+            }else if(/(Android)/i.test(navigator.userAgent)){
+                method = 'log';
+            }
+            if(!!method)
+                doLog(method, msg);
+        }catch(e){
+            console.error(e)
+            throw e
+        }
+    }
+    function doLog(method, msg){
+        if(!!method && !!top.window.WeixinJSBridge && !!top.window.WeixinJSBridge.invoke){
+            top.window.WeixinJSBridge.invoke(method, {
+                "level" : 'info',
+                "msg" : "[WechatFe][appmsg]" + msg
+            });
+        }else{
+            
+            setTimeout(function(){
+                if( top.window.document.addEventListener ){
+                    top.window.document.addEventListener('WeixinJSBridgeReady', function(){
+                        doLog(method,msg)
+                    }, false);
+                }else if (top.window.document.attachEvent){
+                    top.window.document.attachEvent('WeixinJSBridgeReady', function(){
+                        doLog(method, msg)
+                    });
+                    top.window.document.attachEvent('onWeixinJSBridgeReady', function(){
+                        doLog(method, msg)
+                    });
+                }
+            }, 0)
+        }
+    }
+    window.__moonErrRep = function(src){
+        window.__logClientLog(' moon load err ' + src);
+    }
+    window.__moonSucRep = function(src){
+        window.__logClientLog(' moon load suc ' + src);
+    }
+    window.setTimeout(function(){
+        window.__logClientLog(' index.html end, __moonhasinit : ' + window.__moonhasinit);
+    }, 500);
+})();
+</script>
+
+        <script nonce="880546264">window.__moon_host = 'res.wx.qq.com';window.__moon_mainjs = 'appmsg/index.js';window.moon_map = {"new_video/player.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/player.html385437.js","biz_wap/zepto/touch.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/touch34c264.js","biz_wap/zepto/event.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/event34c264.js","biz_wap/zepto/zepto.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/zepto34c264.js","page/pages/video.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/pages/video.css3767b8.js","a/appdialog_confirm.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/appdialog_confirm.html34f0d8.js","widget/wx_profile_dialog_primary.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/widget/wx_profile_dialog_primary.css34f0d8.js","appmsg/emotion/caret.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/caret278965.js","new_video/player.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/player376c4d.js","a/appdialog_confirm.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/appdialog_confirm34c32b.js","biz_wap/jsapi/cardticket.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/jsapi/cardticket34c264.js","biz_common/utils/emoji_panel_data.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/emoji_panel_data3518c7.js","biz_common/utils/emoji_data.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/emoji_data3518c7.js","appmsg/emotion/textarea.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/textarea353f34.js","appmsg/emotion/nav.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/nav278965.js","appmsg/emotion/common.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/common3518c7.js","appmsg/emotion/slide.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/slide2a9cd9.js","pages/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/report38518d.js","pages/music_player.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/music_player3857fc.js","pages/loadscript.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/loadscript30203e.js","appmsg/emotion/dom.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/dom31ff31.js","appmsg/comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/comment_tpl.html36c376.js","biz_wap/utils/fakehash.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/fakehash38c7af.js","biz_common/utils/wxgspeedsdk.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/wxgspeedsdk3518c7.js","a/sponsor.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/sponsor364802.js","a/app_card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/app_card38bdd4.js","a/ios.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/ios333f3e.js","a/android.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/android2c5484.js","a/profile.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/profile31ff31.js","a/cpc_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/cpc_a_tpl.html3802da.js","a/sponsor_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/sponsor_a_tpl.html36c7d0.js","a/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a_tpl.html37cd32.js","a/mpshop.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/mpshop31117a.js","a/wxopen_card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/wxopen_card37b642.js","a/card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/card31117a.js","biz_wap/utils/position.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/position34c264.js","a/a_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a_report38bd36.js","appmsg/my_comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/my_comment_tpl.html36906d.js","appmsg/cmt_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cmt_tpl.html369d00.js","sougou/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/sougou/a_tpl.html2c6e7c.js","appmsg/emotion/emotion.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/emotion353f34.js","biz_wap/utils/wapsdk.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/wapsdk34c264.js","biz_common/utils/monitor.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/monitor3518c7.js","biz_common/utils/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/report3518c7.js","appmsg/open_url_with_webview.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/open_url_with_webview3145f1.js","biz_common/utils/http.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/http3518c7.js","biz_common/utils/cookie.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/cookie3518c7.js","appmsg/topic_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/topic_tpl.html31ff31.js","pages/weapp_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/weapp_tpl.html36906d.js","pages/voice_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/voice_tpl.html38518d.js","pages/voice_component.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/voice_component389055.js","pages/qqmusic_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/qqmusic_tpl.html37189c.js","new_video/ctl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/ctl2d441f.js","a/testdata.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/testdata38bdd4.js","appmsg/reward_entry.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/reward_entry36906d.js","appmsg/comment.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/comment36ca0d.js","appmsg/like.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/like375fea.js","pages/version4video.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/version4video384cbb.js","a/a.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a38bdd4.js","rt/appmsg/getappmsgext.rt.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/rt/appmsg/getappmsgext.rt2c21f7.js","biz_wap/utils/storage.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/storage34c264.js","biz_common/tmpl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/tmpl3518c7.js","appmsg/share_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/share_tpl.html36906d.js","appmsg/img_copyright_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/img_copyright_tpl.html2a2c13.js","pages/video_ctrl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/video_ctrl36ebcf.js","biz_common/ui/imgonepx.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/ui/imgonepx3518c7.js","biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/respTypes3518c7.js","biz_wap/utils/log.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/log34c264.js","sougou/index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/sougou/index36913b.js","biz_wap/safe/mutation_observer_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/safe/mutation_observer_report34c264.js","appmsg/fereport.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/fereport37b642.js","appmsg/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/report3404b3.js","appmsg/report_and_source.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/report_and_source34c49d.js","appmsg/page_pos.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/page_pos37aa31.js","appmsg/cdn_speed_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cdn_speed_report3097b2.js","appmsg/wxtopic.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/wxtopic31a3be.js","appmsg/new_index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/new_index36906d.js","appmsg/weapp.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/weapp381ee1.js","appmsg/autoread.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/autoread3857fc.js","appmsg/voice.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/voice38518d.js","appmsg/qqmusic.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/qqmusic377c4f.js","appmsg/iframe.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/iframe38ce84.js","appmsg/product.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/product3820c5.js","appmsg/review_image.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/review_image37871c.js","appmsg/outer_link.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/outer_link275627.js","appmsg/copyright_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/copyright_report2ec4b2.js","appmsg/async.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/async38b7bb.js","biz_wap/ui/lazyload_img.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/ui/lazyload_img36be04.js","biz_common/log/jserr.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/log/jserr3518c7.js","appmsg/share.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/share37ba82.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cdn_img_lib38b7bb.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/url/parse36ebcf.js","page/appmsg/not_in_mm.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/not_in_mm.css36906d.js","page/appmsg/page_mp_article_improve_combo.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_combo.css3802da.js","page/appmsg_new/not_in_mm.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg_new/not_in_mm.css36f05c.js","page/appmsg_new/combo.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg_new/combo.css3802da.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/jsapi/core34c264.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/event36f1bc.js","appmsg/test.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/test354009.js","biz_wap/utils/mmversion.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/mmversion34c264.js","appmsg/max_age.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/max_age2fdd28.js","biz_common/dom/attr.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/attr3518c7.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/ajax38c31a.js","appmsg/log.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/log300331.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/class3518c7.js","biz_wap/utils/device.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/device34c264.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/string/html3518c7.js","appmsg/index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/index3894d8.js"};</script><script nonce="880546264" type="text/javascript" id="moon_inline" > window.__mooninline=1; window.setTimeout(function() {  function __moonf__(){
+if(!window.__moonhasinit){
+window.__moonhasinit=!0,window.__moonclientlog=[],window.__wxgspeeds&&(window.__wxgspeeds.moonloadedtime=+new Date),
+"object"!=typeof JSON&&(window.JSON={
+stringify:function(){
+return"";
+},
+parse:function(){
+return{};
+}
+});
+var e=function(){
+function e(e){
+try{
+var o;
+/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)?o="writeLog":/(Android)/i.test(navigator.userAgent)&&(o="log"),
+o&&t(o,e);
+}catch(n){
+throw console.error(n),n;
+}
+}
+function t(e,o){
+e&&top.window.WeixinJSBridge&&top.window.WeixinJSBridge.invoke?top.window.WeixinJSBridge.invoke(e,{
+level:"info",
+msg:"[WechatFe][moon]"+o
+}):setTimeout(function(){
+top.window.document.addEventListener?top.window.document.addEventListener("WeixinJSBridgeReady",function(){
+t(e,o);
+},!1):top.window.document.attachEvent&&(top.window.document.attachEvent("WeixinJSBridgeReady",function(){
+t(e,o);
+}),top.window.document.attachEvent("onWeixinJSBridgeReady",function(){
+t(e,o);
+}));
+},0);
+}
+var n;
+localStorage&&JSON.parse(localStorage.getItem("__WXLS__moonarg"))&&"fromls"==JSON.parse(localStorage.getItem("__WXLS__moonarg")).method&&(n=!0),
+e(" moon init, moon_inline:"+window.__mooninline+", moonls:"+n),function(){
+var e={},o={},t={};
+e.COMBO_UNLOAD=0,e.COMBO_LOADING=1,e.COMBO_LOADED=2;
+var n=function(e,t,n){
+if(!o[e]){
+o[e]=n;
+for(var r=3;r--;)try{
+moon.setItem(moon.prefix+e,n.toString()),moon.setItem(moon.prefix+e+"_ver",moon_map[e]);
+break;
+}catch(i){
+moon.clear();
+}
+}
+},r=window.alert;
+window.__alertList=[],window.alert=function(e){
+r(e),window.__alertList.push(e);
+};
+var i=function(e){
+if(!e||!o[e])return null;
+var n=o[e];
+if("function"==typeof n&&!t[e]){
+var a={},s={
+exports:a
+},c=n(i,a,s,r);
+n=o[e]=c||s.exports,t[e]=!0;
+}
+if(".css"===e.substr(-4)){
+var d=document.getElementById(e);
+if(!d){
+d=document.createElement("style"),d.id=e;
+var _=/url\s*\(\s*\/(\"(?:[^\\\"\r\n\f]|\\[\s\S])*\"|'(?:[^\\'\n\r\f]|\\[\s\S])*'|[^)}]+)\s*\)/g,m=window.testenv_reshost||window.__moon_host||"res.wx.qq.com";
+n=n.replace(_,"url(//"+m+"/$1)"),d.innerHTML=n,document.getElementsByTagName("head")[0].appendChild(d);
+}
+}
+return n;
+};
+e.combo_status=e.COMBO_UNLOAD,e.run=function(){
+var o=e.run.info,t=o&&o[0],n=o&&o[1];
+if(t&&e.combo_status==e.COMBO_LOADED){
+var r=i(t);
+n&&n(r);
+}
+},e.use=function(o,t){
+window.__wxgspeeds&&(window.__wxgspeeds.seajs_use_time=+new Date),e.run.info=[o,t],
+e.run();
+},window.define=n,window.seajs=e;
+}(),function(){
+if(window.__nonce_str){
+var e=document.createElement;
+document.createElement=function(o){
+var t=e.apply(this,arguments);
+return"object"==typeof o&&(o=o.toString()),"string"==typeof o&&"script"==o.toLowerCase()&&t.setAttribute("nonce",window.__nonce_str),
+t;
+};
+}
+window.addEventListener&&window.__DEBUGINFO&&Math.random()<.01&&window.addEventListener("load",function(){
+var e=document.createElement("script");
+e.src=__DEBUGINFO.safe_js,e.type="text/javascript",e.async=!0;
+var o=document.head||document.getElementsByTagName("head")[0];
+o.appendChild(e);
+});
+}(),function(){
+function t(e){
+return"[object Array]"===Object.prototype.toString.call(e);
+}
+function n(e){
+return"[object Object]"===Object.prototype.toString.call(e);
+}
+function r(e){
+var t=e.stack+" "+e.toString()||"";
+try{
+if(window.testenv_reshost){
+var n="http(s)?://"+window.testenv_reshost,r=new RegExp(n,"g");
+t=t.replace(r,"");
+}else t=t.replace(/http(s)?:\/\/res\.wx\.qq\.com/g,"");
+for(var r=/\/([^.]+)\/js\/(\S+?)\.js(\,|:)?/g;r.test(t);)t=t.replace(r,function(e,o,t,n){
+return t+n;
+});
+}catch(e){
+t=e.stack?e.stack:"";
+}
+var i=[];
+for(o in u)u.hasOwnProperty(o)&&i.push(o+":"+u[o]);
+return i.push("STK:"+t.replace(/\n/g,"")),i.join("|");
+}
+function i(e){
+if(!e){
+var o=window.onerror;
+window.onerror=function(){},f=setTimeout(function(){
+window.onerror=o,f=null;
+},50);
+}
+}
+function a(e,o,t){
+if(!/^mp\.weixin\.qq\.com$/.test(location.hostname)){
+var n=[];
+t=t.replace(location.href,(location.origin||"")+(location.pathname||"")).replace("#wechat_redirect","").replace("#rd","").split("&");
+for(var r=0,i=t.length;i>r;r++){
+var a=t[r].split("=");
+a[0]&&a[1]&&n.push(a[0]+"="+encodeURIComponent(a[1]));
+}
+var s=new window.Image;
+return void(s.src=(o+n.join("&")).substr(0,1024));
+}
+var c;
+if(window.ActiveXObject)try{
+c=new ActiveXObject("Msxml2.XMLHTTP");
+}catch(d){
+try{
+c=new ActiveXObject("Microsoft.XMLHTTP");
+}catch(_){
+c=!1;
+}
+}else window.XMLHttpRequest&&(c=new XMLHttpRequest);
+c&&(c.open(e,o,!0),c.setRequestHeader("cache-control","no-cache"),c.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),
+c.setRequestHeader("X-Requested-With","XMLHttpRequest"),c.send(t));
+}
+function s(e){
+return function(o,t){
+if("string"==typeof o)try{
+o=new Function(o);
+}catch(n){
+throw n;
+}
+var r=[].slice.call(arguments,2),a=o;
+return o=function(){
+try{
+return a.apply(this,r.length&&r||arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:O,
+log:"timeout_error;host:"+top.location.host,
+e:e
+}]),i(f)),e;
+}
+},e(o,t);
+};
+}
+function c(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this,a=t||function(){};
+return t=function(){
+try{
+return a.apply(r,arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:y,
+log:"listener_error;type:"+o+";host:"+top.location.host,
+e:e
+}]),i(f)),e;
+}
+},a.moon_lid=b,D[b]=t,b++,e.call(r,o,t,n);
+};
+}
+function d(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this;
+return t=D[t.moon_lid],e.call(r,o,t,n);
+};
+}
+var _,m,w,l,u,p,f,h=/MicroMessenger/i.test(navigator.userAgent),g=window.define,v=0,y=2,x=4,O=9,j=10;
+if(window.__initCatch=function(e){
+_=e.idkey,m=e.startKey||0,w=e.limit,l=e.badjsId,u=e.reportOpt||"",p=e.extInfo||{},
+p.rate=p.rate||.5;
+},window.__moon_report=function(e,o){
+var i=.5;
+if(p&&p.rate&&(i=p.rate),o&&"number"==typeof o&&(i=o),!(!/mp\.weixin\.qq\.com/.test(location.href)&&!/payapp\.weixin\.qq\.com/.test(location.href)||Math.random()>i||!h||top!=window&&!/mp\.weixin\.qq\.com/.test(top.location.href))&&(n(e)&&(e=[e]),
+t(e)&&""!=_)){
+var s="",c=[],d=[],u=[],f=[];
+"number"!=typeof w&&(w=1/0);
+for(var g=0;g<e.length;g++){
+var v=e[g]||{};
+if(!(v.offset>w||"number"!=typeof v.offset||v.offset==x&&p&&p.network_rate&&Math.random()>=p.network_rate)){
+var y=1/0==w?m:m+v.offset;
+c[g]="[moon]"+_+"_"+y+";"+v.log+";"+r(v.e||{})||"",d[g]=y,u[g]=1;
+}
+}
+for(var O=0;O<d.length;O++)f[O]=_+"_"+d[O]+"_"+u[O],s=s+"&log"+O+"="+c[O];
+if(f.length>0){
+a("POST",location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?","idkey="+f.join(";")+"&r="+Math.random()+"&lc="+c.length+s);
+var i=1;
+if(p&&p.badjs_rate&&(i=p.badjs_rate),l&&Math.random()<i){
+s=s.replace(/uin\:(.)*\|biz\:(.)*\|mid\:(.)*\|idx\:(.)*\|sn\:(.)*\|/,"");
+var j=new Image,D="https://badjs.weixinbridge.com/badjs?id="+l+"&level=4&from="+encodeURIComponent(location.host)+"&msg="+encodeURIComponent(s);
+j.src=D.slice(0,1024);
+}
+}
+}
+},window.setTimeout=s(window.setTimeout),window.setInterval=s(window.setInterval),
+Math.random()<.01&&window.Document&&window.HTMLElement){
+var D={},b=0;
+Document.prototype.addEventListener=c(Document.prototype.addEventListener),Document.prototype.removeEventListener=d(Document.prototype.removeEventListener),
+HTMLElement.prototype.addEventListener=c(HTMLElement.prototype.addEventListener),
+HTMLElement.prototype.removeEventListener=d(HTMLElement.prototype.removeEventListener);
+}
+var E=window.navigator.userAgent;
+if((/ip(hone|ad|od)/i.test(E)||/android/i.test(E))&&!/windows phone/i.test(E)&&window.localStorage&&window.localStorage.setItem){
+var S=window.localStorage.setItem,I=0;
+window.localStorage.setItem=function(e,o){
+if(!(I>=10))try{
+S.call(window.localStorage,e,o);
+}catch(t){
+t.stack&&console&&console.error&&console.error("[TryCatch]"+t.stack),window.__moon_report([{
+offset:j,
+log:"localstorage_error;"+t.toString(),
+e:t
+}]),I++,I>=3&&window.moon&&window.moon.clear&&moon.clear();
+}
+};
+}
+window.seajs&&g&&(window.define=function(){
+for(var o,t=[],n=arguments&&arguments[0],a=0,s=arguments.length;s>a;a++){
+var c=o=arguments[a];
+"function"==typeof o&&(o=function(){
+try{
+return c.apply(this,arguments);
+}catch(o){
+throw"string"==typeof n&&console.error("[TryCatch][DefineeErr]id:"+n),o.stack&&console&&console.error&&console.error("[TryCatch]"+o.stack),
+_&&window.__moon_report&&(window.__moon_report([{
+offset:v,
+log:"define_error;id:"+n+";",
+e:o
+}]),i(f)),e(" [define_error]"+JSON.stringify(r(o))),o;
+}
+},o.toString=function(e){
+return function(){
+return e.toString();
+};
+}(arguments[a])),t.push(o);
+}
+return g.apply(this,t);
+});
+}(),function(o){
+function t(e,o,t){
+return window.__DEBUGINFO?(window.__DEBUGINFO.res_list||(window.__DEBUGINFO.res_list=[]),
+window.__DEBUGINFO.res_list[e]?(window.__DEBUGINFO.res_list[e][o]=t,!0):!1):!1;
+}
+function n(e){
+var o=new TextEncoder("utf-8").encode(e),t=crypto.subtle||crypto.webkitSubtle;
+return t.digest("SHA-256",o).then(function(e){
+return r(e);
+});
+}
+function r(e){
+for(var o=[],t=new DataView(e),n=0;n<t.byteLength;n+=4){
+var r=t.getUint32(n),i=r.toString(16),a="00000000",s=(a+i).slice(-a.length);
+o.push(s);
+}
+return o.join("");
+}
+function i(e,o,t){
+if("object"==typeof e){
+var n=Object.prototype.toString.call(e).replace(/^\[object (.+)\]$/,function(e,o){
+return o;
+});
+if(t=t||e,"Array"==n){
+for(var r=0,i=e.length;i>r;++r)if(o.call(t,e[r],r,e)===!1)return;
+}else{
+if("Object"!==n&&a!=e)throw"unsupport type";
+if(a==e){
+for(var r=e.length-1;r>=0;r--){
+var s=a.key(r),c=a.getItem(s);
+if(o.call(t,c,s,e)===!1)return;
+}
+return;
+}
+for(var r in e)if(e.hasOwnProperty(r)&&o.call(t,e[r],r,e)===!1)return;
+}
+}
+}
+var a=o.localStorage,s=document.head||document.getElementsByTagName("head")[0],c=1,d=11,_=12,m=13,w=window.__allowLoadResFromMp?1:2,l=window.__allowLoadResFromMp?1:0,u=w+l,p=window.testenv_reshost||window.__moon_host||"res.wx.qq.com",f=new RegExp("^(http(s)?:)?//"+p);
+window.__loadAllResFromMp&&(p="mp.weixin.qq.com",w=0,u=w+l);
+var h=0,g={
+prefix:"__MOON__",
+loaded:[],
+unload:[],
+clearSample:Math.random()<h,
+hit_num:0,
+mod_num:0,
+version:1003,
+cacheData:{
+js_mod_num:0,
+js_hit_num:0,
+js_not_hit_num:0,
+js_expired_num:0,
+css_mod_num:0,
+css_hit_num:0,
+css_not_hit_num:0,
+css_expired_num:0
+},
+init:function(){
+g.loaded=[],g.unload=[];
+var e,t,r;
+if(a){
+var s="_moon_ver_key_",c=a.getItem(s);
+c!=g.version&&(g.clear(),a.setItem(s,g.version));
+}
+if((-1!=location.search.indexOf("no_moon1=1")||-1!=location.search.indexOf("no_lshttps=1"))&&g.clear(),
+a){
+var d=1*a.getItem(g.prefix+"clean_time"),_=+new Date;
+if(_-d>=1296e6){
+g.clear();
+try{
+!!a&&a.setItem(g.prefix+"clean_time",+new Date);
+}catch(m){}
+}
+}
+i(moon_map,function(i,s){
+if(t=g.prefix+s,r=!!i&&i.replace(f,""),e=!!a&&a.getItem(t),version=!!a&&(a.getItem(t+"_ver")||"").replace(f,""),
+g.mod_num++,r&&-1!=r.indexOf(".css")?g.cacheData.css_mod_num++:r&&-1!=r.indexOf(".js")&&g.cacheData.js_mod_num++,
+g.clearSample||!e||r!=version)g.unload.push(r.replace(f,"")),r&&-1!=r.indexOf(".css")?e?r!=version&&g.cacheData.css_expired_num++:g.cacheData.css_not_hit_num++:r&&-1!=r.indexOf(".js")&&(e?r!=version&&g.cacheData.js_expired_num++:g.cacheData.js_not_hit_num++);else{
+if("https:"==location.protocol&&window.moon_hash_map&&window.moon_hash_map[s]&&window.crypto)try{
+n(e).then(function(e){
+window.moon_hash_map[s]!=e&&console.log(s);
+});
+}catch(c){}
+try{
+var d="//# sourceURL="+s+"\n//@ sourceURL="+s;
+o.eval.call(o,'define("'+s+'",[],'+e+")"+d),g.hit_num++,r&&-1!=r.indexOf(".css")?g.cacheData.css_hit_num++:r&&-1!=r.indexOf(".js")&&g.cacheData.js_hit_num++;
+}catch(c){
+g.unload.push(r.replace(f,""));
+}
+}
+}),g.load(g.genUrl());
+},
+genUrl:function(){
+var e=g.unload;
+if(!e||e.length<=0)return[];
+var o,t,n="",r=[],i={},a=-1!=location.search.indexOf("no_moon2=1"),s="//"+p;
+-1!=location.href.indexOf("moon_debug2=1")&&(s="//mp.weixin.qq.com");
+for(var c=0,d=e.length;d>c;++c){
+/^\/(.*?)\//.test(e[c]);
+var _=/^\/(.*?)\//.exec(e[c]);
+_.length<2||!_[1]||(t=_[1],n=i[t],n?(o=n+","+e[c],o.length>1e3||a?(r.push(n+"?v="+g.version),
+n=location.protocol+s+e[c],i[t]=n):(n=o,i[t]=n)):(n=location.protocol+s+e[c],i[t]=n));
+}
+for(var m in i)i.hasOwnProperty(m)&&r.push(i[m]);
+return r;
+},
+load:function(e){
+if(window.__wxgspeeds&&(window.__wxgspeeds.mod_num=g.mod_num,window.__wxgspeeds.hit_num=g.hit_num),
+!e||e.length<=0)return seajs.combo_status=seajs.COMBO_LOADED,seajs.run(),console.debug&&console.debug("[moon] load js complete, all in cache, cost time : 0ms, total count : "+g.mod_num+", hit num: "+g.hit_num),
+void window.__moonclientlog.push("[moon] load js complete, all in cache, cost time : 0ms, total count : "+g.mod_num+", hit num: "+g.hit_num);
+seajs.combo_status=seajs.COMBO_LOADING;
+var o=0,t=+new Date;
+window.__wxgspeeds&&(window.__wxgspeeds.combo_times=[],window.__wxgspeeds.combo_times.push(t)),
+i(e,function(n){
+g.request(n,u,function(){
+if(window.__wxgspeeds&&window.__wxgspeeds.combo_times.push(+new Date),o++,o==e.length){
+var n=+new Date-t;
+window.__wxgspeeds&&(window.__wxgspeeds.mod_downloadtime=n),seajs.combo_status=seajs.COMBO_LOADED,
+seajs.run(),console.debug&&console.debug("[moon] load js complete, url num : "+e.length+", total mod count : "+g.mod_num+", hit num: "+g.hit_num+", use time : "+n+"ms"),
+window.__moonclientlog.push("[moon] load js complete, url num : "+e.length+", total mod count : "+g.mod_num+", hit num: "+g.hit_num+", use time : "+n+"ms");
+}
+});
+});
+},
+request:function(o,n,r){
+if(o){
+n=n||0,o.indexOf("mp.weixin.qq.com")>-1&&((new Image).src=location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?idkey=27613_32_1&r="+Math.random(),
+window.__moon_report([{
+offset:_,
+log:"load_script_from_mp: "+o
+}],1));
+var i=-1;
+window.__DEBUGINFO&&(__DEBUGINFO.res_list||(__DEBUGINFO.res_list=[]),__DEBUGINFO.res_list.push({
+type:"js",
+status:"pendding",
+start:+new Date,
+end:0,
+url:o
+}),i=__DEBUGINFO.res_list.length-1),-1!=location.search.indexOf("no_lshttps=1")&&(o=o.replace("http://","https://"));
+var a=document.createElement("script");
+a.src=o,a.type="text/javascript",a.async=!0,a.down_time=+new Date,a.onerror=function(s){
+t(i,"status","error"),t(i,"end",+new Date);
+var _=new Error(s);
+if(n>=0)if(l>n){
+var w=o.replace("res.wx.qq.com","mp.weixin.qq.com");
+g.request(w,n,r);
+}else g.request(o,n,r);else window.__moon_report&&window.__moon_report([{
+offset:c,
+log:"load_script_error: "+o,
+e:_
+}],1);
+if(n==l-1&&window.__moon_report([{
+offset:d,
+log:"load_script_error: "+o,
+e:_
+}],1),-1==n){
+var u="ua: "+window.navigator.userAgent+", time="+(+new Date-a.down_time)+", load_script_error -1 : "+o;
+window.__moon_report([{
+offset:m,
+log:u
+}],1);
+}
+window.__moonclientlog.push("moon load js error : "+o+", error -> "+_.toString()),
+e("moon_request_error url:"+o);
+},"undefined"!=typeof moon_crossorigin&&moon_crossorigin&&a.setAttribute("crossorigin",!0),
+a.onload=a.onreadystatechange=function(){
+t(i,"status","loaded"),t(i,"end",+new Date),!a||a.readyState&&!/loaded|complete/.test(a.readyState)||(t(i,"status","200"),
+a.onload=a.onreadystatechange=null,"function"==typeof r&&r());
+},n--,s.appendChild(a),e("moon_request url:"+o+" retry:"+n);
+}
+},
+setItem:function(e,o){
+!!a&&a.setItem(e,o);
+},
+clear:function(){
+a&&(i(a,function(e,o){
+~o.indexOf(g.prefix)&&a.removeItem(o);
+}),console.debug&&console.debug("[moon] clear"));
+},
+idkeyReport:function(e,o,t){
+t=t||1;
+var n=e+"_"+o+"_"+t;
+(new Image).src="/mp/jsmonitor?idkey="+n+"&r="+Math.random();
+}
+};
+seajs&&seajs.use&&"string"==typeof window.__moon_mainjs&&seajs.use(window.__moon_mainjs),
+window.moon=g;
+}(window),window.moon.init();
+};
+e(),!!window.__moon_initcallback&&window.__moon_initcallback(),window.__wxgspeeds&&(window.__wxgspeeds.moonendtime=+new Date);
+}
+}
+__moonf__(); }, 25);</script><script nonce="880546264" type="text/javascript">
+    var real_show_page_time = +new Date();
+    if (!!window.addEventListener){
+        window.addEventListener("load", function(){
+            window.onload_endtime = +new Date();
+        });
+    }
+    
+</script>
+
+    </body>
+    <script nonce="880546264" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+<!--tailTrap<body></body><head></head><html></html>-->

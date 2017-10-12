@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>华中农业大学-水产学院</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" href="/css/common.css">
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/jquery.scrollLoading.js"></script>
+<script src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/jquery.roundabout2.js"></script>
+<!--[if lt IE 9]>
+	<script src="/js/html5shiv.min.js"></script>
+<![endif]-->
+
+
+<!--//翻页函数-->
+<script>
+function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt){
+	var PageStart;
+	var PageEnd;
+	if(_nPageCount == null || _nPageCount<=1){
+		return;
+	}
+	var nCurrIndex = _nCurrIndex || 0;
+	if(nCurrIndex == 0)
+	{
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;");
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;");
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">1</a>&nbsp;");
+	}
+	else
+	{
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">首页</a>&nbsp;&nbsp;");
+		if(nCurrIndex==1)
+		{
+			document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;");
+		}
+		else
+		{
+			document.write("<a href=\""+_sPageName+"_"+(nCurrIndex-1)+"."+_sPageExt+"\">上一页</a>&nbsp;&nbsp;");
+		}
+		if(_nPageCount>9&&nCurrIndex>4)
+		{								
+		}
+		else
+		{
+			document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">1</a>&nbsp;&nbsp;");
+		}
+	}
+	if(_nPageCount>9)
+	{
+		PageStart = nCurrIndex-4;
+		if((nCurrIndex-4)<1)PageStart = 1;
+		if((nCurrIndex+5)>_nPageCount) PageStart = _nPageCount-9;
+		PageEnd = PageStart +9;
+	}
+	else
+	{
+		PageStart = 1;
+		PageEnd = _nPageCount;
+	}
+	for(var i=PageStart; i<PageEnd; i++){
+		if(nCurrIndex == i)
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">"+(i+1) + "</a>&nbsp;");
+		else
+		document.write("<a href=\""+_sPageName+"_" + i + "."+_sPageExt+"\">"+(i+1)+"</a>&nbsp;");
+	}
+	if(nCurrIndex<_nPageCount-1)
+	{
+		document.write("<a href=\""+_sPageName+"_"+(nCurrIndex+1)+"."+_sPageExt+"\">下一页</a>&nbsp;");
+		document.write("<a href=\""+_sPageName+"_"+(_nPageCount-1)+"."+_sPageExt+"\">尾页</a>&nbsp;");
+	}
+	else
+	{
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">下一页</a>&nbsp;");
+		document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">尾页</a>");
+	}
+}
+</script>
+
+<!--//翻页函数-->
+<!--//搜索栏-->
+<script language="javascript">
+				$(document).ready(function(){
+				 $("input.text").focus(function(){
+				if( $(this).val()=="请输入搜索关键字..."){$(this).val("");}
+						 });
+				 $("input.text").blur(function(){
+				if( $(this).val()==""){$(this).val("请输入搜索关键字...");}
+						 });
+					 $("input:button").click(function(){
+						 var vale=$("input.text").val();
+							 if(vale==""||vale=="请输入搜索关键字...")
+							 {
+								 alert("搜索关键字不能为空！"); 
+							 }
+							 else
+							 {
+								//location.href="NewEast-Searcher.aspx?item="+vale;
+							 }
+						 });
+					});
+
+//搜索栏验证开始
+function LTrim(s)
+{
+    for(var i=0;i<s.length;i++)
+        if(s.charAt(i)!=' ')
+         return s.substring(i,s.length);
+     return "";
+}
+
+function RTrim(s)
+{
+    for(var i=s.length-1;i>=0;i--)
+        if(s.charAt(i)!=' ')
+            return s.substring(0,i+1);
+        return "";
+}
+
+function Trim(s)
+{
+    return RTrim(LTrim(s));
+}
+function simsearch()
+{
+	var Word=document.searchform.SearchValue.value;
+	Word = Trim(Word);
+	if(Word == "")
+	{
+		alert("检索表达式不能为空!");
+		return false;
+	}
+	else
+	{
+		if(validWord(Word)==false)
+		{
+			return false;	
+		}
+
+		document.searchform.SearchValue.value=Word;
+		document.searchform.submit();
+		return true;
+	}
+}
+
+
+function validWord(_keyword)
+{
+	if(_keyword.length>0)
+	{
+		if(_keyword.indexOf("+")>=0)
+		{
+			return notice("搜索词中不能含有关键字'+'");
+		}
+		else if(_keyword.indexOf("*")>=0)
+		{
+			return notice("搜索词中不能含有关键字'*'");
+		}
+		else if(_keyword.indexOf("-")>=0)
+		{
+			return notice("搜索词中不能含有关键字'-'");
+		}
+		else if(_keyword.indexOf("\"")>=0)
+		{
+			return notice("搜索词中不能含有关键字'\"'");
+		}
+		else if(_keyword.indexOf("(")>=0)
+		{
+			return notice("搜索词中不能含有关键字'('");
+		}
+		else if(_keyword.indexOf(")")>=0)
+		{
+			return notice("搜索词中不能含有关键字')'");
+		}
+		else if(_keyword.indexOf("'")>=0)
+		{
+			return notice("搜索词中不能含有关键字'\''");
+		}
+
+	}
+	return true;
+}
+
+
+function notice(s)
+{
+	alert(s);
+	return false;
+}
+
+				</script>
+
+
+
+<!--//搜索栏-->
+
+</head>
+<body>
+
+<!-- header -->
+<div class="headerWrap">
+
+	<div class="header clearfix">
+		<div class="w1180">
+			<a href="http://cf.hzau.edu.cn" class="logo fl"><img src="/images/logo.png" alt /></a>
+			<div class="fr">
+				<ul class="hNav">
+					<li><a href="http://jw.hzau.edu.cn" class="tran300" target="_blank">教务系统</a></li>
+					<li><a href="http://lib.hzau.edu.cn/" class="tran300" target="_blank">图书馆</a></li>
+					<li><a href="http://pdc.hzau.edu.cn/" class="tran300" target="_blank">校内直达</a></li>
+					<li><a href="http://xwgk.hzau.edu.cn/" class="tran300" target="_blank">华中农大信息公开网</a></li>
+					<li><a href="http://jbts.hzau.edu.cn/" class="tran300" target="_blank">监督举报平台</a></li>
+				</ul>
+				<div class="hForm">
+					<form name="searchform" method="post" action="http://webapp.hzau.edu.cn/trswcm_plugins/search/searchsite.jsp" target="_blank">
+						<input type="text" class="text" name="SearchValue" id="SearchValue" placeholder="请输入关键字" />
+						<input type="submit" class="subm" value />
+                                                 <input type="hidden" name="SearchSiteID" id="SearchSiteID" value="124" />
+                                                 <input type="hidden" name="searchtarget" id="searchtarget" value="doctitle" /> 
+					</form>
+				</div>
+			</div>
+		</div>
+	</div><!-- header end -->
+
+	<div class="navWrap">
+		<ul id="nav" class="w1180 nav clearfix">
+			<li class="nLi on">
+				<h3><a href="http://cf.hzau.edu.cn">网站首页</a></h3>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../xygk/">学院概况</a></h3>
+				<ul class="sub">
+					
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../xygk/xyjj/">学院简介</a></li>
+                                                               
+                                            
+                                                            
+                                         
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../xygk/xrld/">现任领导</a></li>
+                                                               
+                                            
+                                                            
+                                         
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../xygk/jgsz/">机构设置</a></li>
+                                                               
+                                            
+                                                            
+                                         
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../xygk/xywh/">学院文化</a></li>
+                                                               
+                                            
+                                                            
+                                         
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../xygk/xkjs/">学科建设</a></li>
+                                                               
+                                            
+                                                            
+                                         	   
+				</ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../szdw/">师资队伍</a></h3>
+				<ul class="sub">
+					
+                                           
+                                                                 
+                                              <li><a href="../../../szdw/js/">教授</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                           
+                                                                 
+                                              <li><a href="../../../szdw/fjs/">副教授</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                           
+                                                                 
+                                              <li><a href="../../../szdw/jiangshi/">讲师</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                           
+                                                                 
+                                              <li><a href="../../../szdw/jzjs/">兼职教师</a></li>
+                                                               
+                                           
+                                                            
+                                         	   
+				</ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../rcpy/">人才培养</a></h3>
+				<ul class="sub">
+					
+                                                               
+                                           
+                                                                 
+                                              <li><a href="../../../rcpy/bkspy/">本科生培养</a></li>
+                                                               
+                                           
+                                                            
+                                        
+                                                               
+                                           
+                                                                 
+                                              <li><a href="../../../rcpy/yjspy/">研究生培养</a></li>
+                                                               
+                                           
+                                                            
+                                        
+                                                               
+                                           
+                                                                 
+                                              <li><a href="../../../rcpy/jxjy/">继续教育</a></li>
+                                                               
+                                           
+                                                            
+                                        	   
+				</ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../djgz/">党建工作</a></h3>
+				<ul class="sub">
+					
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../djgz/djdt/">党建动态</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../djgz/zbfc/">支部风采</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../djgz/lxyz/">两学一做</a></li>
+                                                               
+                                           
+                                                            
+                                         	   
+				</ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../kxyj/">科学研究</a></h3>
+				<ul class="sub">
+					
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../kxyj/kypt/">科研平台</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../kxyj/kytd/">科研团队</a></li>
+                                                               
+                                           
+                                                            
+                                         
+                                                               
+                                           
+                                                                 
+                                             <li><a href="../../../kxyj/yjcg/">研究成果</a></li>
+                                                               
+                                           
+                                                            
+                                         	   
+				</ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../hzjl/">合作交流</a></h3>
+				<ul class="sub">
+					
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../hzjl/shfw/">社会服务</a></li>
+                                                               
+                                            
+                                                            
+                                        
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../hzjl/kyys/">科研院所</a></li>
+                                                               
+                                            
+                                                            
+                                        
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../hzjl/xqhz/">校企合作</a></li>
+                                                               
+                                            
+                                                            
+                                        
+                                                               
+                                            
+                                                                 
+                                              <li><a href="../../../hzjl/gjjl/">国际交流</a></li>
+                                                               
+                                            
+                                                            
+                                        
+	   	                </ul>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../jgzj/">教工之家</a></h3>
+			</li>
+			<li class="nLi">
+				<h3><a href="../../../fwxx/">服务信息</a></h3>
+			</li>
+		</ul>
+	</div>
+	<script id="jsID" type="text/javascript">
+			
+		jQuery("#nav").slide({ 
+			type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+			titCell:".nLi", //鼠标触发对象
+			targetCell:".sub", //titCell里面包含的要显示/消失的对象
+			effect:"slideDown", //targetCell下拉效果
+			delayTime:300 , //效果时间
+			triggerTime:0, //鼠标延迟触发时间（默认150）
+			returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+		});
+	</script>
+</div>
+<div class="w1180 nyWrap clearfix">
+	<div class="side">
+		<h3 class="title"><span class="ch">学术科研</span><span class="en">about us</span></h3>
+		<ul>
+                      
+			<li><a href="../../hdyg/" class="tran300 TXTovehid">活动预告</a></li>
+                      
+			<li><a href="../" class="tran300 TXTovehid">活动报导</a></li>
+                      
+
+
+					
+                </ul>
+	</div>
+	<div class="nyRight">
+		<div class="nyContent">
+
+			<div class="bread">
+				<span>活动报导</span>
+				<div class="path">当前位置：<a href="../../../">首页</a>&nbsp;>&nbsp;<a href="../../">学术科研</a>&nbsp;>&nbsp;<a href="../">活动报导</a></div>
+			</div><!-- bread end -->
+			
+			 <div class="passage contPsg">
+		        <h4 class="title">复旦大学研究生院院长钟扬教授做客我校水产讲坛</h4>
+		        <div class="tips"><span>发布时间：2016-12-03</span><span>来源：</span></div>
+		        <div class="psgCont detail">
+		            
+                                <div class="Custom_UnionStyle">
+<div align="justify">
+<p>　　<font face="宋体"><font style="font-size: 14pt"><span style="font-size: 14pt">核心提示：</span><span style="font-size: 14pt">&nbsp;4月19日下午15:30，应华中农业大学水产学院副院长梁旭方的邀请，来自复旦大学研究生院院长钟扬教授做客我校水产讲坛，在水产楼109报告厅作了题为“动植物间的基因水平转移”的学术报告。钟扬教授通过多种案例讲述了动植物间基因水平转移的现象，此次报告由水产学院梁旭方教授主持。</span>&nbsp; </font></font></p>
+<font face="宋体"><font style="font-size: 14pt"><font style="font-size: 14pt" face="宋体">
+<p>　　<font face="宋体"><font style="font-size: 14pt"><span style="font-size: 14pt">（水产学院通讯员 沈宇东 供图 李青彬 ）4月19日下午15:30，应华中农业大学水产学院副院长梁旭方的邀请，来自复旦大学研究生院院长钟扬教授做客我校水产讲坛，在水产楼109报告厅作了题为“动植物间的基因水平转移”的学术报告。此次报告由水产学院梁旭方教授主持，水产学院70余名师生代表参与本次报告会。</span>&nbsp; </font></font></p>
+<font face="宋体"><font style="font-size: 14pt">
+<p>　　<span><font style="font-size: 14pt" face="宋体">生物学家普遍认为，一切生命都有着一个共同的祖先，探寻生命的起源与进化是一个非常有意思的课题。钟扬教授首先讲述了他在西藏的研究工作和科研成果，并结合自身的经历，讲述了他入藏十三年的奇妙收获。他指出构建进化树是分析进化的主要手段，但他坚信物种之间的关系不仅仅是树状结构，更是网状结构。基因水平转移的现象使得进化关系变得错综复杂。但如何拿出完美的证据证明不同物种间基因水平转移的现象是目前科学研究的一个瓶颈。</font></span></p>
+</font></font></font></font></font>
+<p>　　<span><font style="font-size: 14pt" face="宋体">如何研究基因水平转移呢，钟扬教授给出了答案。钟扬教授指出基因水平转移是指在具有生物繁殖隔离的不同物种之间，或单个细胞的叶绿体、线粒体等细胞器之间，以及细胞器和细胞核之间所进行的 DNA 片段的流动。钟扬教授强调通过生物信息学的手段来分析基因序列的同源性之外，还得排除基因丧失这一备择假设，而很多研究人员都忽略了排除备择假设这一过程。他举了一个例子：蝙蝠是唯一一类有飞翔能力的哺乳动物，通常来说，研究者会探索蝙蝠是获得了什么基因才拥有了飞翔的能力，往往忽略了另外一种可能：是否是其他动物失去了飞翔基因。钟扬教授还举了一个例子，2001年发表在Nature上的人类基因组草图上有一个观点认为：“数百个人类基因似乎是由于细菌水平转移过来的”。而接下来的一篇文章则驳斥了这一观点。事实表明，至少113个基因并非基因水平转移而是由于只有人类和细菌保留了该基因。</font></span></p>
+<p>　　<span><font style="font-size: 14pt" face="宋体">钟扬教授借这些案例告诫我们一定要懂得逆向思维，排除备择假设才能让自己的文章更严密，而且千万不要迷信权威，也不要盲目的追求文章的影响因子。</font></span></p>
+<p>　　<span><font style="font-size: 14pt" face="宋体">接着，钟扬教授举例说明了植物与植物，植物与动物，动物与动物之间的基因水平转移，并讲述了自己研究五倍子与倍蚜之间的基因水平转移的故事。钟扬教授表示，科研就是不断的寻找证据来证明自己的观点。而提出一个结论，需要不断的验证，接受并回应别人的质疑，在探寻真理的过程中经得起考验。</font></span></p>
+<p>　　<span><font style="font-size: 14pt" face="宋体">钟扬教授的精彩报告赢得了与会师生的热烈掌声。会议结束后，与会师生纷纷表示收获颇丰，对科研有了更深的认识。</font></span></p>
+<p>　　<font style="font-size: 14pt" face="宋体">&nbsp;</font><font face="宋体"><font style="font-size: 14pt"><span style="font-size: 14pt">[资料链接] </span><span style="font-size: 14pt">钟扬，1964年生，西藏大学校长助理、长江学者特聘教授，复旦大学研究生院院长、植物学与生物信息学博士生导师，国家杰出青年基金获得者。科技部863计划“生物资源与安全技术”主题专家组成员。</span></font></font></p>
+<p>　　<span><font style="font-size: 14pt" face="宋体">&nbsp;中国科学技术大学少年班和无线电电子学系毕业，日本国立综合研究大学院大学生物系统科学博士。曾任中科院武汉植物所研究员（1996）、副所长（1997），美国加州大学伯克利分校和密西根州立大学访问学者共4年，复旦大学生物多样性与生态工程教育部重点实验室负责人等。学术兼职为中国生物物理学会生物信息学与理论生物学专业委员会主任，中国生物化学与分子生物学会系统生物学专业委员会副主任，中国植物学会系统与进化生物学专业委员会副主任，BMC Bioinformatics、Computational Biology and Chemistry、Protein &amp; Cell、Computer Methods and Programs in Biomedicine、科学通报和Journal of Systematics and Evolution等学术杂志Associate Editor。</font></span></p>
+<p>　　<span><font style="font-size: 14pt" face="宋体">从事分子进化、生物信息学与系统生物学研究，在SCI刊物发表论文180余篇。一次获国家发明二等奖，三次获教育部自然科学一等奖。</font></span></p>
+<p>　　</p>
+<p>　　</p>
+</div>
+<div>&nbsp;</div>
+</div>
+		        </div>
+		    </div>
+
+		    			
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="w1180 clearfix">
+		<div class="fl">
+			<p><span>地址：中国·湖北·武汉 南湖狮子山街一号</span><span>邮编：430070</span></p>
+			<p>E-mail：hnsc@mail.hzau.edu.cn </p>
+			<p>电话：027-87282113 </p>
+		</div>
+		<div class="fr">
+			<p>CopyRight © 2005-2016 华中农业大学水产学院 版权所有  </p>
+			<p>	鄂ICP备13013419号 <span><img src="/images/demo/cnzz.jpg" alt /></span></p>
+			<p> 技术支持：<a href="http://www.jltech.cn/" target="_blank">京伦科技</a> </p>
+		</div>
+	</div>
+</div>
+<ul class="float">
+	<li class="fCode">
+		<span>关注微信</span>
+		<div class="codeImg"><img src="/images/demo/fCode.jpg" alt /></div>
+	</li>
+	<li class="goTop tran300"></li>
+</ul>
+
+<script type="text/javascript">
+	$(function() {
+		$('.float .fCode').hover(function() {
+			$(this).find('.codeImg').stop().fadeIn(100);
+		}, function() {
+			$(this).find('.codeImg').stop().fadeOut(100);
+		});
+
+		$('.float .goTop').click(function(event) {
+			$('body,html').animate({ scrollTop: 0 }, 100);
+		});
+	});
+</script>
+
+</body>
+</html>

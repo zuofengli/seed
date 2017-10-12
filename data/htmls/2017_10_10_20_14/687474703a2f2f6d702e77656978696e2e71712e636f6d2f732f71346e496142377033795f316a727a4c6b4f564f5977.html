@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>--><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="2104329651" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        
+<script nonce="2104329651" type="text/javascript">
+    var biz = ""||"MzI1NTIyMTA3Mw==";
+    var sn = "" || ""|| "e921761ada6fc462e5eb384131ae108e";
+    var mid = "" || ""|| "2649512427";
+    var idx = "" || "" || "1";
+    window.__allowLoadResFromMp = true; 
+    
+</script>
+<script nonce="2104329651" type="text/javascript">
+var page_begintime=+new Date,is_rumor="",norumor="";
+1*is_rumor&&!(1*norumor)&&biz&&mid&&(document.referrer&&-1!=document.referrer.indexOf("mp.weixin.qq.com/mp/rumor")||(location.href="http://mp.weixin.qq.com/mp/rumor?action=info&__biz="+biz+"&mid="+mid+"&idx="+idx+"&sn="+sn+"#wechat_redirect")),
+document.domain="qq.com";
+</script>
+<script nonce="2104329651" type="text/javascript">
+var MutationObserver=window.WebKitMutationObserver||window.MutationObserver||window.MozMutationObserver,isDangerSrc=function(t){
+if(t){
+var e=t.match(/http(?:s)?:\/\/([^\/]+?)(\/|$)/);
+if(e&&!/qq\.com(\:8080)?$/.test(e[1])&&!/weishi\.com$/.test(e[1]))return!0;
+}
+return!1;
+},ishttp=0==location.href.indexOf("http://");
+-1==location.href.indexOf("safe=0")&&ishttp&&"function"==typeof MutationObserver&&"mp.weixin.qq.com"==location.host&&(window.__observer_data={
+count:0,
+exec_time:0,
+list:[]
+},window.__observer=new MutationObserver(function(t){
+window.__observer_data.count++;
+var e=new Date,r=[];
+t.forEach(function(t){
+for(var e=t.addedNodes,o=0;o<e.length;o++){
+var n=e[o];
+if("SCRIPT"===n.tagName){
+var i=n.src;
+isDangerSrc(i)&&(window.__observer_data.list.push(i),r.push(n)),!i&&window.__nonce_str&&n.getAttribute("nonce")!=window.__nonce_str&&(window.__observer_data.list.push("inlinescript_without_nonce"),
+r.push(n));
+}
+}
+});
+for(var o=0;o<r.length;o++){
+var n=r[o];
+n.parentNode&&n.parentNode.removeChild(n);
+}
+window.__observer_data.exec_time+=new Date-e;
+}),window.__observer.observe(document,{
+subtree:!0,
+childList:!0
+})),function(){
+if(-1==location.href.indexOf("safe=0")&&Math.random()<.01&&ishttp&&HTMLScriptElement.prototype.__lookupSetter__&&"undefined"!=typeof Object.defineProperty){
+window.__danger_src={
+xmlhttprequest:[],
+script_src:[],
+script_setAttribute:[]
+};
+var t="$"+Math.random();
+HTMLScriptElement.prototype.__old_method_script_src=HTMLScriptElement.prototype.__lookupSetter__("src"),
+HTMLScriptElement.prototype.__defineSetter__("src",function(t){
+t&&isDangerSrc(t)&&window.__danger_src.script_src.push(t),this.__old_method_script_src(t);
+});
+var e="element_setAttribute"+t;
+Object.defineProperty(Element.prototype,e,{
+value:Element.prototype.setAttribute,
+enumerable:!1
+}),Element.prototype.setAttribute=function(t,r){
+"SCRIPT"==this.tagName&&"src"==t&&isDangerSrc(r)&&window.__danger_src.script_setAttribute.push(r),
+this[e](t,r);
+};
+}
+}();
+</script>
+
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/favicon22c41c.ico">
+<script nonce="2104329651" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+        if (encode) {
+            replace.reverse();
+        }
+        for (var i=0,str=this;i< replace.length;i+= 2) {
+             str=str.replace(new RegExp(replace[i],'g'),replace[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+        window.appmsg_token = "";
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+        <title>谢谢你，钟扬教授</title>
+        
+<style>html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.6}body{-webkit-touch-callout:none;font-family:-apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background-color:#f3f3f3;line-height:inherit}body.rich_media_empty_extra{background-color:#fff}body.rich_media_empty_extra .rich_media_area_primary:before{display:none}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:16px}*{margin:0;padding:0}a{color:#607fa6;text-decoration:none}.rich_media_inner{font-size:16px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.rich_media_area_primary{position:relative;padding:20px 15px 15px;background-color:#fff}.rich_media_area_primary:before{content:" ";position:absolute;left:0;top:0;width:100%;height:1px;border-top:1px solid #e5e5e5;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5);top:auto;bottom:-2px}.rich_media_area_primary .original_img_wrp{display:inline-block;font-size:0}.rich_media_area_primary .original_img_wrp .tips_global{display:block;margin-top:.5em;font-size:14px;text-align:right;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.rich_media_area_extra{padding:0 15px 0}.rich_media_title{margin-bottom:10px;line-height:1.4;font-weight:400;font-size:24px}.icon_original_tag_primary{display:inline-block;padding:1px .65em;margin-top:-0.2em;vertical-align:middle;line-height:1.4;font-size:12px;border-top-left-radius:.85em 50%;-moz-border-radius-topleft:.85em 50%;-webkit-border-top-left-radius:.85em 50%;border-top-right-radius:.85em 50%;-moz-border-radius-topright:.85em 50%;-webkit-border-top-right-radius:.85em 50%;border-bottom-left-radius:.85em 50%;-moz-border-radius-bottomleft:.85em 50%;-webkit-border-bottom-left-radius:.85em 50%;border-bottom-right-radius:.85em 50%;-moz-border-radius-bottomright:.85em 50%;-webkit-border-bottom-right-radius:.85em 50%;border:1px solid #9e9e9e;color:#8c8c8c}.icon_original_tag_primary.title_tag{background-color:#e94442;border-color:#d04b4e;color:#fff;margin-bottom:.5em;padding:2px .65em;border-top-left-radius:.95em 50%;-moz-border-radius-topleft:.95em 50%;-webkit-border-top-left-radius:.95em 50%;border-top-right-radius:.95em 50%;-moz-border-radius-topright:.95em 50%;-webkit-border-top-right-radius:.95em 50%;border-bottom-left-radius:.95em 50%;-moz-border-radius-bottomleft:.95em 50%;-webkit-border-bottom-left-radius:.95em 50%;border-bottom-right-radius:.95em 50%;-moz-border-radius-bottomright:.95em 50%;-webkit-border-bottom-right-radius:.95em 50%}.rich_media_meta_list{margin-bottom:18px;line-height:20px;font-size:0}.rich_media_meta_list em{font-style:normal}.rich_media_meta{display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:10px;font-size:16px}.meta_original_tag{display:inline-block;vertical-align:middle;padding:1px .5em;border:1px solid #9e9e9e;color:#8c8c8c;border-top-left-radius:20% 50%;-moz-border-radius-topleft:20% 50%;-webkit-border-top-left-radius:20% 50%;border-top-right-radius:20% 50%;-moz-border-radius-topright:20% 50%;-webkit-border-top-right-radius:20% 50%;border-bottom-left-radius:20% 50%;-moz-border-radius-bottomleft:20% 50%;-webkit-border-bottom-left-radius:20% 50%;border-bottom-right-radius:20% 50%;-moz-border-radius-bottomright:20% 50%;-webkit-border-bottom-right-radius:20% 50%;font-size:15px;line-height:1.1}.meta_enterprise_tag img{width:30px;height:30px!important;display:block;position:relative;margin-top:-3px;border:0}.rich_media_meta_text{color:#8c8c8c}span.rich_media_meta_nickname{display:none}.rich_media_thumb_wrp{margin-bottom:6px}.rich_media_thumb_wrp .original_img_wrp{display:block}.rich_media_thumb{display:block;width:100%}.rich_media_content{overflow:hidden;color:#3e3e3e}.rich_media_content *{max-width:100%!important;box-sizing:border-box!important;-webkit-box-sizing:border-box!important;word-wrap:break-word!important}.rich_media_content p{clear:both;min-height:1em}.rich_media_content em{font-style:italic}.rich_media_content fieldset{min-width:0}.rich_media_content .list-paddingleft-2{padding-left:30px}.rich_media_content blockquote{margin:0;padding-left:10px;border-left:3px solid #dbdbdb}img{height:auto!important}@media screen and (device-aspect-ratio:2/3),screen and (device-aspect-ratio:40/71){.meta_original_tag{padding-top:0}}@media(min-device-width:375px) and (max-device-width:667px) and (-webkit-min-device-pixel-ratio:2){.mm_appmsg .rich_media_inner,.mm_appmsg .rich_media_meta,.mm_appmsg .discuss_list,.mm_appmsg .rich_media_extra,.mm_appmsg .title_tips .tips{font-size:17px}.mm_appmsg .meta_original_tag{font-size:15px}}@media(min-device-width:414px) and (max-device-width:736px) and (-webkit-min-device-pixel-ratio:3){.mm_appmsg .rich_media_title{font-size:25px}}@media screen and (min-width:1024px){.rich_media{width:740px;margin-left:auto;margin-right:auto}.rich_media_inner{padding:20px}body{background-color:#fff}}@media screen and (min-width:1025px){body{font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}.rich_media{position:relative}.rich_media_inner{background-color:#fff;padding-bottom:100px}}.radius_avatar{display:inline-block;background-color:#fff;padding:3px;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;overflow:hidden;vertical-align:middle}.radius_avatar img{display:block;width:100%;height:100%;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background-color:#eee}.cell{padding:.8em 0;display:block;position:relative}.cell_hd,.cell_bd,.cell_ft{display:table-cell;vertical-align:middle;word-wrap:break-word;word-break:break-all;white-space:nowrap}.cell_primary{width:2000px;white-space:normal}.flex_cell{padding:10px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex_cell_primary{width:100%;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;box-flex:1;flex:1}.original_tool_area{display:block;padding:.75em 1em 0;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#3e3e3e;border:1px solid #eaeaea;margin:20px 0}.original_tool_area .tips_global{position:relative;padding-bottom:.5em;font-size:15px}.original_tool_area .tips_global:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1px solid #dbdbdb;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.original_tool_area .radius_avatar{width:27px;height:27px;padding:0;margin-right:.5em}.original_tool_area .radius_avatar img{height:100%!important}.original_tool_area .flex_cell_bd{width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}.original_tool_area .flex_cell_ft{font-size:14px;color:#8c8c8c;padding-left:1em;white-space:nowrap}.original_tool_area .icon_access:after{content:" ";display:inline-block;height:8px;width:8px;border-width:1px 1px 0 0;border-color:#cbcad0;border-style:solid;transform:matrix(0.71,0.71,-0.71,0.71,0,0);-ms-transform:matrix(0.71,0.71,-0.71,0.71,0,0);-webkit-transform:matrix(0.71,0.71,-0.71,0.71,0,0);position:relative;top:-2px;top:-1px}.weui_loading{width:20px;height:20px;display:inline-block;vertical-align:middle;-webkit-animation:weuiLoading 1s steps(12,end) infinite;animation:weuiLoading 1s steps(12,end) infinite;background:transparent url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iciIgd2lkdGg9JzEyMHB4JyBoZWlnaHQ9JzEyMHB4JyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjRTlFOUU5JwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoMCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICA8L3JlY3Q+CiAgICA8cmVjdCB4PSc0Ni41JyB5PSc0MCcgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHJ4PSc1JyByeT0nNScgZmlsbD0nIzk4OTY5NycKICAgICAgICAgIHRyYW5zZm9ybT0ncm90YXRlKDMwIDUwIDUwKSB0cmFuc2xhdGUoMCAtMzApJz4KICAgICAgICAgICAgICAgICByZXBlYXRDb3VudD0naW5kZWZpbml0ZScvPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyM5Qjk5OUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA1MCA1MCkgdHJhbnNsYXRlKDAgLTMwKSc+CiAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9J2luZGVmaW5pdGUnLz4KICAgIDwvcmVjdD4KICAgIDxyZWN0IHg9JzQ2LjUnIHk9JzQwJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgcng9JzUnIHJ5PSc1JyBmaWxsPScjQTNBMUEyJwogICAgICAgICAgdHJhbnNmb3JtPSdyb3RhdGUoOTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNBQkE5QUEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCMkIyQjInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxNTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNCQUI4QjknCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgxODAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDMkMwQzEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyMTAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNDQkNCQ0InCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEMkQyRDInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgyNzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNEQURBREEnCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMDAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0PgogICAgPHJlY3QgeD0nNDYuNScgeT0nNDAnIHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyByeD0nNScgcnk9JzUnIGZpbGw9JyNFMkUyRTInCiAgICAgICAgICB0cmFuc2Zvcm09J3JvdGF0ZSgzMzAgNTAgNTApIHRyYW5zbGF0ZSgwIC0zMCknPgogICAgPC9yZWN0Pgo8L3N2Zz4=) no-repeat;-webkit-background-size:100%;background-size:100%}@-webkit-keyframes weuiLoading{0%{-webkit-transform:rotate3d(0,0,1,0deg)}100%{-webkit-transform:rotate3d(0,0,1,360deg)}}@keyframes weuiLoading{0%{-webkit-transform:rotate3d(0,0,1,0deg)}100%{-webkit-transform:rotate3d(0,0,1,360deg)}}.gif_img_wrp{display:inline-block;font-size:0;position:relative;font-weight:400;font-style:normal;text-indent:0;text-shadow:none 1px 1px rgba(0,0,0,0.5)}.gif_img_wrp img{vertical-align:top}.gif_img_tips{background:rgba(0,0,0,0.6)!important;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000',endcolorstr = '#99000000');border-top-left-radius:1.2em 50%;-moz-border-radius-topleft:1.2em 50%;-webkit-border-top-left-radius:1.2em 50%;border-top-right-radius:1.2em 50%;-moz-border-radius-topright:1.2em 50%;-webkit-border-top-right-radius:1.2em 50%;border-bottom-left-radius:1.2em 50%;-moz-border-radius-bottomleft:1.2em 50%;-webkit-border-bottom-left-radius:1.2em 50%;border-bottom-right-radius:1.2em 50%;-moz-border-radius-bottomright:1.2em 50%;-webkit-border-bottom-right-radius:1.2em 50%;line-height:2.3;font-size:11px;color:#fff;text-align:center;position:absolute;bottom:10px;left:10px;min-width:65px}.gif_img_tips.loading{min-width:75px}.gif_img_tips i{vertical-align:middle;margin:-0.2em .73em 0 -2px}.gif_img_play_arrow{display:inline-block;width:0;height:0;border-width:8px;border-style:dashed;border-color:transparent;border-right-width:0;border-left-color:#fff;border-left-style:solid;border-width:5px 0 5px 8px}.gif_img_loading{width:14px;height:14px}i.gif_img_loading{margin-left:-4px}.gif_bg_tips_wrp{position:relative;height:0;line-height:0;margin:0;padding:0}.gif_bg_tips_wrp .gif_img_tips_group{position:absolute;top:0;left:0;z-index:9999}.gif_bg_tips_wrp .gif_img_tips_group .gif_img_tips{top:0;left:0;bottom:auto}.rich_media_global_msg{position:fixed;top:0;left:0;right:0;padding:1em 35px 1em 15px;z-index:2;background-color:#c6e0f8;color:#8c8c8c;font-size:13px}.rich_media_global_msg .icon_closed{position:absolute;right:15px;top:50%;margin-top:-5px;line-height:300px;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);background:transparent url(//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/icon_appmsg_msg_closed_sprite.2x2eb52a.png) no-repeat 0 0;width:11px;height:11px;vertical-align:middle;display:inline-block;-webkit-background-size:100% auto;background-size:100% auto}.rich_media_global_msg .icon_closed:active{background-position:0 -17px}.preview_appmsg .rich_media_title{margin-top:1.9em}@media screen and (min-width:1024px){.rich_media_global_msg{position:relative;margin:0 20px}.preview_appmsg .rich_media_title{margin-top:0}}.pages_reset{color:#3e3e3e;line-height:1.6;font-size:16px;font-weight:400;font-style:normal;text-indent:0;letter-spacing:normal;text-align:left;text-decoration:none;white-space:normal}.weapp_element,.weapp_display_element,.mp-miniprogram{display:block;margin:1em 0}.share_audio_context{margin:16px 0}.weapp_text_link{font-size:17px}.weapp_text_link:before{content:'';display:inline-block;line-height:1;background-size:12px 12px;background-repeat:no-repeat;background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAb1BMVEUAAAB4it11h9x2h9x2h9x2htx8j+R8i+B1h9x2h9x3h92Snv91htt2h9x1h9x4h9x1h9x1h9x2idx1h9t2h9t1htt1h9x1h9x1htx2h9x1h912h9x4h913iN17juOOjuN1iNx2h9t4h958i+B1htvejBiPAAAAJHRSTlMALPLcxKcVEOXXUgXtspU498sx69DPu5+Yc2JeRDwbCYuIRiGBtoolAAAA3ElEQVQoz62S1xKDIBBFWYiFYImm2DWF///G7DJEROOb58U79zi4O8iOo8zuCRfV8EdFgbYE49qFQs8ksJInajOA1wWfYvLcGSueU/oUGBtPpti09uNS68KTMcrQ5jce4kmN/HKn9XVPAo702JEdx9hTUrWUqVrI3KwUmM1NhIWMKdwiGvpGMWZOAj1PZuzAxHwhVSplrajoseBnbyDHAwvrtvKKhdqTtFBkL8wO5ijcsS3G1JMNvQ5mdW7fc0x0+ZcnlJlZiflAomdEyFaM7qeK2JahEjy5ZyU7jC/q/Rz/DgqEuAAAAABJRU5ErkJggg==');vertical-align:middle;font-size:11px;color:#888;border-radius:10px;background-color:#f4f4f4;margin-right:6px;margin-top:-4px;background-position:center;height:20px;width:20px}.weui-mask{position:fixed;z-index:1000;top:0;right:0;left:0;bottom:0;background:rgba(0,0,0,0.6)}.weui-dialog{position:fixed;z-index:5000;width:80%;max-width:300px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#fff;text-align:center;border-radius:3px;overflow:hidden}.weui-dialog__hd{padding:1.3em 1.6em .5em}.weui-dialog__title{font-weight:400;font-size:18px}.weui-dialog__bd{padding:0 1.6em .8em;min-height:40px;font-size:15px;line-height:1.3;word-wrap:break-word;word-break:break-all;color:#999}.weui-dialog__bd:first-child{padding:2.7em 20px 1.7em;color:#353535}.weui-dialog__ft{position:relative;line-height:48px;font-size:18px;display:-webkit-box;display:-webkit-flex;display:flex}.weui-dialog__ft:after{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid #d5d5d6;color:#d5d5d6;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(0.5);transform:scaleY(0.5)}.weui-dialog__btn{display:block;-webkit-box-flex:1;-webkit-flex:1;flex:1;color:#3cc51f;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative}.weui-dialog__btn:active{background-color:#eee}.weui-dialog__btn:after{content:" ";position:absolute;left:0;top:0;width:1px;bottom:0;border-left:1px solid #d5d5d6;color:#d5d5d6;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleX(0.5);transform:scaleX(0.5)}.weui-dialog__btn:first-child:after{display:none}.weui-dialog__btn_default{color:#353535}.weui-dialog__btn_primary{color:#0bb20c}</style>
+<style>
+        </style>
+<!--[if lt IE 9]>
+<link onerror="wx_loaderror(this)" rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_pc2c9cd7.css">
+<![endif]-->
+
+    </head>
+    <body id="activity-detail" class="en_US mm_appmsg">
+        
+<script nonce="2104329651" type="text/javascript">
+    var write_sceen_time = (+new Date());
+</script>
+
+<div id="js_article" class="rich_media">
+    
+    <div id="js_top_ad_area" class="top_banner"></div>
+    
+    <div class="rich_media_inner">
+                
+        <div id="page-content" class="rich_media_area_primary">
+            
+                        <div id="img-content">
+                
+                <h2 class="rich_media_title" id="activity-name">
+                    谢谢你，钟扬教授                                    </h2>
+                <div id="meta_content" class="rich_media_meta_list">
+                                        <span id="copyright_logo" class="rich_media_meta meta_original_tag">原创</span>
+                                                            <em id="post-date" class="rich_media_meta rich_media_meta_text">2017-10-01</em>
+
+                                        <em class="rich_media_meta rich_media_meta_text">岛君</em>
+                                        <a class="rich_media_meta rich_media_meta_link rich_media_meta_nickname" href="##" id="post-user">理想岛</a>
+                    <span class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">理想岛</span>
+
+                    <div id="js_profile_qrcode" class="profile_container" style="display:none;">
+                        <div class="profile_inner">
+                            <strong class="profile_nickname">理想岛</strong>
+                            <img class="profile_avatar" id="js_profile_qrcode_img" src="" alt="">
+
+                            <p class="profile_meta">
+                            <label class="profile_meta_label">微信号</label>
+                            <span class="profile_meta_value">lixiangdao002</span>
+                            </p>
+
+                            <p class="profile_meta">
+                            <label class="profile_meta_label">功能介绍</label>
+                            <span class="profile_meta_value">人与人之间最大的差别不是智商或财富，而是思考问题的层次和模式。关注理想岛，提升认知维度。</span>
+                            </p>
+                            
+                        </div>
+                        <span class="profile_arrow_wrp" id="js_profile_arrow_wrp">
+                            <i class="profile_arrow arrow_out"></i>
+                            <i class="profile_arrow arrow_in"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                
+                
+                
+                                                
+                                                                
+                
+                <div class="rich_media_content " id="js_content">
+                    
+
+                    
+
+                    
+                    
+                    <p style="text-align: center;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBdkoEYWNGbPfCViavSwAFbQhmMibcETNGJUMCnqC1nMDWcn8iccUfxoibTuRkMgNOhDw3qpa5TdWkNfww/0?wx_fmt=jpeg" class="" data-ratio="0.25" data-w="640"  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ57neZibPT7GkIf477fxgVMticHg2dibfzaA22aJZB196SuR0ZSktWx3Q9A/0?wx_fmt=jpeg" class="" data-ratio="1.38125" data-w="640"  /></p><p style="text-align: center;"><span style="font-size: 12px;color: rgb(136, 136, 136);">复旦教授钟扬</span></p><p style="margin-top: 5px;margin-bottom: 5px;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="88401" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section class="135brush" data-style="white-space: normal;text-align: justify; font-size: 14px; line-height: 2; padding-right: 10px; padding-left: 10px;margin: 15px 0%;"><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="caret-color: red;"></span></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">1</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授常年背着一个沉重双肩包，包里装着笔记本电脑、大摞的学术和会议资料、翻译稿，以及学生的论文。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">事情太多，他平时衣袋里还装着很多小纸片，上面密密麻麻写着一条条待办事项，每做掉一项就划掉。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">他习惯把所有要用的东西随身背着。由于常年往返各地，尤其是沪藏之间，他会利用在机场、空中，以及车上等碎片化时间，随时打开包进行工作。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">除了担任复旦大学生命科学学院植物学和生物信息学教授、复旦大学研究生院院长，他还身兼西藏大学生态学博导，每年待在西藏的时间超过130天。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2017年9月21日，教育部发布“双一流”大学名单，西藏大学生态学入选一流学科，是整个西藏地区唯一入选的一流学科。对此，最感到欣慰的人应该是钟扬教授。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">从硕士点的开辟，到一级学科博士点的建立；从为西藏大学争取到第一个自然科学基金<span style="font-size: 14px;color: rgb(136, 136, 136);">（重大项目）</span>，到入选教育部“双一流”高校建设名单，钟扬教授倾注了太多心血。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">作为援藏干部，钟扬教授在探索一种高端人才培养的支教模式，以帮助西藏形成人才培养的造血机制。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">按照钟扬教授的既定行程，他将在9月28日从上海飞回西藏，进一步统筹西藏大学生态学学科的建设和发展。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">但是，他回不去了。钟扬教授再也回不到他所深爱和熟悉的青藏高原。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">9月25日，凌晨五点至六点间，在内蒙古鄂尔多斯市出差的途中，钟扬教授所乘车辆与一辆铲车相撞，造成一人（钟扬教授）死亡。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授原计划当天到位于鄂尔多斯鄂托克前旗的城川民族干部学院做一场讲座，并于当天飞到上海。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">鄂托克前旗地处蒙陕宁三省区交界处，是中央红军创建的老解放区。城川民族干部学院于今年7月刚刚挂牌成立，由中央民族大学与内蒙古合作共建，性质类似于井冈山干部学院、延安干部学院。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">2</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">1977年春节刚过，恢复高考后的第一届大学生即将入学。如今赫赫有名的湖北省黄冈中学，于当年二月份在大操场为四名考上大学的学生举行了隆重的欢送仪式。锣鼓声、鞭炮声、欢呼声震耳欲聋，4名应届毕业生胸佩大红花，精神抖擞地站在高台上，接受学校的表彰。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬回忆说，“他们还不到我校应届高中毕业生总数的1%，却成了全校2000多名学生心目中真正的英雄。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">那时，13岁的钟扬即将从黄冈中学初中部毕业，“我仿佛看到了人生的希望和前进的榜样，那从未走进过的大学校园对我而言似乎也不再遥远了。” 钟扬的大学梦就此产生。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5ScS7wB1YbSLQnDWv98yeM7FEZa4ZvbcXZ05iapFHENKywRVVIBtiaeqA/0?wx_fmt=jpeg" class="" data-ratio="0.5563636363636364" data-w="550"  /></p><p style="text-align: center;"><span style="font-size: 12px;color: rgb(136, 136, 136);">钟扬教授的初高中母校，湖北黄冈中学</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">此后的寒暑假，好动的钟扬不再东跑西窜，而是自己找一个空无一人的教室，一边手抄文革前的各种习题，一边查教科书上的答案，反复做练习。自己偷偷一盘算，照这样再努力两年，上大学还是很有希望的。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">转眼之间，就到了1979年的高考报名时间。当时的政策允许非毕业班学生，也就是高一学生报名参加高考。彼时的高中还是两年制。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">按捺不住跃跃欲试的念头，和班中多名成绩拔尖的同学一样，钟扬决定提前参加高考。他们的决定引起部分应届毕业班学生和家长的担忧，于是，不断有人向省招办反映此事。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">从1974年起，钟扬的父亲便开始担任地区教育局高等院校招生办公室主任。省招办迅即责成钟扬的父亲了解情况，并给考生和家长们一个满意的答复。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">经过讨论，钟扬的父亲到黄冈中学宣布解决方案。凡提前高考的同学必须办理提前毕业手续，在校学生不能违背“机会均等”的原则，也就是说在读生只能参加一次高考。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">最后，全校21位成绩优异者仍然决定提前参加高考。应届生和往届生也都表示满意。省里得知此事，迅速面向全省数十万考生推广这项处理方案并将此原则沿用多年。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在宣布方案之前，父亲告诉钟扬，作为招办主任，要处理几万考生关心的问题，他的儿子非避嫌不可。“无论如何，你必须放弃这次高考的机会。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">少年钟扬无话可说，只是觉得委屈，一摔门就走了。一个人生闷气，并拒绝和父母谈话。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">不久，班主任前来家访，说，“我们都知道这件事对你是不公平的，但你父亲决心很大，大家对他的做法也很服气。你不要再惹他生气，不能参加正规的高考，去考科大少年班怎么样？”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">1978年3月，中国科学技术大学正式创建少年班，采取单独考试、改卷和录取的模式。中科大少年班主要招收尚未完成常规中学教育，但成绩优异的青少年接受大学教育。当年在全国仅招收20多人，竞争异常残酷，整个黄冈地区成绩最好的一位学生也没考上。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">父亲也同意钟扬报考中科大少年班，但提醒说，这的确是一场成功机会不大的考试，如果考不上少年班，也不能像正常高考一样可以调剂到其他大学。“但你还不到15岁，今后的机会还很多。考不上还可以再参加普通高考。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">鼓足勇气，钟扬最终迈向了通往中科大少年班的“独木桥”。在通过高淘汰率的初审、复试和面试后，钟扬考入中科大第三期少年班，就读无线电专业。当年，整个湖北约有60名学生报考中科大少年班，钟扬的初试总分排名第二。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">父亲的同事得知后，纷纷表示祝贺，都想见见钟扬。父亲却叮嘱说，高考是一件“几家欢乐几家愁”的事，不要太得意忘形，刺激别人。省招办主任孙伯伯的儿子今年已是第二次高考，这次又是只差几分，落榜了。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">1979年的高考，湖北全省录取率不到4%，除钟扬之外，参加高考的省地市招办主任的孩子无一人考入大学。即便是孙伯伯，任省招办主任和省教委主任十多年，儿子却一直未能上成大学。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">3</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"></span></p><p style="margin-top: 15px;margin-bottom: 15px;padding-right: 10px;padding-left: 10px;white-space: normal;text-align: justify;font-size: 14px;line-height: 2;"><span style="font-size: 15px;">大学期间，钟扬是个不折不扣的文学青年。大二时，中科大校报创刊，钟扬陆续发表几首诗，拿到生平第一笔稿费，金额在2元至4元不等。临近毕业，钟扬又连载数篇文章，拿到了10元的高额稿费。</span><br  /></p><p style="margin-top: 15px;margin-bottom: 15px;padding-right: 10px;padding-left: 10px;white-space: normal;text-align: justify;font-size: 14px;line-height: 2;"><span style="font-size: 15px;">钟扬曾笑言，幸好本科读书期间没有BBS、博客之类，否则他一定会沉湎其中，不能自拔。他说，很怀念当时的创作激情，而如今所有正规的写字机会都演变成撰写项目申请书、总结和各种报告，完全的八股文。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">五年后的1984年，刚满20岁的钟扬大学毕业，被分配到中科院武汉植物研究所（现中科院武汉植物园）工作。虽然并非学植物学相关专业，但钟扬数学和计算机基础很好，于是被分到研究所技术室。</span></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5bFzOmib4VvibWc6N6WeicOwDFkSKDodN7Lfj4FFHNf9YQbZQ4u51HibMZw/0?wx_fmt=jpeg" class="" data-ratio="0.5783132530120482" data-w="415"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬利用所长，创建了该所第一个计算机室，并组建计算机生物学青年实验室，他还用自己在国外节省下来的生活费，购置了计算机、复印机等设备。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">接下来的工作中，他又组建水生植物室。在数量分类和分支分类上，引进计算机处理技术，在植物学和计算机学交叉学科中，取得重大进展。期间，他跑到武汉大学进修了植物学专业。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">为填补生物学知识的空白，所里还专门让林业大学毕业生张晓艳辅导他。当时钟扬的想法是两年后考研，离开植物园。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">不过，先离开的是张晓艳。半年后，赵晓艳回到中科院上海植物生理所工作。而钟扬留了下来，这一留就是15年。第三年，张晓艳在钟扬的“召唤”下返回武汉，并且由“专业老师”变成了“家庭领导”。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬彻底爱上了植物学研究，最后还当上了副所长，副所长算是 “副局级”干部。“做副所长时，钟扬表现出极高的领导才能。他走到哪里都像一团火，能把大家都带动起来。”钟扬的前同事说。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在中科院武汉植物所的15年间，钟扬还到美国加州大学伯克利分校和密歇根州立大学从事合作研究四年。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2000年，钟扬放弃一切待遇，两手空空地来到复旦大学任教。他说<strong><span style="font-size: 15px;color: rgb(171, 25, 66);">：“人就是要做自己感兴趣的事情，才能不负人生。我对植物学感兴趣，但我们当时的植物研究所只能在华中地区转悠，而在高校搞研究，想去哪儿就能去哪儿。就只做个普通教授又怎样呢？”</span></strong></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">不久，钟扬被复旦大学聘为生命科学学院常务副院长。2001年，恰逢复旦大学对口支援西藏，他想都没想，就放弃了副院长的职务，选择到西藏大学担任一名普通教授。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">他又说，我国生物多样性排名倒数第一、倒数第二的上海和北京，集中了约50%的相关人才，而排名前列的西藏却很少，“</span><span style="font-size: 15px;"><strong><span style="font-size: 15px;color: rgb(171, 25, 66);">青藏高原有2000种特有植物，那是每个植物学家都应该去的地方。”</span></strong></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">这片高原上，有近6000个能结种子的高等植物物种，占全国的18%，数量大，质量好。“非常糟糕的是，由于全球环境的破坏，人类活动的剧烈，在了解和知道它能否被利用前，很多种子就已经没有了。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授决定去西藏收集种子。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">4</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2001年，钟扬第一次踏上地球的“第三极”——青藏高原的土地。刚到西藏时，钟扬花了整整5年时间来克服高原反应，后来体检，他发现高原环境还是对自己的心肺功能造成了损伤。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2002年，钟扬和张晓艳的爱情结晶——双胞胎儿子出生，38岁的钟扬一下成为两个孩子的父亲。孩子出生时，钟扬正在研究红树植物。他给双胞胎儿子用植物取名：云杉和云实。一个是裸子植物，一个是被子植物。有学生在院里贴告示：钟扬教授和张晓艳博士的遗传学实验取得巨大成功，结果为两新种：钟云杉、钟云实。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬说，如果人们都喜欢用植物给孩子取名字，那就是最好的科普时代的到来。而且花花草草多，植物志那么厚，想重名都很难。童年一套残缺不全的《十万个为什么》，让钟扬相信，科学能深入儿童的心灵。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在西藏16年，从藏北高原到藏南谷地，从阿里无人区到雅鲁藏布江，在林芝、日喀则，在那曲、阿里，都留下了钟扬和学生采集野生植物标本和DNA样品的影子。他在西藏行路总里程超过10万公里，和团队收集上千种植物的4000千万颗种子。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5nedhrEaZFic1ibmbS8MkOr5dIyDibOdYRvJglbPGcBKJ87Sb3oibtGYDwQ/0?wx_fmt=jpeg" class="" data-ratio="0.521875" data-w="640"  /><br  /></p><p style="text-align: center;"><span style="color: rgb(136, 136, 136);font-size: 12px;">纪录片《播种未来》截图</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">这些种子不仅能为我们提供水果、花卉、粮食作物，在医药研究方面也有重大作用。</span><strong style="font-size: 15px;"><span style="color: rgb(171, 25, 66);">“一个基因可以为一个国家带来希望，一粒种子可以造福万千苍生”。</span></strong><span style="font-size: 15px;">钟扬说。</span><br  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">青藏高原的植物资源从来没有进行过彻底盘点，即使在全世界最大的种质源库中，也没有西藏地区的植物种子。钟扬急切地想盘清西藏的生物“家底”。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在野外考察途中，他多次看到过往的车辆冲出盘曲的山路，掉下悬崖。有一次在考察路上，石头飞下来，砸中钟扬所乘的车辆，但是没有砸中人。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5LDx06kYCZCmBiaxUQPc3613otvtYDic9gptj4uw3hRwacoAGYT04TkgQ/0?wx_fmt=jpeg" class="" data-ratio="0.7359375" data-w="640"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">除了意外随时发生的可能，钟扬教授还深知，对青藏高原的长期效应，很可能到十年以后才能慢慢显现，这都让他有一种紧迫感。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2013年，在录制的一则视频中，钟扬教授表达出了这种紧迫感，说，“我再给自己十年。所以我现在一年是150天在西藏。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">意外虽然没发生在西藏，但还是提前夺走了钟扬教授的生命。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">西藏生态环境孕育了特有的生物资源，从海拔2000米一直到6000多米，都有植被分布。它们不仅可做药物，分布规律还体现植物适应环境的进化过程——越是气候条件恶劣的地方，越是有研究的价值。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5OQjPjx3IdrNZ2gscYR6UfWzTkKdgQzicEG6EfsdH8WXWd05fV5hC2xA/0?wx_fmt=jpeg" class="" data-ratio="0.5734375" data-w="640"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">为收集这些植物的样本、种子，钟扬教授常出没无人区，也常在海拔5000米的野外采样。即便高原反应令钟扬血压升高，使其头疼欲裂，身体绵软，但他依然勤勤恳恳，坚持早出晚归，从不懈怠。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">“科学研究嘛，本身就是对人类的挑战。”高原反应差不多有十七种，每次准备出发的水和食物时，他都会说：我们不能因为高原反应就怕了，是吧？</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">死面饼子加些凉菜和午餐肉，就是他的野外佳肴。曾为了收集海拔4000米以上的香柏，钟扬和学生们前往珠峰大本营，高速公路到了尽头，就走搓板路。因严重缺氧，帐内的煤油灯点不亮，加了酒精，也勉强只燃了一分钟；盖三床被子仍冷得瑟瑟发抖，几乎不能合眼……</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5RLDphvHpRPMiaIPe6uEA2unh7rTiaoD4LKhGPgNeBIs94xkbGHic8fZsg/0?wx_fmt=jpeg" class="" data-ratio="0.5" data-w="640"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在阿里地区的一次野外考察中，一个学生缺氧晕倒。“吸氧，快给他吸氧！”钟扬喊道。到了半夜，极度劳累的钟扬也出现严重的高原反应，学生挣扎着拔掉氧气管试图换给钟老师，结果被他一把阻止：“别动，都这么大的人了，这么不讲卫生，快点插回去！”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">收集植物种子是研究西藏生物多样性保护的重要一环，钟扬给自己的目标是，每个标本收集5000颗种子，而按照学术规范，两个样本之间的空间距离不得小于50公里。有时，钟扬一天就要走800公里，每走50公里，看见一个种子，赶紧收集那几个，装上麻袋，然后开车去另一个点。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">有次，钟扬发现一种桃核光滑的毛桃，就在高原上釆摘了8000颗。为了不损坏种子的完好度，他发动全课题组老师、学生啃毛桃，刷干净、擦干、晾干（不能暴晒，否则质量毁坏）后，再送入种子库，筛选出5000个封到瓶子里，有可能放80年到120年，这就算一个样本。那年夏天，他做了500个样本。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">为分析巨柏在藏东南地区和雅鲁藏布江两岸的生存和发育情况，钟扬和研究生一起，花3年时间，给每棵巨柏树进行登记。不少巨柏生长在人迹罕至的山林或悬崖上，他们苦苦寻觅后，对不同的野生种群一一标记分析，直到将全世界仅存的、在西藏的这3万多棵巨柏都登记在册。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">有一种植物名为拟南芥，研究价值堪比果蝇和小白鼠。寻找特殊的拟南芥材料，成为全球植物学界竞争的方向之一。在钟扬指导下，许敏和赵宁两位学生利用休息时间，每周末都坐公交、爬山路，到4000多米海拔高峰探寻，终于找到一种全新的拟南芥生态型。钟扬将其命名为“XZ生态型”，这既是两位年轻人姓氏拼音的缩写，更是西藏首字母的组合。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授的紧迫感，让他拼得太狠，对自己太狠，不知不觉身体危机正慢慢逼近。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2015年5月，在上海过生日时，因长期高强度工作，钟扬突发脑溢血，幸好被及时发现送医，才保住了生命。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在被救治苏醒后的ICU病床上，他口述写下一封信，里面有这样一段话：“这十多年来，既有跋山涉水、冒着生命危险的艰辛，也有人才育成、一举实现零的突破的欢欣；既有组织上给予的责任和荣誉为伴，也有窦性心律过缓和高血压等疾病相随。就我个人而言，我将矢志不渝地把余生献给西藏建设事业。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5ZykIxpOWLF9kncjiaMG0N5EKVUZDibXHibalBBl2jSsNnRerK93cNRumA/0?wx_fmt=jpeg" class="" data-ratio="1.3328125" data-w="640"  /></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 12px;color: rgb(136, 136, 136);">2015年，钟扬在病床前与同事讨论工作</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">医生提醒他，以后需要注意两点：一是不能饮酒，二是一年内不能再去西藏。钟扬喜欢喝酒，一次能喝一斤，但从那以后，他滴酒不沾。但对于西藏，他戒不掉，9个月后，实在忍不住，还是去了。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2016年，钟扬回上海做了心脏搭桥手术。医生再次强调，他的身体已不适合在高原工作。但钟扬教授没有听从医生的建议，很快又回到西藏。每次回藏，他都要不停地吃药。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2016年7月，钟扬以援藏干部老队员身份在欢迎座谈会上讲话，第一句就告诉大家，千万不能感冒进藏。当时，钟扬已多次受高原病折磨，他的脸浮肿，有着高原人特有的黑红色。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬曾经感慨，<strong><span style="font-size: 15px;color: rgb(171, 25, 66);">“每个人都会死去，但我想为未来留下希望。”</span></strong>钟扬教授的希望，主要包括两件事：收集种子，为藏区培养人才。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">5</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">2010年，钟扬成为中组部选派的第六批援藏干部。３年后，他又申请留任第七批援藏干部。又是3年期满后的2016年，由于西藏大学相关学科建设处在紧要关头，大病初愈的他毅然再次申请留任。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">面对组织上对他身体状况的关心和担忧，他反复表示没有问题，还自费到医院作了体检，最终凭着体检合格报告和个人反复争取，入选了第八批援藏干部。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬一直是个敢想敢做的人。担任西藏大学理学院副院长时，钟扬曾说，西藏大学的植物学博士点不批下来，自己就不离开。很多人以为这是大话，因为那时，学校理科硕士点一个都没有，植物学专业没有教授，也没有一位老师有博士学位。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">但在钟扬及学校师生努力下，2011年，西藏大学植物学一级学科硕士学位授予点获得批准；2013年，西藏大学生态学一级学科博士学位授予点获得批准，填补了西藏高等教育史的空白。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5awVStnqjvueZRz1iaEQAkbfYzJayIjKic3Mb2QGia0hGDD26vlSLR80Qg/0?wx_fmt=jpeg" class="" data-ratio="0.7777777777777778" data-w="450"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">如今，西藏大学的植物学研究，在钟扬带领下已初具规模，拥有了植物学博士生导师1名，副教授4名，讲师5名，而且大多老师都具备国外学习和研究工作经历。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬说，“教师是我最在意的身份。”他的心里始终将学生放在第一位。身兼复旦大学、西藏大学两校博士生导师的他，指导了藏族第一位植物学博士和哈萨克族第一位植物学博士。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在钟扬看来，当地学生熟悉地形，了解当地生物分布，如果受到良好的科研训练，完全可以做出成果。2015年6月，西藏大学第一批7位生物学硕士研究生毕业，他们中的绝大部分都留在西藏工作。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">“我想带出一批博士生团队，探索一种高端人才培养的支教模式，帮助西藏形成人才培养的造血机制。一百年后我肯定不在这个世界上了，但我的学生们还在，他们早晚有一天会发现那颗改变我们国家命运的种子。”2014年，钟扬教授接受记者采访时说，希望能为高原留下科学的种子。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">琼次仁是钟扬教授在西藏大学的同事，2003年他与钟扬一起成功申请到西藏大学有史以来第一个国家自然科学基金项目。不幸的是，他在2004年被查出身患肝癌、胃癌。弥留之际，琼次仁拉着钟扬的手说，“钟老师，我还没和你合作够啊。我走时，你抬我”。一句“我走时，你抬我”是藏族汉子能够给朋友的最深信任。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><strong><span style="font-size: 15px;color: rgb(171, 25, 66);">“任何生命都有其结束的一天，但我毫不畏惧，因为我的学生会将科学探索之路延续，而我们采集的种子，也许会在几百年后的某一天生根发芽，到那时，不知会完成多少人的梦想。”</span></strong><span style="font-size: 15px;">在纪录片《播种未来》中，钟扬在给自己的配音中的说。</span></p><p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;line-height: 25.6px;white-space: normal;widows: 1;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><iframe class="video_iframe" frameborder="0" allowfullscreen="allowfullscreen" data-vidtype="-1" data-ratio="1.7647058823529411" data-w="480" scrolling="no" data-src="https://v.qq.com/iframe/preview.html?vid=a0140jq18gd&amp;width=500&amp;height=375&amp;auto=0"></iframe></p><p style="max-width: 100%;min-height: 1em;color: rgb(62, 62, 62);font-size: 16px;line-height: 25.6px;white-space: normal;widows: 1;text-align: center;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;color: rgb(136, 136, 136);box-sizing: border-box !important;word-wrap: break-word !important;">钟扬教授援藏纪录片《播种未来》</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬招收研究生只看他是否喜欢做植物研究。在考察学生时，钟扬有个特别之处：对藏族学生不考察英语，也不看知识面，只看兴趣——喜欢做植物研究就会招。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬把每一个学生都看成一颗宝贵的种子，他曾将一名患肌无力的学生毅然收为自己的博士生。这名学生在毕业论文答辩完成后说：“我今天很激动，特别要对钟老师说一声谢谢！他的胸怀，像青藏高原一样辽阔，在他身上我看到了坚强与拼搏，看到了对生活和事业的挚爱。我期望有一天，也能到青藏高原去。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">6</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">爱生如子的作风，也体现在钟扬作为复旦大学研究生院院长的管理工作中。他推动设立了研究生服务中心，全天服务12小时，一年365天无休，最大限度地方便研究生办事。他还推动创立研究生论文指导中心、研究生FIST课程等重要项目，想方设法满足研究生的学术发展需求。“宁可我们工作累一点，也要尽力方便学生”，钟扬说。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授常常工作到凌晨三四点，经常和他打交道的人往往会在半夜一两点收到他回复的邮件、修改的文章。他的办公室里永远有行李箱相伴，他一年之内飞出的航空金卡，让人叹为观止。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">每次出差回来，召集学生开会或制作标本，同学们都非常开心。因身材较胖，性格和蔼可亲，亦师亦友，大家在背后称其为“钟胖胖”。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p style="text-align: center;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5JURktaHduOKLmkBAvAqLmnOx3WibYHUKMU9kaBf4GGBJg2iaSpfiaDOdQ/0?wx_fmt=jpeg" class="" data-ratio="0.503125" data-w="640"  /><span style="text-align: justify;font-size: 12px;color: rgb(136, 136, 136);">钟扬教授和学生在一起</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬常在饭桌上用风趣的口吻谈自己所经历的故事。每次吃饭，都会变成钟扬的单口相声，“他有太多故事了，让吃什么都变得不再重要。”他的同事回忆说。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授博学且幽默，学术报告中那么枯燥的东西，经他一说，很容易就能接受。两个小时的课堂，到结束时，同学经常觉得时间过得太快。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">就连考试也很“新奇”。钟扬教授为大三学生开设《生物信息学》课程，期末考试内容之一就是，为用来做教材的《简明生物信息学》挑刺——这本书他是第一作者。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授不允许任何一个学生掉队，会根据学生特点“定制”专属的成长计划。有位学生对科研工作并不十分热爱，但对国际事务与接待工作特别上心，钟扬看在眼里，每次遇有相关事务都交给他去做，经过几年培养，该生博士毕业后到了丹麦领馆工作。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">有位学生热爱课堂教育，钟扬便把国际学生课程的教授交给她负责，经过几年积淀，她成了钟扬国际教学的左膀右臂，毕业后如愿到复旦附中国际部任职。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">关于坚持和学习，钟扬教授以自己的经历来激励学生。“我在武汉植物园待了15年，现在的孩子一听15年就摇头。其实，很多研究生听几年音乐，复习几年外语，学几年计算机，再搞几年金融，合起来也是15年，却一事无成。假如你专注于一件事，15年也许就成某个领域的专家了。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><strong><span style="font-size: 15px;color: rgb(171, 25, 66);">“很多人30多岁就不学习了，反而逼着自己的孩子学这学那。我要一直保持热爱学习的状态，没人规定援藏干部要学藏语，但是用藏语是表达尊重的最好方式。现在我已经能听懂四分之一。”</span></strong></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">7</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">为了给我们的后代保留足够生物多样性，十多年间，钟扬和他的团队在青藏高原收集了上千种植物的4000万颗种子，这些种子很多被存放在国家和上海种质库的冰库里，可以存放100至400年不等。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">这些种子可能几十年、甚至几百年后才能发挥作用、造福人类。钟扬说，“生物学就是这样的一门学科，我们所做的可能就是一天到晚采种子，眼前没有任何经济效益。但因为国家需要、人类需要这些种子，做我们这些基础性研究的，心里想的就是‘前人栽树、后人乘凉’。”</span></p><p><br  /></p><section style="max-width: 100%;color: rgb(62, 62, 62);font-size: 16px;line-height: 25.6px;white-space: normal;widows: 1;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" powered-by="xiumi.us" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" powered-by="xiumi.us" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section class="" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"><section style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"><section class="" powered-by="xiumi.us" style="max-width: 100%;box-sizing: border-box;word-wrap: break-word !important;"><section class="" style="margin-top: 0.5em;margin-bottom: 0.5em;max-width: 100%;box-sizing: border-box;text-align: center;word-wrap: break-word !important;"><p style="max-width: 100%;min-height: 1em;box-sizing: border-box !important;word-wrap: break-word !important;"><iframe class="video_iframe" data-vidtype="2" allowfullscreen="" frameborder="0" data-ratio="1.7666666666666666" data-w="848" scrolling="no" data-src="https://v.qq.com/iframe/preview.html?vid=f0539mv8vdr&amp;width=500&amp;height=375&amp;auto=0"></iframe></p><p style="max-width: 100%;min-height: 1em;box-sizing: border-box !important;word-wrap: break-word !important;text-align: left;"><span style="max-width: 100%;font-size: 12px;color: rgb(136, 136, 136);box-sizing: border-box !important;word-wrap: break-word !important;"><span style="font-size: 12px;max-width: 100%;widows: 1;background-color: rgb(255, 255, 255);">不久前，钟扬做客“一席”，讲述了自己通过收集一颗颗普普通通的种子来造福苍生的追求和故事。这是</span>完整视频</span></p></section></section></section></section></section></section></section></section></section></section><p><br  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬进一步举例说，“如果一百多年以后还有癌症，如果那时候人们发现有一种植物有抗癌作用，而由于气候变化的原因，这个植物在西藏已经没有了，但是一百多年前有个姓钟的教授好像采过，那不就造福了大家了吗？”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬的植物情缘不仅生长在雪域高原，也盛开在距离相隔4000公里、海拔相差4000米的上海临港。在上海浦东南汇东滩湿地附近一块十亩大小的田地里，种植着一片绿色的树苗，那是钟扬培植的红树。最高的树苗已经长出地面两米多，而且不用再生活在暖棚里了。其中最早一批是9年前种下的。</span></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ51cKOCibIbq8tsF0XY5KHbZhRD3zib11r0GMlaZyzxUzwPcFvHNskhS9g/0?wx_fmt=jpeg" class="" data-ratio="0.6671875" data-w="640" style="font-size: 14px;"  /><span style="font-size: 12px;color: rgb(136, 136, 136);">上海浦东南汇东滩湿地，钟扬</span><span style="color: rgb(136, 136, 136);font-size: 12px;">教授</span><span style="font-size: 12px;color: rgb(136, 136, 136);">在附近培植了十亩红树苗。</span></p><p style="white-space: normal;text-align: left;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">当时，中国自然分布的红树林所能达到的最高维度，在福建；人工栽种的红树林，纬度最高的在温州。在北纬30°40′-31°53′的上海栽种，着实是个难题。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">“既然没人尝试种过，怎么知道在上海种不活呢？创新就是捅破窗户纸的勇气，我愿意做第一个捅窗户纸的人。”钟扬申报在上海种植红树林这一课题。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">其他植物学专家均持否定态度，认为这根本不可能。同事们也劝他放弃：“不能瞎搞，这个搞不活的。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">最终，课题组经多次研究、实验，克服上海温度、盐度方面的限制，红树林不断适应周围环境，开始生长。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5kGcZFdgetaLK4kN6ogWA8lHNlUm4vAFiavns7gYia0nJxBIrPqcSKZ3Q/0?wx_fmt=jpeg" class="" data-ratio="0.7166853303471444" data-w="893"  /></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="color: rgb(136, 136, 136);font-size: 12px;">上海《新民晚报》的报道</span><span style="font-size: 15px;"></span><br  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">红树林是恐龙时代的植物，是一种热带、亚热带特有的海岸带植物群落。作为世界上生物量最大的生态系统之一，它在改善生态环境和维持生物多样性方面具有重要作用。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">在上海种植红树能够带来巨大的经济、生态和社会效益。在种植红树之前，这块地是干的，盐碱都往外泛。有了红树，蝌蚪、田螺出现了，生物明显多了起来。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">“我的愿望是，50年甚至100年以后，上海的海滩也能长满繁盛的红树，人们提起上海的时候，会毫不吝啬地称其为‘美丽的海滨城市’。虽然我不一定能看到这一幕，但上海的红树林将造福子子孙孙，成为巨大的宝藏———这是我们献给未来上海的礼物。”钟扬说。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">8</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">一个国家的生物学发展靠少数几个人的力量是不行的，必须有一大批专家和人才。虽然科研工作占据了钟扬大部分时间和精力，但他始终热心地投入科普教育。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5wdXHyT5yrFYlZh3miaicB1Xib0e774fEAfIRWh84ribRNmDecN4Zgxjezw/0?wx_fmt=jpeg" class="" data-ratio="0.5555555555555556" data-w="720"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">为此，他担任了上海科技馆英文图文版和上海自然博物馆中英文图文版的负责人，展馆内的一条条解说词凝结着钟扬大量的心血；他从西藏带回许多标本，用于上海自然科学博物馆的展出，包括一条最大的温泉蛇标本。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">销量长期位于科普类书籍前列的《大流感——最致命瘟疫的史诗》也是钟扬所翻译。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5qZYsKEPHVIAjcRkickHmUNm8KGicnC3lxicYjpEK3Ky3cw1pQAf9mT6UQ/0?wx_fmt=jpeg" class="" data-ratio="1" data-w="720"  /></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="color: rgb(136, 136, 136);font-size: 12px;">豆瓣评分高达8.7的《大流感》</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬很乐意去电视台作科普宣传节目，或者给报纸杂志写些科普小文章。他说，现在许多植物都濒临灭绝，可人们还叫不出它的名字，真的很遗憾。<strong><span style="font-size: 15px;color: rgb(171, 25, 66);">科学研究是一项艰苦的事业，科学家的特质就是从中提取欢乐，然后把科学和欢乐一起带给大家。</span></strong>”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授常常挤出宝贵的个人时间，给孩子做科普，希望把科学的种子种到更多的孩子们心中。他对科普教育的内核有着深入的思考，他希望科普不仅仅是传递知识，更是传递科学的思维方式、科学的精神和对科学的热爱。”</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5uicf17gIWPJudibDibkWcHmaY86ZHPBjyoxYiaO6dP2CS7Den2qPGsBgAA/0?wx_fmt=jpeg" class="" data-ratio="0.75" data-w="640"  /></p><p><span style="color: rgb(136, 136, 136);font-size: 12px;">2017年9月15日，钟扬教授在上海浦东向小学生们讲解湿地生态保护有关知识</span></p><p style="white-space: normal;text-align: left;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">就在上个月，钟扬教授还兴冲冲地说：“到了我这个年龄，其实在哪个岗位都不重要了，我已经想好了100个小故事，要为小学生们录下来，这些故事都是从一个问题开始，既有趣又有科学性，引导孩子学会提问。”第一个故事，他打算从“长颈鹿会不会游泳”开始录制。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">他还在策划，召集一批热心的科学家为中学生们排演舞台连续剧，专门为高中生展示不同的大学、不同的专业，名字就叫“那些大学，那些专业”，因为“每年接待太多的孩子和家长，他们对大学不甚理解，对专业更不了解”。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授为了让科普讲座生动有趣，表现出脱口秀的感觉，每次讲座之前他都在家对着镜子反复练习各种段子。有人曾在复旦大学日月光华BBS留言说，“钟扬老师的科普小故事就像好莱坞大片一样精彩”。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬教授像是经历了许多坎坷而历练出了泰然自若的气场，带着出世的态度一件件完成入世的事情。”以出世的态度做入世之事，钟扬的脚步定格在了他所热爱的土地。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">9月29日上午，钟扬教授遗体告别仪式在银川市殡仪馆举行。“风华五三秋崇德建业育人桃李天下播种未来，雪域十六载援藏支边报国胸怀西部常在路上”，满载哀思的挽联道不尽他短暂而悠长的一生。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Z2eNzymNZ9bibG48tmOH1lx4cph5lg7yOh6h3YTtPp44O9NDaNFsjBw/0?wx_fmt=jpeg" class="" data-ratio="0.5625" data-w="640"  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5b9Qb3Ro5JyCEF0Sibgl0kUUMFvGUm26fqffrEib2UqSuOs6BbbDdxaibg/0?wx_fmt=jpeg" style="" class="" data-ratio="0.6671875" data-w="640"  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5npp1ggU1f3P3DSBY9mRdYzibUf8FY8CtZjSqzLDphC6xGLnR8a6H2OA/0?wx_fmt=jpeg" style="" class="" data-ratio="0.6671875" data-w="640"  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5ubb3JswSAkzHY6nnCEemiceKXQEPKfvSgE7rW6dKxqBhYOeABn2oNQA/0?wx_fmt=jpeg" style="" class="" data-ratio="0.675" data-w="640"  /></p><p><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5qmVJKBV0tjoulP9Ef9VacC8aIQCzGNqOricf3X18ffRdgiaqJFns8KYw/0?wx_fmt=jpeg" style="" class="" data-ratio="0.6671875" data-w="640"  /></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">教育部副部长朱之文，复旦大学党委书记焦扬、校长许宁生，广西壮族自治区纪委书记房灵敏，上海市副市长翁铁慧，山东省人大常委会副主任张新起，江苏省政协副主席阎立，西藏自治区政协副主席阿沛•晋源，中国科学技术大学校长包信和，四川大学校长谢和平等敬送花圈，对钟扬教授的逝世表示沉痛哀悼。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">复旦大学师生还自发折千纸鹤，悬挂在复旦大学邯郸路校区的立人生物楼前，寄托对钟扬教授的无限哀思。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;"></span></p><p style="text-align: center;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5DInzBwJ5sM1AXYweNq7nULLGEbVlqLmglEXRibc6eyvPyCgn8ibPicWqw/0?wx_fmt=jpeg" class="" data-ratio="0.6666666666666666" data-w="720"  /><span style="font-size: 12px;color: rgb(136, 136, 136);">复旦<span style="font-size: 12px;text-align: justify;">师生折叠千纸鹤寄托哀思</span></span></p><p style="white-space: normal;text-align: left;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><img data-s="300,640" data-type="jpeg" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ500QfT50aic1UH2ibtBg6iaLpncibdgWNMXn0ticNialw5Kl0c4hkGubuOonQ/0?wx_fmt=jpeg" class="" data-ratio="0.6515625" data-w="640"  /><span style="color: rgb(136, 136, 136);font-size: 12px;">9月26日，钟扬逝世的第二天，复旦大学立人生物楼东侧悄然挂起了黑白横幅与千纸鹤。“立业先立人，立人先立德”，而这里也是他生前在复旦奔波总会路过的地方。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">当银川在举行钟扬教授遗体告别仪式的同时，300多名师生和闻讯而来的社会人士也聚集在复旦大学生命科学学院江湾校区报告厅，一同挥泪告别钟扬教授。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><br  /></p><section data-role="outer" label="Powered by 135editor.com" style="font-size: 16px;"><section class="_135editor" data-tools="135编辑器" data-id="89264" style="border-width: 0px;border-style: none;border-color: initial;box-sizing: border-box;"><section style="text-align:center;"><section style="width: 3em;height: 3em;color: rgb(255, 255, 255);font-size: 1em;line-height: 3em;display: inline-block;background-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_gif/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5Xj7GrwMAu5ktDh3YzLF34ck7ibuYt276QiaTsOtrJkxjvM5cSE8EAibcA/0?wx_fmt=gif&quot;);background-repeat: no-repeat;background-size: 100%;background-position: 0px center;margin-right: auto;margin-left: auto;"><p><span class="autonum" data-original-title="" title="">9</span></p></section></section></section></section><p style="white-space: normal;text-align: justify;font-size: 14px;padding-right: 10px;padding-left: 10px;margin: 5px 0%;line-height: normal;"><span style="font-size: 15px;"><br  /></span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">钟扬正在上高中的双胞胎儿子，钟云杉和钟云实，一个读汉语班，一个读藏语班。钟扬教授希望将来自己的孩子也能来西藏。而钟扬教授年迈的父亲，一个曾经历“十年浩劫”的正派知识分子，老来再遭浩劫。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">9月25日，上海下起了这个时节罕见的暴雨。时而电闪雷鸣，大雨滂沱如愤怒；时而淅淅沥沥，哀婉犹如人啜泣。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">这天，上海机场没有等到钟扬教授的归来。</span></p><p style="white-space: normal;text-align: justify;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 15px;">今天，是钟扬教授遇难“头七”。回顾他的一生，他的点点滴滴，是想把他的故事铭记于心，以继其志。然后让我们一起送别钟扬教授：</span></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 16px;"><strong><span style="color: rgb(171, 25, 66);">谢谢你，为未来所做的一切。</span></strong></span></p><p style="white-space: normal;text-align: center;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><strong><span style="font-size: 15px;color: rgb(171, 25, 66);"><br  /></span></strong></p><p style="white-space: normal;text-align: left;font-size: 14px;line-height: 2;padding-right: 10px;padding-left: 10px;margin: 15px 0%;"><span style="font-size: 12px;color: rgb(136, 136, 136);">本文部分资料来自复旦大学官方网站、复旦大学官方微信、文汇教育、上海观察、人民网、新京报、南方都市报等媒体报道。</span><br  /></p><p style="max-width: 100%;min-height: 1em;line-height: 25.6px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;color: rgb(0, 122, 170);box-sizing: border-box !important;word-wrap: break-word !important;">人与人之间最大的差别不是智商或财富，而是思考问题的层次。关注公众号理想岛（ID：lixiangdao002），提升认知维度。</strong></p><p style="max-width: 100%;min-height: 1em;line-height: 25.6px;font-family: 微软雅黑;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><span style="max-width: 100%;font-size: 14px;box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;color: rgb(0, 122, 170);box-sizing: border-box !important;word-wrap: break-word !important;"><br data-filtered="filtered" style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  /></strong></span></p><p style="max-width: 100%;min-height: 1em;font-family: 微软雅黑;text-align: center;line-height: 34.13px;background-color: rgb(255, 255, 255);box-sizing: border-box !important;word-wrap: break-word !important;"><img class="" data-ratio="1" data-s="300,640" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBdQFJXrEaShqicSVdA9hJnMaib1w2xJlCrdUXAsUX4vhhiaLPGB1LvbcK93nbb8lsPn9tYkoj8bh6kTQ/640?wx_fmt=jpeg" data-type="jpeg" data-w="640" style="box-sizing: border-box !important;word-wrap: break-word !important;visibility: visible !important;width: 556px !important;" width="auto"  /></p></section></section></section>
+                </div>
+                <script nonce="2104329651" type="text/javascript">
+                    var first_sceen__time = (+new Date());
+
+                    if ("" == 1 && document.getElementById('js_content')) {
+                        document.getElementById('js_content').addEventListener("selectstart",function(e){ e.preventDefault(); });
+                    }
+
+                    
+                    (function(){
+                        if (navigator.userAgent.indexOf("WindowsWechat") != -1){
+                            var link = document.createElement('link');
+                            var head = document.getElementsByTagName('head')[0];
+                            link.rel = 'stylesheet';
+                            link.type = 'text/css';
+                            link.href = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_winwx315a9c.css";
+                            head.appendChild(link);
+                        }
+                    })();
+                </script>
+                
+                
+                                
+                <div class="ct_mpda_wrp" id="js_sponsor_ad_area" style="display:none;"></div>
+
+                
+                                <div class="reward_area tc" id="js_preview_reward" style="display:none;">
+                    <p id="js_preview_reward_wording" class="tips_global reward_tips" style="display:none;"></p>
+                    <p>
+                        <a class="reward_access" id='js_preview_reward_link' href="##">赞赏</a>
+                    </p>
+                </div>
+                <div class="reward_qrcode_area reward_area tc" id="js_preview_reward_qrcode" style="display:none;">
+                    <p class="tips_global">长按二维码向我转账</p>
+                    <p id="js_preview_reward_ios_wording" class="reward_tips" style="display:none;"></p>
+                    <span class="reward_qrcode_img_wrp"><img class="reward_qrcode_img" src="//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/appmsg/pic_reward_qrcode.2x3534de.png"></span>
+                    <p class="tips_global">受苹果公司新规定影响，微信 iOS 版的赞赏功能被关闭，可通过二维码转账支持公众号。</p>
+                </div>
+                            </div>
+                        
+                        <div class="rich_media_tool" id="js_toobar3">
+                                            <div id="js_read_area3" class="media_tool_meta tips_global meta_primary" style="display:none;">阅读 <span id="readNum3"></span></div>
+
+                <span style="display:none;" class="media_tool_meta meta_primary tips_global meta_praise" id="like3">
+                    <i class="icon_praise_gray"></i><span class="praise_num" id="likeNum3"></span>
+                </span>
+
+                <a id="js_report_article3" style="display:none;" class="media_tool_meta tips_global meta_extra" href="##">投诉</a>
+
+            </div>
+
+
+                    </div>
+
+        <div class="rich_media_area_primary sougou" id="sg_tj" style="display:none"></div>
+
+        
+        <div class="rich_media_area_extra">
+
+            
+                        <div class="mpda_bottom_container" id="js_bottom_ad_area"></div>
+                        
+            <div id="js_iframetest" style="display:none;"></div>
+                        
+                        <div class="rich_media_extra" id="js_cmt_area" style="display:none">
+            </div>
+                    </div>
+
+        
+        <div id="js_pc_qr_code" class="qr_code_pc_outer" style="display:none;">
+            <div class="qr_code_pc_inner">
+                <div class="qr_code_pc">
+                    <img id="js_pc_qr_code_img" class="qr_code_pc_img">
+                    <p>微信扫一扫<br>关注该公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="js_minipro_dialog" style="display:none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd">即将打开"<span id="js_minipro_dialog_name"></span>"小程序</div>
+        <div class="weui-dialog__ft">
+            <a id="js_minipro_dialog_cancel" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+            <a id="js_minipro_dialog_ok" href="javascript:void(0);" class="weui-dialog__btn weui-dialog__btn_primary">打开</a>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="2104329651">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="2104329651" type="text/javascript">
+(function() {
+	var totalCount = 0,
+			finishCount = 0;
+
+	function _loadVConsolePlugin() {
+		window.vConsole = new window.VConsole();
+		while (window.vConsolePlugins.length > 0) {
+			var p = window.vConsolePlugins.shift();
+			window.vConsole.addPlugin(p);
+		}
+	}
+	
+	function _addVConsole(uri, cb) {
+		totalCount++;
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		var node = document.createElement('SCRIPT');
+		node.type = 'text/javascript';
+		node.src = url;
+		node.setAttribute('nonce', '2104329651');
+		if (cb) {
+			node.onload = cb;
+		}
+		document.getElementsByTagName('head')[0].appendChild(node);
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		window.vConsolePlugins = [];
+		_addVConsole('3.0.0/vconsole.min.js', function() {
+			
+			_addVConsole('plugin/vconsole-mpopt/1.0.1/vconsole-mpopt.js', _loadVConsolePlugin);
+		});
+	}
+})();
+</script>
+        
+<script nonce="2104329651" type="text/javascript">
+
+if (!window.console) window.console = { log: function() {} };
+
+if (typeof getComputedStyle == 'undefined') {
+    if (document.body.currentStyle) {
+        window.getComputedStyle = function(el) {
+            return el.currentStyle;
+        }
+    } else {
+        window.getComputedStyle = {};
+    }
+}
+(function(){
+    window.__zoom = 1;
+    
+    (function(){
+        var validArr = ","+([0.875, 1, 1.125, 1.25, 1.375]).join(",")+",";
+        var match = window.location.href.match(/winzoom=(\d+(?:\.\d+)?)/);
+        if (match && match[1]) {
+            var winzoom = parseFloat(match[1]);
+            if (validArr.indexOf(","+winzoom+",")>=0) {
+                window.__zoom = winzoom;
+            }
+        }
+    })();
+
+    var isIE = false;
+    if (typeof version != 'undefined' && version >= 6 && version <= 9) {
+        isIE = true;
+    }
+    var getMaxWith=function(){
+        var container = document.getElementById('img-content');
+        var max_width = container.offsetWidth;
+        var container_padding = 0;
+        var container_style = getComputedStyle(container);
+        container_padding = parseFloat(container_style.paddingLeft) + parseFloat(container_style.paddingRight);
+        max_width -= container_padding;
+        var ua = navigator.userAgent.toLowerCase();
+        var re = new RegExp("msie ([0-9]+[\.0-9]*)");
+        var version;
+        if (re.exec(ua) != null) {
+            version = parseInt(RegExp.$1);
+        }
+        var isIE = false;
+        if (typeof version != 'undefined' && version >= 6 && version <= 9) {
+            isIE = true;
+        }
+        if (!max_width) {
+            max_width = window.innerWidth - 30;      
+        }
+        return max_width;
+    };
+    var getParentWidth = function(dom){
+        var parent_width = 0;
+        var parent = dom.parentNode;
+        var outerWidth = 0;
+        while (true) {
+            var parent_style = getComputedStyle(parent);
+            if (!parent || !parent_style) break;
+            parent_width = parent.clientWidth - parseFloat(parent_style.paddingLeft) - parseFloat(parent_style.paddingRight) - outerWidth;
+            if (parent_width > 0) break;
+            outerWidth += parseFloat(parent_style.paddingLeft) + parseFloat(parent_style.paddingRight) + parseFloat(parent_style.marginLeft) + parseFloat(parent_style.marginRight) + parseFloat(parent_style.borderLeftWidth) + parseFloat(parent_style.borderRightWidth);
+            parent = parent.parentNode;
+        }
+        return parent_width;
+    }
+    var getOuterW=function(dom){
+        var style=getComputedStyle(dom),
+            w=0;
+        if(!!style){
+            w = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
+        }
+        return w;
+    };
+    var getOuterH =function(dom){
+        var style=getComputedStyle(dom),
+            h=0;
+        if(!!style){
+            h = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+        }
+        return h;
+    };
+    var insertAfter = function(dom,afterDom){
+        var _p = afterDom.parentNode;
+        if(!_p){
+            return;
+        }
+        if(_p.lastChild === afterDom){
+            _p.appendChild(dom);
+        }else{
+            _p.insertBefore(dom,afterDom.nextSibling);
+        }
+    };
+    var getQuery = function(name,url){
+        
+        var u  = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?")+1).match(reg);
+        return r!=null?r[2]:"";
+    };
+    (function(){
+        var images = document.getElementsByTagName('img');
+        var length = images.length;
+        var max_width = getMaxWith();
+        for (var i = 0; i < length; ++i) {
+            var src_ = images[i].getAttribute('data-src');
+            var realSrc = images[i].getAttribute('src');
+            if (!src_ || realSrc) continue;
+            var width_ = 1 * images[i].getAttribute('data-w') || max_width;
+            var ratio_ = 1 * images[i].getAttribute('data-ratio');
+            var height = 100;
+            if (ratio_ && ratio_ > 0) {
+                var img_style = getComputedStyle(images[i]);
+                var init_width = images[i].style.width;
+                
+                if (init_width) {
+                    images[i].setAttribute('_width', init_width);
+                    if (init_width != 'auto') width_ = parseFloat(img_style.width);
+                }
+                var parent_width = getParentWidth(images[i])||max_width;
+                var width = width_ > parent_width ? parent_width : width_; 
+                var img_padding_border = getOuterW(images[i])||0;
+                var img_padding_border_top_bottom = getOuterH(images[i])||0;
+                height = (width - img_padding_border) * ratio_ + img_padding_border_top_bottom;
+                images[i].style.cssText += ";width: " + width + "px !important;";
+                if (isIE) {
+                    var url = images[i].getAttribute('data-src');
+                    images[i].src = url;
+                } else {
+                    if(width > 40 && height > 40){
+                        images[i].className += ' img_loading';
+                    }
+                    images[i].src = "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+                }
+            } else {
+                images[i].style.cssText += ";visibility: hidden !important;";
+            }
+            images[i].style.cssText += ";height: " + height + "px !important;";
+        }
+    })();
+    window.__videoDefaultRatio=16/9;
+    window.__getVideoWh = function(dom){
+        var max_width = getMaxWith(),
+            width = max_width,
+            ratio_ = dom.getAttribute('data-ratio')*1||(4/3),
+            arr = [4/3, 16/9],
+            ret = arr[0],
+            abs = Math.abs(ret - ratio_);
+        for(var j=1,jl=arr.length;j<jl;j++){
+            var _abs = Math.abs(arr[j] - ratio_);
+            if(_abs<abs){
+                abs = _abs;
+                ret = arr[j];
+            }
+        }
+        ratio_ = ret;
+        var parent_width = getParentWidth(dom)||max_width,
+            width = width > parent_width ? parent_width : width,
+            outerW = getOuterW(dom)||0,
+            outerH = getOuterH(dom)||0,
+            videoW = width - outerW,
+            videoH = videoW/ratio_,
+            height = videoH + outerH;
+        return {w:width,h:height,vh:videoH,vw:videoW,ratio:ratio_};
+    };
+
+    (function(){
+        var iframe = document.getElementsByTagName('iframe');
+        for (var i=0,il=iframe.length;i<il;i++) {
+            var a = iframe[i];
+            var src_ = a.getAttribute('src')||a.getAttribute('data-src')||"";
+            if(!/http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)){
+                continue;
+            }
+            var vid = getQuery("vid",src_);
+            if(!vid){
+                continue;
+            }
+            vid=vid.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,"");
+            a.removeAttribute('src');
+            a.style.display = "none";            
+            var obj = window.__getVideoWh(a),
+                mydiv = document.createElement('img');
+            mydiv.className = "img_loading";
+            mydiv.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==";
+            mydiv.setAttribute("data-vid",vid);
+            mydiv.style.cssText = "width: " + obj.w + "px !important;";
+            insertAfter(mydiv,a);
+            a.style.cssText += ";width: " + obj.w + "px !important;";
+            a.setAttribute("width",obj.w);
+            if(window.__zoom!=1){
+                a.style.display = "block";
+                mydiv.style.display = "none";
+                a.setAttribute("_ratio",obj.ratio);
+                a.setAttribute("_vid",vid);
+            }else{
+                mydiv.style.cssText += "height: " + obj.h + "px !important;";
+                a.style.cssText += "height: " + obj.h + "px !important;";
+                a.setAttribute("height",obj.h);
+            }
+            a.setAttribute("data-vh",obj.vh);
+            a.setAttribute("data-vw",obj.vw);
+            a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+obj.vw+"&height="+obj.vh+"&auto=0");
+        }
+    })();
+
+    (function(){
+        if(window.__zoom!=1){
+            document.getElementById('page-content').style.zoom = window.__zoom;
+            var a = document.getElementById('activity-name');
+            var b = document.getElementById('meta_content');
+            if(!!a){
+                a.style.zoom = 1/window.__zoom;
+            }
+            if(!!b){
+                b.style.zoom = 1/window.__zoom;
+            }
+            var images = document.getElementsByTagName('img');
+            for (var i = 0,il=images.length;i<il;i++) {
+                images[i].style.zoom = 1/window.__zoom;
+            }
+            var iframe = document.getElementsByTagName('iframe');
+            for (var i = 0,il=iframe.length;i<il;i++) {
+                var a = iframe[i];
+                a.style.zoom = 1/window.__zoom;
+                var src_ = a.getAttribute('data-src')||"";
+                if(!/http(s)*\:\/\/v\.qq\.com\/iframe\/(preview|player)\.html\?/.test(src_)){
+                    continue;
+                }
+                var ratio = a.getAttribute("_ratio");
+                var vid = a.getAttribute("_vid");
+                a.removeAttribute("_ratio");
+                a.removeAttribute("_vid");
+                var vw = a.offsetWidth - (getOuterW(a)||0);
+                var vh = vw/ratio;
+                var h = vh + (getOuterH(a)||0)
+                a.style.cssText += "height: " + h + "px !important;"
+                a.setAttribute("height",h);
+                a.setAttribute("data-src",location.protocol+"//v.qq.com/iframe/player.html?vid="+ vid + "&width="+vw+"&height="+vh+"&auto=0");
+                a.style.display = "none";                
+                var parent = a.parentNode;
+                if(!parent){
+                    continue;
+                }
+                for(var j=0,jl=parent.children.length;j<jl;j++){
+                    var child = parent.children[j];
+                    if(child.className.indexOf("img_loading")>=0 && child.getAttribute("data-vid")==vid){
+                        child.style.cssText += "height: " + h + "px !important;";
+                        child.style.display = "";
+                    }
+                }
+            }
+        }
+    })();
+})();
+</script>
+<script nonce="2104329651" type="text/javascript">
+
+    var not_in_mm_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/not_in_mm36906d.css";
+    var windowwx_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_winwx315a9c.css";
+    var article_improve_combo_css = "//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_combo3802da.css";
+    var tid = "";
+    var aid = "";
+    var clientversion = "0";
+    var appuin = ""||"MzI1NTIyMTA3Mw==";
+
+    var source = "";
+    var subscene = "";
+    var abtest_cookie = "";
+
+    var scene = 75;
+
+    var itemidx = "";
+
+    var appmsg_token   = "";
+
+    var _copyright_stat = "1";
+    var _ori_article_type = "教育培训";
+
+    var nickname = "理想岛";
+    var appmsg_type = "9";
+    var ct = "1506789504";
+    var publish_time = "2017-10-01" || "";
+    var user_name = "gh_c025a9bcb35d";
+    var user_name_new = "";
+    var fakeid   = "";
+    var version   = "";
+    var is_limit_user   = "0";
+    var round_head_img = "http://mmbiz.qpic.cn/mmbiz/kaJJfkjDRBeVYWLXtibFB9Xg0sfKoBxuPUubRfAFQAaUhnR1zdkVTRmq9ibFeaVafdPhbFjRWSia4A9kexmTIm7Gg/0?wx_fmt=png";
+    var ori_head_img_url = "http://wx.qlogo.cn/mmhead/Q3auHgzwzM5P9HKYiclAUpJOUbFzGGhGjtDN8ZnsW0fJM4MpyHKuzdg/132";
+    var msg_title = "谢谢你，钟扬教授";
+    var msg_desc = "谢谢你为未来所做的一切。";
+    var msg_cdn_url = "http://mmbiz.qpic.cn/mmbiz_jpg/kaJJfkjDRBckaGM4ichW1prQiaBU5iakdZ5W5pSVPwPXg8U3ljlvGibr0PYH4SJ6eaK8BRudFMR9de0XEZbcgibXngQ/0?wx_fmt=jpeg";
+    var msg_link = "http://mp.weixin.qq.com/s?__biz=MzI1NTIyMTA3Mw==\x26amp;mid=2649512427\x26amp;idx=1\x26amp;sn=e921761ada6fc462e5eb384131ae108e\x26amp;chksm=f221b5d5c5563cc312cf028101404cbb1f0061e7fbef1930ff3d53a827353e0c7d31158c6bcd#rd";
+    var user_uin = "0"*1;
+    var msg_source_url = '';
+    var img_format = 'jpeg';
+    var srcid = '';
+    var req_id = '102099AtggT98oPShsExOY4B';
+    var networkType;
+    var appmsgid = '' || ''|| "2649512427";
+    var comment_id = "218530472" * 1;
+    var comment_enabled = "" * 1;
+    var is_need_reward = "0" * 1;
+    var is_https_res = ("" * 1) && (location.protocol == "https:");
+    var msg_daily_idx = "1" || "";
+    var profileReportInfo = "" || "";
+
+    var devicetype = "";
+    var source_encode_biz = "";
+    var source_username = "";
+    
+    var reprint_ticket = "";
+    var source_mid = "";
+    var source_idx = "";
+
+    var show_comment = "";
+    var __appmsgCgiData = {
+        show_msg_voice: "0"*1,
+        can_use_page : "0"*1,
+        is_wxg_stuff_uin : "0"*1,
+        card_pos : "",
+        copyright_stat : "1",
+        source_biz : "",
+        hd_head_img : "http://wx.qlogo.cn/mmhead/Q3auHgzwzM5P9HKYiclAUpJOUbFzGGhGjtDN8ZnsW0fJM4MpyHKuzdg/0"||(window.location.protocol+"//"+window.location.host + "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/appmsg/pic_rumor_link.2x264e77.jpg")
+    };
+    var _empty_v = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/pic/pages/voice/empty26f1f1.mp3";
+
+    var copyright_stat = "1" * 1;
+
+    var pay_fee = "" * 1;
+    var pay_timestamp = "";
+    var need_pay = "" * 1;
+
+    var need_report_cost = "0" * 1;
+    var use_tx_video_player = "0" * 1;
+    var appmsg_fe_filter = "contenteditable";
+
+    var friend_read_source = "" || "";
+    var friend_read_version = "" || "";
+    var friend_read_class_id = "" || "";
+
+    var is_only_read = "1" * 1;
+    var read_num = "" * 1;
+    var like_num = "" * 1;
+    var liked = "" == 'true' ? true : false;
+    var is_temp_url = "" ? 1 : 0;
+    var send_time = "";
+    var icon_emotion_switch = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/emotion/icon_emotion_switch.2x2f1273.png";
+    var icon_emotion_switch_active = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/emotion/icon_emotion_switch_active.2x2f1273.png";
+    var icon_loading_white = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/icon_loading_white2805ea.gif";
+    var icon_audio_unread = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/audio/icon_audio_unread26f1f1.png";
+    var icon_qqmusic_default = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x26f1f1.png";
+    var icon_qqmusic_source = "//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_source263727.png";
+
+    var topic_default_img = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/topic/pic_book_thumb.2x2e4988.png';
+    var comment_edit_icon = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/appmsg/icon_edit25decf.png';
+    var comment_loading_img = '//res.wx.qq.com/mmbizwap/en_US/htmledition/images/icon/common/icon_loading_white2805ea.gif';
+    var voice_in_appmsg = {
+        "1":"1"
+            };
+    var wxa_img_alert = "" != 'false';
+
+    
+    
+    
+    
+
+    
+    var weapp_sn_arr_json = "" || "";
+
+    
+    var ban_scene = "0" * 1;
+
+    var svr_time = "1507637659" * 1;
+    
+    var is_transfer_msg = ""*1||0;
+
+    var malicious_title_reason_id = "0" * 1; 
+
+        window.wxtoken = "";
+        
+    
+    
+    
+    
+    window.is_login = '0' * 1; 
+
+    window.__moon_initcallback = function(){
+        if(!!window.__initCatch){
+            window.__initCatch({
+                idkey : 27611+2,
+                startKey : 0,
+                limit : 128,
+                badjsId: 43,
+                reportOpt : {
+                    uin : uin,
+                    biz : biz,
+                    mid : mid,
+                    idx : idx,
+                    sn  : sn
+                },
+                extInfo : {
+                    network_rate : 0.01,    
+                    badjs_rate: 0.1 
+                }
+            });
+        }
+    }
+    </script>
+
+<script nonce="2104329651" type="text/javascript">
+(function(){
+    window.__logClientLog = function(msg){
+        try{
+            var method;
+            if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+                method = 'writeLog';
+            }else if(/(Android)/i.test(navigator.userAgent)){
+                method = 'log';
+            }
+            if(!!method)
+                doLog(method, msg);
+        }catch(e){
+            console.error(e)
+            throw e
+        }
+    }
+    function doLog(method, msg){
+        if(!!method && !!top.window.WeixinJSBridge && !!top.window.WeixinJSBridge.invoke){
+            top.window.WeixinJSBridge.invoke(method, {
+                "level" : 'info',
+                "msg" : "[WechatFe][appmsg]" + msg
+            });
+        }else{
+            
+            setTimeout(function(){
+                if( top.window.document.addEventListener ){
+                    top.window.document.addEventListener('WeixinJSBridgeReady', function(){
+                        doLog(method,msg)
+                    }, false);
+                }else if (top.window.document.attachEvent){
+                    top.window.document.attachEvent('WeixinJSBridgeReady', function(){
+                        doLog(method, msg)
+                    });
+                    top.window.document.attachEvent('onWeixinJSBridgeReady', function(){
+                        doLog(method, msg)
+                    });
+                }
+            }, 0)
+        }
+    }
+    window.__moonErrRep = function(src){
+        window.__logClientLog(' moon load err ' + src);
+    }
+    window.__moonSucRep = function(src){
+        window.__logClientLog(' moon load suc ' + src);
+    }
+    window.setTimeout(function(){
+        window.__logClientLog(' index.html end, __moonhasinit : ' + window.__moonhasinit);
+    }, 500);
+})();
+</script>
+
+        <script nonce="2104329651">window.__moon_host = 'res.wx.qq.com';window.__moon_mainjs = 'appmsg/index.js';window.moon_map = {"new_video/player.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/player.html385437.js","biz_wap/zepto/touch.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/touch34c264.js","biz_wap/zepto/event.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/event34c264.js","biz_wap/zepto/zepto.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/zepto/zepto34c264.js","page/pages/video.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/pages/video.css3767b8.js","a/appdialog_confirm.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/appdialog_confirm.html34f0d8.js","widget/wx_profile_dialog_primary.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/widget/wx_profile_dialog_primary.css34f0d8.js","appmsg/emotion/caret.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/caret278965.js","new_video/player.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/player376c4d.js","a/appdialog_confirm.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/appdialog_confirm34c32b.js","biz_wap/jsapi/cardticket.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/jsapi/cardticket34c264.js","biz_common/utils/emoji_panel_data.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/emoji_panel_data3518c7.js","biz_common/utils/emoji_data.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/emoji_data3518c7.js","appmsg/emotion/textarea.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/textarea353f34.js","appmsg/emotion/nav.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/nav278965.js","appmsg/emotion/common.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/common3518c7.js","appmsg/emotion/slide.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/slide2a9cd9.js","pages/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/report38518d.js","pages/music_player.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/music_player3857fc.js","pages/loadscript.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/loadscript30203e.js","appmsg/emotion/dom.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/dom31ff31.js","appmsg/comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/comment_tpl.html36c376.js","biz_wap/utils/fakehash.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/fakehash38c7af.js","biz_common/utils/wxgspeedsdk.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/wxgspeedsdk3518c7.js","a/sponsor.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/sponsor364802.js","a/app_card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/app_card38bdd4.js","a/ios.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/ios333f3e.js","a/android.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/android2c5484.js","a/profile.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/profile31ff31.js","a/cpc_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/cpc_a_tpl.html3802da.js","a/sponsor_a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/sponsor_a_tpl.html36c7d0.js","a/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a_tpl.html37cd32.js","a/mpshop.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/mpshop31117a.js","a/wxopen_card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/wxopen_card37b642.js","a/card.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/card31117a.js","biz_wap/utils/position.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/position34c264.js","a/a_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a_report38bd36.js","appmsg/my_comment_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/my_comment_tpl.html36906d.js","appmsg/cmt_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cmt_tpl.html369d00.js","sougou/a_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/sougou/a_tpl.html2c6e7c.js","appmsg/emotion/emotion.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/emotion/emotion353f34.js","biz_wap/utils/wapsdk.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/wapsdk34c264.js","biz_common/utils/monitor.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/monitor3518c7.js","biz_common/utils/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/report3518c7.js","appmsg/open_url_with_webview.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/open_url_with_webview3145f1.js","biz_common/utils/http.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/http3518c7.js","biz_common/utils/cookie.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/cookie3518c7.js","appmsg/topic_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/topic_tpl.html31ff31.js","pages/weapp_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/weapp_tpl.html36906d.js","pages/voice_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/voice_tpl.html38518d.js","pages/voice_component.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/voice_component389055.js","pages/qqmusic_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/qqmusic_tpl.html37189c.js","new_video/ctl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/new_video/ctl2d441f.js","a/testdata.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/testdata38bdd4.js","appmsg/reward_entry.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/reward_entry36906d.js","appmsg/comment.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/comment36ca0d.js","appmsg/like.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/like375fea.js","pages/version4video.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/version4video384cbb.js","a/a.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/a/a38bdd4.js","rt/appmsg/getappmsgext.rt.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/rt/appmsg/getappmsgext.rt2c21f7.js","biz_wap/utils/storage.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/storage34c264.js","biz_common/tmpl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/tmpl3518c7.js","appmsg/share_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/share_tpl.html36906d.js","appmsg/img_copyright_tpl.html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/img_copyright_tpl.html2a2c13.js","pages/video_ctrl.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/pages/video_ctrl36ebcf.js","biz_common/ui/imgonepx.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/ui/imgonepx3518c7.js","biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/respTypes3518c7.js","biz_wap/utils/log.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/log34c264.js","sougou/index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/sougou/index36913b.js","biz_wap/safe/mutation_observer_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/safe/mutation_observer_report34c264.js","appmsg/fereport.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/fereport37b642.js","appmsg/report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/report3404b3.js","appmsg/report_and_source.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/report_and_source34c49d.js","appmsg/page_pos.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/page_pos37aa31.js","appmsg/cdn_speed_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cdn_speed_report3097b2.js","appmsg/wxtopic.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/wxtopic31a3be.js","appmsg/new_index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/new_index36906d.js","appmsg/weapp.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/weapp381ee1.js","appmsg/autoread.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/autoread3857fc.js","appmsg/voice.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/voice38518d.js","appmsg/qqmusic.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/qqmusic377c4f.js","appmsg/iframe.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/iframe38ce84.js","appmsg/product.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/product3820c5.js","appmsg/review_image.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/review_image37871c.js","appmsg/outer_link.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/outer_link275627.js","appmsg/copyright_report.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/copyright_report2ec4b2.js","appmsg/async.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/async38b7bb.js","biz_wap/ui/lazyload_img.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/ui/lazyload_img36be04.js","biz_common/log/jserr.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/log/jserr3518c7.js","appmsg/share.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/share37ba82.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/cdn_img_lib38b7bb.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/url/parse36ebcf.js","page/appmsg/not_in_mm.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/not_in_mm.css36906d.js","page/appmsg/page_mp_article_improve_combo.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg/page_mp_article_improve_combo.css3802da.js","page/appmsg_new/not_in_mm.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg_new/not_in_mm.css36f05c.js","page/appmsg_new/combo.css":"//res.wx.qq.com/mmbizwap/en_US/htmledition/style/page/appmsg_new/combo.css3802da.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/jsapi/core34c264.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/event36f1bc.js","appmsg/test.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/test354009.js","biz_wap/utils/mmversion.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/mmversion34c264.js","appmsg/max_age.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/max_age2fdd28.js","biz_common/dom/attr.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/attr3518c7.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/ajax38c31a.js","appmsg/log.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/log300331.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/dom/class3518c7.js","biz_wap/utils/device.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_wap/utils/device34c264.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/biz_common/utils/string/html3518c7.js","appmsg/index.js":"//res.wx.qq.com/mmbizwap/en_US/htmledition/js/appmsg/index3894d8.js"};</script><script nonce="2104329651" type="text/javascript" id="moon_inline" > window.__mooninline=1; window.setTimeout(function() {  function __moonf__(){
+if(!window.__moonhasinit){
+window.__moonhasinit=!0,window.__moonclientlog=[],window.__wxgspeeds&&(window.__wxgspeeds.moonloadedtime=+new Date),
+"object"!=typeof JSON&&(window.JSON={
+stringify:function(){
+return"";
+},
+parse:function(){
+return{};
+}
+});
+var e=function(){
+function e(e){
+try{
+var o;
+/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)?o="writeLog":/(Android)/i.test(navigator.userAgent)&&(o="log"),
+o&&t(o,e);
+}catch(n){
+throw console.error(n),n;
+}
+}
+function t(e,o){
+e&&top.window.WeixinJSBridge&&top.window.WeixinJSBridge.invoke?top.window.WeixinJSBridge.invoke(e,{
+level:"info",
+msg:"[WechatFe][moon]"+o
+}):setTimeout(function(){
+top.window.document.addEventListener?top.window.document.addEventListener("WeixinJSBridgeReady",function(){
+t(e,o);
+},!1):top.window.document.attachEvent&&(top.window.document.attachEvent("WeixinJSBridgeReady",function(){
+t(e,o);
+}),top.window.document.attachEvent("onWeixinJSBridgeReady",function(){
+t(e,o);
+}));
+},0);
+}
+var n;
+localStorage&&JSON.parse(localStorage.getItem("__WXLS__moonarg"))&&"fromls"==JSON.parse(localStorage.getItem("__WXLS__moonarg")).method&&(n=!0),
+e(" moon init, moon_inline:"+window.__mooninline+", moonls:"+n),function(){
+var e={},o={},t={};
+e.COMBO_UNLOAD=0,e.COMBO_LOADING=1,e.COMBO_LOADED=2;
+var n=function(e,t,n){
+if(!o[e]){
+o[e]=n;
+for(var r=3;r--;)try{
+moon.setItem(moon.prefix+e,n.toString()),moon.setItem(moon.prefix+e+"_ver",moon_map[e]);
+break;
+}catch(i){
+moon.clear();
+}
+}
+},r=window.alert;
+window.__alertList=[],window.alert=function(e){
+r(e),window.__alertList.push(e);
+};
+var i=function(e){
+if(!e||!o[e])return null;
+var n=o[e];
+if("function"==typeof n&&!t[e]){
+var a={},s={
+exports:a
+},c=n(i,a,s,r);
+n=o[e]=c||s.exports,t[e]=!0;
+}
+if(".css"===e.substr(-4)){
+var d=document.getElementById(e);
+if(!d){
+d=document.createElement("style"),d.id=e;
+var _=/url\s*\(\s*\/(\"(?:[^\\\"\r\n\f]|\\[\s\S])*\"|'(?:[^\\'\n\r\f]|\\[\s\S])*'|[^)}]+)\s*\)/g,m=window.testenv_reshost||window.__moon_host||"res.wx.qq.com";
+n=n.replace(_,"url(//"+m+"/$1)"),d.innerHTML=n,document.getElementsByTagName("head")[0].appendChild(d);
+}
+}
+return n;
+};
+e.combo_status=e.COMBO_UNLOAD,e.run=function(){
+var o=e.run.info,t=o&&o[0],n=o&&o[1];
+if(t&&e.combo_status==e.COMBO_LOADED){
+var r=i(t);
+n&&n(r);
+}
+},e.use=function(o,t){
+window.__wxgspeeds&&(window.__wxgspeeds.seajs_use_time=+new Date),e.run.info=[o,t],
+e.run();
+},window.define=n,window.seajs=e;
+}(),function(){
+if(window.__nonce_str){
+var e=document.createElement;
+document.createElement=function(o){
+var t=e.apply(this,arguments);
+return"object"==typeof o&&(o=o.toString()),"string"==typeof o&&"script"==o.toLowerCase()&&t.setAttribute("nonce",window.__nonce_str),
+t;
+};
+}
+window.addEventListener&&window.__DEBUGINFO&&Math.random()<.01&&window.addEventListener("load",function(){
+var e=document.createElement("script");
+e.src=__DEBUGINFO.safe_js,e.type="text/javascript",e.async=!0;
+var o=document.head||document.getElementsByTagName("head")[0];
+o.appendChild(e);
+});
+}(),function(){
+function t(e){
+return"[object Array]"===Object.prototype.toString.call(e);
+}
+function n(e){
+return"[object Object]"===Object.prototype.toString.call(e);
+}
+function r(e){
+var t=e.stack+" "+e.toString()||"";
+try{
+if(window.testenv_reshost){
+var n="http(s)?://"+window.testenv_reshost,r=new RegExp(n,"g");
+t=t.replace(r,"");
+}else t=t.replace(/http(s)?:\/\/res\.wx\.qq\.com/g,"");
+for(var r=/\/([^.]+)\/js\/(\S+?)\.js(\,|:)?/g;r.test(t);)t=t.replace(r,function(e,o,t,n){
+return t+n;
+});
+}catch(e){
+t=e.stack?e.stack:"";
+}
+var i=[];
+for(o in u)u.hasOwnProperty(o)&&i.push(o+":"+u[o]);
+return i.push("STK:"+t.replace(/\n/g,"")),i.join("|");
+}
+function i(e){
+if(!e){
+var o=window.onerror;
+window.onerror=function(){},f=setTimeout(function(){
+window.onerror=o,f=null;
+},50);
+}
+}
+function a(e,o,t){
+if(!/^mp\.weixin\.qq\.com$/.test(location.hostname)){
+var n=[];
+t=t.replace(location.href,(location.origin||"")+(location.pathname||"")).replace("#wechat_redirect","").replace("#rd","").split("&");
+for(var r=0,i=t.length;i>r;r++){
+var a=t[r].split("=");
+a[0]&&a[1]&&n.push(a[0]+"="+encodeURIComponent(a[1]));
+}
+var s=new window.Image;
+return void(s.src=(o+n.join("&")).substr(0,1024));
+}
+var c;
+if(window.ActiveXObject)try{
+c=new ActiveXObject("Msxml2.XMLHTTP");
+}catch(d){
+try{
+c=new ActiveXObject("Microsoft.XMLHTTP");
+}catch(_){
+c=!1;
+}
+}else window.XMLHttpRequest&&(c=new XMLHttpRequest);
+c&&(c.open(e,o,!0),c.setRequestHeader("cache-control","no-cache"),c.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),
+c.setRequestHeader("X-Requested-With","XMLHttpRequest"),c.send(t));
+}
+function s(e){
+return function(o,t){
+if("string"==typeof o)try{
+o=new Function(o);
+}catch(n){
+throw n;
+}
+var r=[].slice.call(arguments,2),a=o;
+return o=function(){
+try{
+return a.apply(this,r.length&&r||arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:O,
+log:"timeout_error;host:"+top.location.host,
+e:e
+}]),i(f)),e;
+}
+},e(o,t);
+};
+}
+function c(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this,a=t||function(){};
+return t=function(){
+try{
+return a.apply(r,arguments);
+}catch(e){
+throw e.stack&&console&&console.error&&console.error("[TryCatch]"+e.stack),_&&window.__moon_report&&(window.__moon_report([{
+offset:y,
+log:"listener_error;type:"+o+";host:"+top.location.host,
+e:e
+}]),i(f)),e;
+}
+},a.moon_lid=b,D[b]=t,b++,e.call(r,o,t,n);
+};
+}
+function d(e){
+return function(o,t,n){
+if("undefined"==typeof n)var n=!1;
+var r=this;
+return t=D[t.moon_lid],e.call(r,o,t,n);
+};
+}
+var _,m,w,l,u,p,f,h=/MicroMessenger/i.test(navigator.userAgent),g=window.define,v=0,y=2,x=4,O=9,j=10;
+if(window.__initCatch=function(e){
+_=e.idkey,m=e.startKey||0,w=e.limit,l=e.badjsId,u=e.reportOpt||"",p=e.extInfo||{},
+p.rate=p.rate||.5;
+},window.__moon_report=function(e,o){
+var i=.5;
+if(p&&p.rate&&(i=p.rate),o&&"number"==typeof o&&(i=o),!(!/mp\.weixin\.qq\.com/.test(location.href)&&!/payapp\.weixin\.qq\.com/.test(location.href)||Math.random()>i||!h||top!=window&&!/mp\.weixin\.qq\.com/.test(top.location.href))&&(n(e)&&(e=[e]),
+t(e)&&""!=_)){
+var s="",c=[],d=[],u=[],f=[];
+"number"!=typeof w&&(w=1/0);
+for(var g=0;g<e.length;g++){
+var v=e[g]||{};
+if(!(v.offset>w||"number"!=typeof v.offset||v.offset==x&&p&&p.network_rate&&Math.random()>=p.network_rate)){
+var y=1/0==w?m:m+v.offset;
+c[g]="[moon]"+_+"_"+y+";"+v.log+";"+r(v.e||{})||"",d[g]=y,u[g]=1;
+}
+}
+for(var O=0;O<d.length;O++)f[O]=_+"_"+d[O]+"_"+u[O],s=s+"&log"+O+"="+c[O];
+if(f.length>0){
+a("POST",location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?","idkey="+f.join(";")+"&r="+Math.random()+"&lc="+c.length+s);
+var i=1;
+if(p&&p.badjs_rate&&(i=p.badjs_rate),l&&Math.random()<i){
+s=s.replace(/uin\:(.)*\|biz\:(.)*\|mid\:(.)*\|idx\:(.)*\|sn\:(.)*\|/,"");
+var j=new Image,D="https://badjs.weixinbridge.com/badjs?id="+l+"&level=4&from="+encodeURIComponent(location.host)+"&msg="+encodeURIComponent(s);
+j.src=D.slice(0,1024);
+}
+}
+}
+},window.setTimeout=s(window.setTimeout),window.setInterval=s(window.setInterval),
+Math.random()<.01&&window.Document&&window.HTMLElement){
+var D={},b=0;
+Document.prototype.addEventListener=c(Document.prototype.addEventListener),Document.prototype.removeEventListener=d(Document.prototype.removeEventListener),
+HTMLElement.prototype.addEventListener=c(HTMLElement.prototype.addEventListener),
+HTMLElement.prototype.removeEventListener=d(HTMLElement.prototype.removeEventListener);
+}
+var E=window.navigator.userAgent;
+if((/ip(hone|ad|od)/i.test(E)||/android/i.test(E))&&!/windows phone/i.test(E)&&window.localStorage&&window.localStorage.setItem){
+var S=window.localStorage.setItem,I=0;
+window.localStorage.setItem=function(e,o){
+if(!(I>=10))try{
+S.call(window.localStorage,e,o);
+}catch(t){
+t.stack&&console&&console.error&&console.error("[TryCatch]"+t.stack),window.__moon_report([{
+offset:j,
+log:"localstorage_error;"+t.toString(),
+e:t
+}]),I++,I>=3&&window.moon&&window.moon.clear&&moon.clear();
+}
+};
+}
+window.seajs&&g&&(window.define=function(){
+for(var o,t=[],n=arguments&&arguments[0],a=0,s=arguments.length;s>a;a++){
+var c=o=arguments[a];
+"function"==typeof o&&(o=function(){
+try{
+return c.apply(this,arguments);
+}catch(o){
+throw"string"==typeof n&&console.error("[TryCatch][DefineeErr]id:"+n),o.stack&&console&&console.error&&console.error("[TryCatch]"+o.stack),
+_&&window.__moon_report&&(window.__moon_report([{
+offset:v,
+log:"define_error;id:"+n+";",
+e:o
+}]),i(f)),e(" [define_error]"+JSON.stringify(r(o))),o;
+}
+},o.toString=function(e){
+return function(){
+return e.toString();
+};
+}(arguments[a])),t.push(o);
+}
+return g.apply(this,t);
+});
+}(),function(o){
+function t(e,o,t){
+return window.__DEBUGINFO?(window.__DEBUGINFO.res_list||(window.__DEBUGINFO.res_list=[]),
+window.__DEBUGINFO.res_list[e]?(window.__DEBUGINFO.res_list[e][o]=t,!0):!1):!1;
+}
+function n(e){
+var o=new TextEncoder("utf-8").encode(e),t=crypto.subtle||crypto.webkitSubtle;
+return t.digest("SHA-256",o).then(function(e){
+return r(e);
+});
+}
+function r(e){
+for(var o=[],t=new DataView(e),n=0;n<t.byteLength;n+=4){
+var r=t.getUint32(n),i=r.toString(16),a="00000000",s=(a+i).slice(-a.length);
+o.push(s);
+}
+return o.join("");
+}
+function i(e,o,t){
+if("object"==typeof e){
+var n=Object.prototype.toString.call(e).replace(/^\[object (.+)\]$/,function(e,o){
+return o;
+});
+if(t=t||e,"Array"==n){
+for(var r=0,i=e.length;i>r;++r)if(o.call(t,e[r],r,e)===!1)return;
+}else{
+if("Object"!==n&&a!=e)throw"unsupport type";
+if(a==e){
+for(var r=e.length-1;r>=0;r--){
+var s=a.key(r),c=a.getItem(s);
+if(o.call(t,c,s,e)===!1)return;
+}
+return;
+}
+for(var r in e)if(e.hasOwnProperty(r)&&o.call(t,e[r],r,e)===!1)return;
+}
+}
+}
+var a=o.localStorage,s=document.head||document.getElementsByTagName("head")[0],c=1,d=11,_=12,m=13,w=window.__allowLoadResFromMp?1:2,l=window.__allowLoadResFromMp?1:0,u=w+l,p=window.testenv_reshost||window.__moon_host||"res.wx.qq.com",f=new RegExp("^(http(s)?:)?//"+p);
+window.__loadAllResFromMp&&(p="mp.weixin.qq.com",w=0,u=w+l);
+var h=0,g={
+prefix:"__MOON__",
+loaded:[],
+unload:[],
+clearSample:Math.random()<h,
+hit_num:0,
+mod_num:0,
+version:1003,
+cacheData:{
+js_mod_num:0,
+js_hit_num:0,
+js_not_hit_num:0,
+js_expired_num:0,
+css_mod_num:0,
+css_hit_num:0,
+css_not_hit_num:0,
+css_expired_num:0
+},
+init:function(){
+g.loaded=[],g.unload=[];
+var e,t,r;
+if(a){
+var s="_moon_ver_key_",c=a.getItem(s);
+c!=g.version&&(g.clear(),a.setItem(s,g.version));
+}
+if((-1!=location.search.indexOf("no_moon1=1")||-1!=location.search.indexOf("no_lshttps=1"))&&g.clear(),
+a){
+var d=1*a.getItem(g.prefix+"clean_time"),_=+new Date;
+if(_-d>=1296e6){
+g.clear();
+try{
+!!a&&a.setItem(g.prefix+"clean_time",+new Date);
+}catch(m){}
+}
+}
+i(moon_map,function(i,s){
+if(t=g.prefix+s,r=!!i&&i.replace(f,""),e=!!a&&a.getItem(t),version=!!a&&(a.getItem(t+"_ver")||"").replace(f,""),
+g.mod_num++,r&&-1!=r.indexOf(".css")?g.cacheData.css_mod_num++:r&&-1!=r.indexOf(".js")&&g.cacheData.js_mod_num++,
+g.clearSample||!e||r!=version)g.unload.push(r.replace(f,"")),r&&-1!=r.indexOf(".css")?e?r!=version&&g.cacheData.css_expired_num++:g.cacheData.css_not_hit_num++:r&&-1!=r.indexOf(".js")&&(e?r!=version&&g.cacheData.js_expired_num++:g.cacheData.js_not_hit_num++);else{
+if("https:"==location.protocol&&window.moon_hash_map&&window.moon_hash_map[s]&&window.crypto)try{
+n(e).then(function(e){
+window.moon_hash_map[s]!=e&&console.log(s);
+});
+}catch(c){}
+try{
+var d="//# sourceURL="+s+"\n//@ sourceURL="+s;
+o.eval.call(o,'define("'+s+'",[],'+e+")"+d),g.hit_num++,r&&-1!=r.indexOf(".css")?g.cacheData.css_hit_num++:r&&-1!=r.indexOf(".js")&&g.cacheData.js_hit_num++;
+}catch(c){
+g.unload.push(r.replace(f,""));
+}
+}
+}),g.load(g.genUrl());
+},
+genUrl:function(){
+var e=g.unload;
+if(!e||e.length<=0)return[];
+var o,t,n="",r=[],i={},a=-1!=location.search.indexOf("no_moon2=1"),s="//"+p;
+-1!=location.href.indexOf("moon_debug2=1")&&(s="//mp.weixin.qq.com");
+for(var c=0,d=e.length;d>c;++c){
+/^\/(.*?)\//.test(e[c]);
+var _=/^\/(.*?)\//.exec(e[c]);
+_.length<2||!_[1]||(t=_[1],n=i[t],n?(o=n+","+e[c],o.length>1e3||a?(r.push(n+"?v="+g.version),
+n=location.protocol+s+e[c],i[t]=n):(n=o,i[t]=n)):(n=location.protocol+s+e[c],i[t]=n));
+}
+for(var m in i)i.hasOwnProperty(m)&&r.push(i[m]);
+return r;
+},
+load:function(e){
+if(window.__wxgspeeds&&(window.__wxgspeeds.mod_num=g.mod_num,window.__wxgspeeds.hit_num=g.hit_num),
+!e||e.length<=0)return seajs.combo_status=seajs.COMBO_LOADED,seajs.run(),console.debug&&console.debug("[moon] load js complete, all in cache, cost time : 0ms, total count : "+g.mod_num+", hit num: "+g.hit_num),
+void window.__moonclientlog.push("[moon] load js complete, all in cache, cost time : 0ms, total count : "+g.mod_num+", hit num: "+g.hit_num);
+seajs.combo_status=seajs.COMBO_LOADING;
+var o=0,t=+new Date;
+window.__wxgspeeds&&(window.__wxgspeeds.combo_times=[],window.__wxgspeeds.combo_times.push(t)),
+i(e,function(n){
+g.request(n,u,function(){
+if(window.__wxgspeeds&&window.__wxgspeeds.combo_times.push(+new Date),o++,o==e.length){
+var n=+new Date-t;
+window.__wxgspeeds&&(window.__wxgspeeds.mod_downloadtime=n),seajs.combo_status=seajs.COMBO_LOADED,
+seajs.run(),console.debug&&console.debug("[moon] load js complete, url num : "+e.length+", total mod count : "+g.mod_num+", hit num: "+g.hit_num+", use time : "+n+"ms"),
+window.__moonclientlog.push("[moon] load js complete, url num : "+e.length+", total mod count : "+g.mod_num+", hit num: "+g.hit_num+", use time : "+n+"ms");
+}
+});
+});
+},
+request:function(o,n,r){
+if(o){
+n=n||0,o.indexOf("mp.weixin.qq.com")>-1&&((new Image).src=location.protocol+"//mp.weixin.qq.com/mp/jsmonitor?idkey=27613_32_1&r="+Math.random(),
+window.__moon_report([{
+offset:_,
+log:"load_script_from_mp: "+o
+}],1));
+var i=-1;
+window.__DEBUGINFO&&(__DEBUGINFO.res_list||(__DEBUGINFO.res_list=[]),__DEBUGINFO.res_list.push({
+type:"js",
+status:"pendding",
+start:+new Date,
+end:0,
+url:o
+}),i=__DEBUGINFO.res_list.length-1),-1!=location.search.indexOf("no_lshttps=1")&&(o=o.replace("http://","https://"));
+var a=document.createElement("script");
+a.src=o,a.type="text/javascript",a.async=!0,a.down_time=+new Date,a.onerror=function(s){
+t(i,"status","error"),t(i,"end",+new Date);
+var _=new Error(s);
+if(n>=0)if(l>n){
+var w=o.replace("res.wx.qq.com","mp.weixin.qq.com");
+g.request(w,n,r);
+}else g.request(o,n,r);else window.__moon_report&&window.__moon_report([{
+offset:c,
+log:"load_script_error: "+o,
+e:_
+}],1);
+if(n==l-1&&window.__moon_report([{
+offset:d,
+log:"load_script_error: "+o,
+e:_
+}],1),-1==n){
+var u="ua: "+window.navigator.userAgent+", time="+(+new Date-a.down_time)+", load_script_error -1 : "+o;
+window.__moon_report([{
+offset:m,
+log:u
+}],1);
+}
+window.__moonclientlog.push("moon load js error : "+o+", error -> "+_.toString()),
+e("moon_request_error url:"+o);
+},"undefined"!=typeof moon_crossorigin&&moon_crossorigin&&a.setAttribute("crossorigin",!0),
+a.onload=a.onreadystatechange=function(){
+t(i,"status","loaded"),t(i,"end",+new Date),!a||a.readyState&&!/loaded|complete/.test(a.readyState)||(t(i,"status","200"),
+a.onload=a.onreadystatechange=null,"function"==typeof r&&r());
+},n--,s.appendChild(a),e("moon_request url:"+o+" retry:"+n);
+}
+},
+setItem:function(e,o){
+!!a&&a.setItem(e,o);
+},
+clear:function(){
+a&&(i(a,function(e,o){
+~o.indexOf(g.prefix)&&a.removeItem(o);
+}),console.debug&&console.debug("[moon] clear"));
+},
+idkeyReport:function(e,o,t){
+t=t||1;
+var n=e+"_"+o+"_"+t;
+(new Image).src="/mp/jsmonitor?idkey="+n+"&r="+Math.random();
+}
+};
+seajs&&seajs.use&&"string"==typeof window.__moon_mainjs&&seajs.use(window.__moon_mainjs),
+window.moon=g;
+}(window),window.moon.init();
+};
+e(),!!window.__moon_initcallback&&window.__moon_initcallback(),window.__wxgspeeds&&(window.__wxgspeeds.moonendtime=+new Date);
+}
+}
+__moonf__(); }, 25);</script><script nonce="2104329651" type="text/javascript">
+    var real_show_page_time = +new Date();
+    if (!!window.addEventListener){
+        window.addEventListener("load", function(){
+            window.onload_endtime = +new Date();
+        });
+    }
+    
+</script>
+
+    </body>
+    <script nonce="2104329651" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+<!--tailTrap<body></body><head></head><html></html>-->
