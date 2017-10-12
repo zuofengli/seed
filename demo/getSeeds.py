@@ -12,12 +12,18 @@ exportFile = open(filePathName, 'w')
 
 ####remove duplication 2017.10.12
 exported_url_list = []
+
+titles = ['source', 'media', 'title', 'url']
+exportFile.write('\t'.join(titles))
+exportFile.write('\n')
 for webInfo in db[MAIN_COLLECTION_NAME].find():
     if webInfo['url'] in exported_url_list:
         continue
     else:
         exported_url_list.append(webInfo['url'])
-        
-    exportFile.write('\t'.join([webInfo['media'],webInfo['title'],webInfo['url']]).encode('utf8'))
+    values = []
+    for title in titles:
+        values.append(webInfo[title])
+    exportFile.write('\t'.join(values).encode('utf8'))
     exportFile.write('\n')
 exportFile.close()     

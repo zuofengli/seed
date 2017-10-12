@@ -1,5 +1,7 @@
 ﻿import demo
-import re
+import regex as re
+import chardet
+import uuid
 from datetime import datetime
 from pymongo import MongoClient
 
@@ -13,6 +15,7 @@ db.drop_collection(MAIN_COLLECTION_NAME)
 
 import os
 import urllib2
+import html2text
  
 
 
@@ -54,6 +57,10 @@ def selectOneField(fields, index):
 def getMediaName(webPageInfo):
     title = webPageInfo['title']
     url = webPageInfo['url']
+    
+    if url.find('http://www.shanghai.gov.cn')>=0:
+        return u'上海政府网'
+    
     for splitter in [u'--', u' - ', u'|',u'-', u'_', u'——', u' ']:
         fds = title.split(splitter)
         if len(fds) > 1:
@@ -74,11 +81,39 @@ def getMediaName(webPageInfo):
         return u'微信网文'
     
     return 'NDTD'
+'''
+来源: 上观新闻  作者:彭德倩 2017-09-25 17:30:16
+来源：新民晚报 | 作者：邵宁 | 编辑：乐先文
+【来源】文汇报
+'''
+def getSource(htmlResponse, htmlText):
+    '''
+    htmlText: unicode, string
+    '''
+    
+    if htmlResponse.url.find('http://news.sina.com.cn') ==0:
+        return ''.join(htmlResponse.xpath('//span/span/span/a/text()').extract())
+    else:
+    
+        #lines = htmlText.split('\n')
+        
+        #for line in lines:
+        rlt = re.search(u'来源[:：】](\W*)(\w+)\W', htmlText)
+        if rlt:
+            if rlt.group(1).find('\n')>=0:
+                pass
+            else:
+                return rlt.group(2)
+        return 'NDTD'
 
 THISRUN_DATETIME = datetime.now().strftime('%Y_%m_%d_%H_%M')
 htmlFileFolder = '{root}//data//htmls//{dt}'.format(root = demo.ROOT_DIR, dt = THISRUN_DATETIME)
 import os
 os.makedirs(htmlFileFolder)
+
+txtFileFolder = '{root}//data//txts//{dt}'.format(root = demo.ROOT_DIR, dt = THISRUN_DATETIME)
+import os
+os.makedirs(txtFileFolder)
 
 import scrapy
 class BlogSpider(scrapy.Spider):
@@ -95,11 +130,51 @@ class BlogSpider(scrapy.Spider):
         
         pageInfo['media'] = getMediaName(pageInfo)
         
-        import chardet
-        uniqueName = response.url.encode('hex')
+        
+        #uniqueName = response.url.encode('hex')
+        uniqueName = str(uuid.uuid1())
+        pageInfo['uid'] = uniqueName
         
         htmlFile = open('{root}//data//htmls//{dt}//{name}.html'.format(root = demo.ROOT_DIR, dt = THISRUN_DATETIME, name = uniqueName),'w')
-        htmlFile.write(response.text.encode('utf8'))
+        #htmlFile.write(response.text.encode('utf8'))
+        bodyHtml = response.body
+        htmlFile.write(bodyHtml)
+        htmlFile.close()
+        
+        txtFile = open('{root}//data//txts//{dt}//{name}.txt'.format(root = demo.ROOT_DIR, dt = THISRUN_DATETIME, name = uniqueName),'w')
+        #htmlFile.write(response.text.encode('utf8'))
+        h = html2text.HTML2Text()
+        h.ignore_links = True
+        
+        myHTMLCoding = chardet.detect(bodyHtml)
+        if myHTMLCoding['encoding'] in ['ascii','GB2312']:
+            bodyHtml = bodyHtml.decode('gbk')
+            bodyHtml = bodyHtml.encode('utf8')
+            
+        if myHTMLCoding['encoding'] in ['windows-1252','ISO-8859-2']:
+            bodyHtml = bodyHtml.encode('utf8')
+            
+        #print 145
+        #print isinstance(bodyHtml, unicode)
+        #print pageInfo['uid']
+        #print pageInfo['url']
+        #raw_input(chardet.detect(bodyHtml))
+        
+        sContent = h.handle(bodyHtml.decode('utf8', 'ignore'))
+        
+        myTextCoding = chardet.detect(sContent)
+        if not myTextCoding['encoding'] in ['ascii','windows-1252','ISO-8859-2']:
+            try:
+                sContent = sContent.decode(myTextCoding['encoding'], 'ignore')
+            except:
+                
+                raw_input(myTextCoding)
+        
+        txtFile.write(sContent.encode('utf8'))
+        txtFile.close()
+        
+        pageInfo['source'] = getSource(response, sContent)
+
         #print response.text.encode('hex','ignore')
         #print hexStr.decode('hex').encode('gbk')
         db[MAIN_COLLECTION_NAME].insert(pageInfo)
